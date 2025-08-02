@@ -8,7 +8,7 @@ typedef struct __mavlink_can_frame_t {
  uint32_t id; /*<  Frame ID*/
  uint8_t target_system; /*<  System ID.*/
  uint8_t target_component; /*<  Component ID.*/
- uint8_t bus; /*<  Bus number*/
+ uint8_t bus; /*<  bus number*/
  uint8_t len; /*<  Frame length*/
  uint8_t data[8]; /*<  Frame data*/
 } mavlink_can_frame_t;
@@ -58,7 +58,7 @@ typedef struct __mavlink_can_frame_t {
  *
  * @param target_system  System ID.
  * @param target_component  Component ID.
- * @param bus  Bus number
+ * @param bus  bus number
  * @param len  Frame length
  * @param id  Frame ID
  * @param data  Frame data
@@ -100,7 +100,7 @@ static inline uint16_t mavlink_msg_can_frame_pack(uint8_t system_id, uint8_t com
  *
  * @param target_system  System ID.
  * @param target_component  Component ID.
- * @param bus  Bus number
+ * @param bus  bus number
  * @param len  Frame length
  * @param id  Frame ID
  * @param data  Frame data
@@ -145,7 +145,7 @@ static inline uint16_t mavlink_msg_can_frame_pack_status(uint8_t system_id, uint
  * @param msg The MAVLink message to compress the data into
  * @param target_system  System ID.
  * @param target_component  Component ID.
- * @param bus  Bus number
+ * @param bus  bus number
  * @param len  Frame length
  * @param id  Frame ID
  * @param data  Frame data
@@ -226,7 +226,7 @@ static inline uint16_t mavlink_msg_can_frame_encode_status(uint8_t system_id, ui
  *
  * @param target_system  System ID.
  * @param target_component  Component ID.
- * @param bus  Bus number
+ * @param bus  bus number
  * @param len  Frame length
  * @param id  Frame ID
  * @param data  Frame data
@@ -330,7 +330,7 @@ static inline uint8_t mavlink_msg_can_frame_get_target_component(const mavlink_m
 /**
  * @brief Get field bus from can_frame message
  *
- * @return  Bus number
+ * @return  bus number
  */
 static inline uint8_t mavlink_msg_can_frame_get_bus(const mavlink_message_t* msg)
 {

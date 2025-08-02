@@ -10,7 +10,7 @@
     #error Wrong include order: MAVLINK_COMMON.H MUST NOT BE DIRECTLY USED. Include mavlink.h from the same directory instead or set ALL AND EVERY defines from MAVLINK.H manually accordingly, including the #define MAVLINK_H call.
 #endif
 
-#define MAVLINK_COMMON_XML_HASH -7316201324492178428
+#define MAVLINK_COMMON_XML_HASH 7529064395697814802
 
 #ifdef __cplusplus
 extern "C" {
@@ -23,7 +23,7 @@ extern "C" {
 #endif
 
 #ifndef MAVLINK_MESSAGE_CRCS
-#define MAVLINK_MESSAGE_CRCS {{0, 50, 9, 9, 0, 0, 0}, {1, 124, 31, 43, 0, 0, 0}, {2, 137, 12, 12, 0, 0, 0}, {4, 237, 14, 14, 3, 12, 13}, {5, 217, 28, 28, 1, 0, 0}, {6, 104, 3, 3, 0, 0, 0}, {7, 119, 32, 32, 0, 0, 0}, {8, 117, 36, 36, 0, 0, 0}, {11, 89, 6, 6, 1, 4, 0}, {20, 214, 20, 20, 3, 2, 3}, {21, 159, 2, 2, 3, 0, 1}, {22, 220, 25, 25, 0, 0, 0}, {23, 168, 23, 23, 3, 4, 5}, {24, 24, 30, 52, 0, 0, 0}, {25, 23, 101, 101, 0, 0, 0}, {26, 170, 22, 24, 0, 0, 0}, {27, 144, 26, 29, 0, 0, 0}, {28, 67, 16, 16, 0, 0, 0}, {29, 115, 14, 16, 0, 0, 0}, {30, 39, 28, 28, 0, 0, 0}, {31, 246, 32, 48, 0, 0, 0}, {32, 185, 28, 28, 0, 0, 0}, {33, 104, 28, 28, 0, 0, 0}, {34, 237, 22, 22, 0, 0, 0}, {35, 244, 22, 22, 0, 0, 0}, {36, 222, 21, 37, 0, 0, 0}, {37, 212, 6, 7, 3, 4, 5}, {38, 9, 6, 7, 3, 4, 5}, {39, 254, 37, 38, 3, 32, 33}, {40, 230, 4, 5, 3, 2, 3}, {41, 28, 4, 4, 3, 2, 3}, {42, 28, 2, 18, 0, 0, 0}, {43, 132, 2, 3, 3, 0, 1}, {44, 221, 4, 9, 3, 2, 3}, {45, 232, 2, 3, 3, 0, 1}, {46, 11, 2, 2, 0, 0, 0}, {47, 153, 3, 8, 3, 0, 1}, {48, 41, 13, 21, 1, 12, 0}, {49, 39, 12, 20, 0, 0, 0}, {50, 78, 37, 37, 3, 18, 19}, {51, 196, 4, 5, 3, 2, 3}, {54, 15, 27, 27, 3, 24, 25}, {55, 3, 25, 25, 0, 0, 0}, {61, 167, 72, 72, 0, 0, 0}, {62, 183, 26, 26, 0, 0, 0}, {63, 119, 181, 181, 0, 0, 0}, {64, 191, 225, 225, 0, 0, 0}, {65, 118, 42, 42, 0, 0, 0}, {66, 148, 6, 6, 3, 2, 3}, {67, 21, 4, 4, 0, 0, 0}, {69, 243, 11, 30, 1, 10, 0}, {70, 124, 18, 38, 3, 16, 17}, {73, 38, 37, 38, 3, 32, 33}, {74, 20, 20, 20, 0, 0, 0}, {75, 158, 35, 35, 3, 30, 31}, {76, 152, 33, 33, 3, 30, 31}, {77, 143, 3, 10, 3, 8, 9}, {80, 14, 4, 4, 3, 2, 3}, {81, 106, 22, 22, 0, 0, 0}, {82, 49, 39, 51, 3, 36, 37}, {83, 22, 37, 37, 0, 0, 0}, {84, 143, 53, 53, 3, 50, 51}, {85, 140, 51, 51, 0, 0, 0}, {86, 5, 53, 53, 3, 50, 51}, {87, 150, 51, 51, 0, 0, 0}, {89, 231, 28, 28, 0, 0, 0}, {90, 183, 56, 56, 0, 0, 0}, {91, 63, 42, 42, 0, 0, 0}, {92, 54, 33, 33, 0, 0, 0}, {93, 47, 81, 81, 0, 0, 0}, {100, 175, 26, 34, 0, 0, 0}, {101, 102, 32, 117, 0, 0, 0}, {102, 158, 32, 117, 0, 0, 0}, {103, 208, 20, 57, 0, 0, 0}, {104, 56, 32, 116, 0, 0, 0}, {105, 93, 62, 63, 0, 0, 0}, {106, 138, 44, 44, 0, 0, 0}, {107, 108, 64, 65, 0, 0, 0}, {108, 32, 84, 92, 0, 0, 0}, {109, 185, 9, 9, 0, 0, 0}, {110, 84, 254, 254, 3, 1, 2}, {111, 34, 16, 18, 3, 16, 17}, {112, 174, 12, 12, 0, 0, 0}, {113, 124, 36, 39, 0, 0, 0}, {114, 237, 44, 44, 0, 0, 0}, {115, 4, 64, 64, 0, 0, 0}, {116, 76, 22, 24, 0, 0, 0}, {117, 128, 6, 6, 3, 4, 5}, {118, 56, 14, 14, 0, 0, 0}, {119, 116, 12, 12, 3, 10, 11}, {120, 134, 97, 97, 0, 0, 0}, {121, 237, 2, 2, 3, 0, 1}, {122, 203, 2, 2, 3, 0, 1}, {123, 250, 113, 113, 3, 0, 1}, {124, 87, 35, 57, 0, 0, 0}, {125, 203, 6, 6, 0, 0, 0}, {126, 220, 79, 81, 3, 79, 80}, {127, 25, 35, 35, 0, 0, 0}, {128, 226, 35, 35, 0, 0, 0}, {129, 46, 22, 24, 0, 0, 0}, {130, 29, 13, 13, 0, 0, 0}, {131, 223, 255, 255, 0, 0, 0}, {132, 85, 14, 39, 0, 0, 0}, {133, 6, 18, 18, 0, 0, 0}, {134, 229, 43, 43, 0, 0, 0}, {135, 203, 8, 8, 0, 0, 0}, {136, 1, 22, 22, 0, 0, 0}, {137, 195, 14, 16, 0, 0, 0}, {138, 109, 36, 120, 0, 0, 0}, {139, 168, 43, 43, 3, 41, 42}, {140, 181, 41, 41, 0, 0, 0}, {141, 47, 32, 32, 0, 0, 0}, {142, 72, 243, 243, 0, 0, 0}, {143, 131, 14, 16, 0, 0, 0}, {144, 127, 93, 93, 0, 0, 0}, {146, 103, 100, 100, 0, 0, 0}, {147, 154, 36, 54, 0, 0, 0}, {148, 178, 60, 78, 0, 0, 0}, {149, 200, 30, 60, 0, 0, 0}, {162, 189, 8, 9, 0, 0, 0}, {192, 36, 44, 54, 0, 0, 0}, {225, 208, 65, 73, 0, 0, 0}, {230, 163, 42, 42, 0, 0, 0}, {231, 105, 40, 40, 0, 0, 0}, {232, 151, 63, 65, 0, 0, 0}, {233, 35, 182, 182, 0, 0, 0}, {234, 150, 40, 40, 0, 0, 0}, {235, 179, 42, 42, 0, 0, 0}, {241, 90, 32, 32, 0, 0, 0}, {242, 104, 52, 60, 0, 0, 0}, {243, 85, 53, 61, 1, 52, 0}, {244, 95, 6, 6, 0, 0, 0}, {245, 130, 2, 2, 0, 0, 0}, {246, 184, 38, 38, 0, 0, 0}, {247, 81, 19, 19, 0, 0, 0}, {248, 8, 254, 254, 3, 3, 4}, {249, 204, 36, 36, 0, 0, 0}, {250, 49, 30, 30, 0, 0, 0}, {251, 170, 18, 18, 0, 0, 0}, {252, 44, 18, 18, 0, 0, 0}, {253, 83, 51, 54, 0, 0, 0}, {254, 46, 9, 9, 0, 0, 0}, {256, 71, 42, 42, 3, 8, 9}, {257, 131, 9, 9, 0, 0, 0}, {258, 187, 32, 232, 3, 0, 1}, {259, 92, 235, 237, 0, 0, 0}, {260, 146, 5, 14, 0, 0, 0}, {261, 179, 27, 61, 0, 0, 0}, {262, 12, 18, 23, 0, 0, 0}, {263, 133, 255, 255, 0, 0, 0}, {264, 49, 28, 32, 0, 0, 0}, {265, 26, 16, 20, 0, 0, 0}, {266, 193, 255, 255, 3, 2, 3}, {267, 35, 255, 255, 3, 2, 3}, {268, 14, 4, 4, 3, 2, 3}, {269, 109, 213, 215, 0, 0, 0}, {270, 59, 19, 20, 0, 0, 0}, {271, 22, 52, 53, 0, 0, 0}, {275, 126, 31, 32, 0, 0, 0}, {276, 18, 49, 50, 0, 0, 0}, {277, 62, 30, 30, 0, 0, 0}, {280, 70, 33, 33, 0, 0, 0}, {281, 48, 13, 13, 0, 0, 0}, {282, 123, 35, 35, 3, 32, 33}, {283, 74, 144, 145, 0, 0, 0}, {284, 99, 32, 32, 3, 30, 31}, {285, 137, 40, 49, 3, 38, 39}, {286, 210, 53, 57, 3, 50, 51}, {287, 1, 23, 23, 3, 20, 21}, {288, 20, 23, 23, 3, 20, 21}, {290, 251, 46, 46, 0, 0, 0}, {291, 10, 57, 57, 0, 0, 0}, {299, 19, 96, 98, 0, 0, 0}, {300, 217, 22, 22, 0, 0, 0}, {301, 243, 58, 58, 0, 0, 0}, {310, 28, 17, 17, 0, 0, 0}, {311, 95, 116, 116, 0, 0, 0}, {320, 243, 20, 20, 3, 2, 3}, {321, 88, 2, 2, 3, 0, 1}, {322, 243, 149, 149, 0, 0, 0}, {323, 78, 147, 147, 3, 0, 1}, {324, 132, 146, 146, 0, 0, 0}, {330, 23, 158, 167, 0, 0, 0}, {331, 91, 230, 233, 0, 0, 0}, {332, 236, 239, 239, 0, 0, 0}, {333, 231, 109, 109, 0, 0, 0}, {334, 72, 10, 10, 0, 0, 0}, {335, 225, 24, 24, 0, 0, 0}, {336, 245, 84, 84, 0, 0, 0}, {339, 199, 5, 5, 0, 0, 0}, {340, 99, 70, 70, 0, 0, 0}, {350, 232, 20, 252, 0, 0, 0}, {360, 11, 25, 25, 0, 0, 0}, {370, 75, 87, 109, 0, 0, 0}, {371, 10, 26, 26, 0, 0, 0}, {372, 26, 140, 140, 0, 0, 0}, {373, 117, 42, 42, 0, 0, 0}, {375, 251, 140, 140, 0, 0, 0}, {380, 232, 20, 20, 0, 0, 0}, {385, 147, 133, 133, 3, 2, 3}, {386, 132, 16, 16, 3, 4, 5}, {387, 4, 72, 72, 3, 4, 5}, {388, 8, 37, 37, 3, 32, 33}, {390, 156, 238, 238, 0, 0, 0}, {395, 0, 212, 212, 0, 0, 0}, {396, 50, 160, 160, 0, 0, 0}, {397, 182, 108, 108, 0, 0, 0}, {400, 110, 254, 254, 3, 4, 5}, {401, 183, 6, 6, 3, 4, 5}, {410, 160, 53, 53, 0, 0, 0}, {411, 106, 3, 3, 0, 0, 0}, {412, 33, 6, 6, 3, 4, 5}, {413, 77, 7, 7, 3, 4, 5}, {435, 134, 46, 46, 0, 0, 0}, {436, 193, 9, 9, 0, 0, 0}, {437, 30, 1, 1, 0, 0, 0}, {440, 66, 35, 35, 0, 0, 0}, {9000, 113, 137, 137, 0, 0, 0}, {9005, 117, 34, 34, 0, 0, 0}, {12900, 114, 44, 44, 3, 0, 1}, {12901, 254, 59, 59, 3, 30, 31}, {12902, 140, 53, 53, 3, 4, 5}, {12903, 249, 46, 46, 3, 0, 1}, {12904, 77, 54, 54, 3, 28, 29}, {12905, 49, 43, 43, 3, 0, 1}, {12915, 94, 249, 249, 3, 0, 1}, {12918, 139, 51, 51, 0, 0, 0}, {12919, 7, 18, 18, 3, 16, 17}, {12920, 20, 5, 5, 0, 0, 0}}
+#define MAVLINK_MESSAGE_CRCS {{0, 50, 9, 9, 0, 0, 0}, {1, 124, 31, 31, 0, 0, 0}, {2, 137, 12, 12, 0, 0, 0}, {4, 237, 14, 14, 3, 12, 13}, {5, 217, 28, 28, 1, 0, 0}, {6, 104, 3, 3, 0, 0, 0}, {7, 119, 32, 32, 0, 0, 0}, {11, 89, 6, 6, 1, 4, 0}, {20, 214, 20, 20, 3, 2, 3}, {21, 159, 2, 2, 3, 0, 1}, {22, 220, 25, 25, 0, 0, 0}, {23, 168, 23, 23, 3, 4, 5}, {24, 24, 30, 52, 0, 0, 0}, {25, 23, 101, 101, 0, 0, 0}, {26, 170, 22, 24, 0, 0, 0}, {27, 144, 26, 29, 0, 0, 0}, {28, 67, 16, 16, 0, 0, 0}, {29, 115, 14, 16, 0, 0, 0}, {30, 39, 28, 28, 0, 0, 0}, {31, 246, 32, 48, 0, 0, 0}, {32, 185, 28, 28, 0, 0, 0}, {33, 104, 28, 28, 0, 0, 0}, {34, 237, 22, 22, 0, 0, 0}, {35, 244, 22, 22, 0, 0, 0}, {36, 222, 21, 37, 0, 0, 0}, {37, 212, 6, 7, 3, 4, 5}, {38, 9, 6, 7, 3, 4, 5}, {39, 254, 37, 38, 3, 32, 33}, {40, 230, 4, 5, 3, 2, 3}, {41, 28, 4, 4, 3, 2, 3}, {42, 28, 2, 6, 0, 0, 0}, {43, 132, 2, 3, 3, 0, 1}, {44, 221, 4, 5, 3, 2, 3}, {45, 232, 2, 3, 3, 0, 1}, {46, 11, 2, 2, 0, 0, 0}, {47, 153, 3, 4, 3, 0, 1}, {48, 41, 13, 21, 1, 12, 0}, {49, 39, 12, 20, 0, 0, 0}, {50, 78, 37, 37, 3, 18, 19}, {51, 196, 4, 5, 3, 2, 3}, {54, 15, 27, 27, 3, 24, 25}, {55, 3, 25, 25, 0, 0, 0}, {61, 167, 72, 72, 0, 0, 0}, {62, 183, 26, 26, 0, 0, 0}, {63, 119, 181, 181, 0, 0, 0}, {64, 191, 225, 225, 0, 0, 0}, {65, 118, 42, 42, 0, 0, 0}, {66, 148, 6, 6, 3, 2, 3}, {67, 21, 4, 4, 0, 0, 0}, {69, 243, 11, 30, 1, 10, 0}, {70, 124, 18, 38, 3, 16, 17}, {73, 38, 37, 38, 3, 32, 33}, {74, 20, 20, 20, 0, 0, 0}, {75, 158, 35, 35, 3, 30, 31}, {76, 152, 33, 33, 3, 30, 31}, {77, 143, 3, 10, 3, 8, 9}, {81, 106, 22, 22, 0, 0, 0}, {82, 49, 39, 39, 3, 36, 37}, {83, 22, 37, 37, 0, 0, 0}, {84, 143, 53, 53, 3, 50, 51}, {85, 140, 51, 51, 0, 0, 0}, {86, 5, 53, 53, 3, 50, 51}, {87, 150, 51, 51, 0, 0, 0}, {89, 231, 28, 28, 0, 0, 0}, {90, 183, 56, 56, 0, 0, 0}, {91, 63, 42, 42, 0, 0, 0}, {92, 54, 33, 33, 0, 0, 0}, {93, 47, 81, 81, 0, 0, 0}, {100, 175, 26, 34, 0, 0, 0}, {101, 102, 32, 117, 0, 0, 0}, {102, 158, 32, 117, 0, 0, 0}, {103, 208, 20, 57, 0, 0, 0}, {104, 56, 32, 116, 0, 0, 0}, {105, 93, 62, 63, 0, 0, 0}, {106, 138, 44, 44, 0, 0, 0}, {107, 108, 64, 65, 0, 0, 0}, {108, 32, 84, 92, 0, 0, 0}, {109, 185, 9, 9, 0, 0, 0}, {110, 84, 254, 254, 3, 1, 2}, {111, 34, 16, 16, 0, 0, 0}, {112, 174, 12, 12, 0, 0, 0}, {113, 124, 36, 39, 0, 0, 0}, {114, 237, 44, 44, 0, 0, 0}, {115, 4, 64, 64, 0, 0, 0}, {116, 76, 22, 24, 0, 0, 0}, {117, 128, 6, 6, 3, 4, 5}, {118, 56, 14, 14, 0, 0, 0}, {119, 116, 12, 12, 3, 10, 11}, {120, 134, 97, 97, 0, 0, 0}, {121, 237, 2, 2, 3, 0, 1}, {122, 203, 2, 2, 3, 0, 1}, {123, 250, 113, 113, 3, 0, 1}, {124, 87, 35, 57, 0, 0, 0}, {125, 203, 6, 6, 0, 0, 0}, {126, 220, 79, 79, 0, 0, 0}, {127, 25, 35, 35, 0, 0, 0}, {128, 226, 35, 35, 0, 0, 0}, {129, 46, 22, 24, 0, 0, 0}, {130, 29, 13, 13, 0, 0, 0}, {131, 223, 255, 255, 0, 0, 0}, {132, 85, 14, 39, 0, 0, 0}, {133, 6, 18, 18, 0, 0, 0}, {134, 229, 43, 43, 0, 0, 0}, {135, 203, 8, 8, 0, 0, 0}, {136, 1, 22, 22, 0, 0, 0}, {137, 195, 14, 16, 0, 0, 0}, {138, 109, 36, 120, 0, 0, 0}, {139, 168, 43, 43, 3, 41, 42}, {140, 181, 41, 41, 0, 0, 0}, {141, 47, 32, 32, 0, 0, 0}, {142, 72, 243, 243, 0, 0, 0}, {143, 131, 14, 16, 0, 0, 0}, {144, 127, 93, 93, 0, 0, 0}, {146, 103, 100, 100, 0, 0, 0}, {147, 154, 36, 54, 0, 0, 0}, {148, 178, 60, 78, 0, 0, 0}, {149, 200, 30, 60, 0, 0, 0}, {162, 189, 8, 9, 0, 0, 0}, {192, 36, 44, 54, 0, 0, 0}, {225, 208, 65, 73, 0, 0, 0}, {230, 163, 42, 42, 0, 0, 0}, {231, 105, 40, 40, 0, 0, 0}, {232, 151, 63, 65, 0, 0, 0}, {233, 35, 182, 182, 0, 0, 0}, {234, 150, 40, 40, 0, 0, 0}, {235, 179, 42, 42, 0, 0, 0}, {241, 90, 32, 32, 0, 0, 0}, {242, 104, 52, 60, 0, 0, 0}, {243, 85, 53, 61, 1, 52, 0}, {244, 95, 6, 6, 0, 0, 0}, {245, 130, 2, 2, 0, 0, 0}, {246, 184, 38, 38, 0, 0, 0}, {247, 81, 19, 19, 0, 0, 0}, {248, 8, 254, 254, 3, 3, 4}, {249, 204, 36, 36, 0, 0, 0}, {250, 49, 30, 30, 0, 0, 0}, {251, 170, 18, 18, 0, 0, 0}, {252, 44, 18, 18, 0, 0, 0}, {253, 83, 51, 54, 0, 0, 0}, {254, 46, 9, 9, 0, 0, 0}, {256, 71, 42, 42, 3, 8, 9}, {257, 131, 9, 9, 0, 0, 0}, {258, 187, 32, 232, 3, 0, 1}, {259, 92, 235, 236, 0, 0, 0}, {260, 146, 5, 13, 0, 0, 0}, {261, 179, 27, 60, 0, 0, 0}, {262, 12, 18, 22, 0, 0, 0}, {263, 133, 255, 255, 0, 0, 0}, {264, 49, 28, 28, 0, 0, 0}, {265, 26, 16, 20, 0, 0, 0}, {266, 193, 255, 255, 3, 2, 3}, {267, 35, 255, 255, 3, 2, 3}, {268, 14, 4, 4, 3, 2, 3}, {269, 109, 213, 213, 0, 0, 0}, {270, 59, 19, 19, 0, 0, 0}, {271, 22, 52, 52, 0, 0, 0}, {275, 126, 31, 31, 0, 0, 0}, {276, 18, 49, 49, 0, 0, 0}, {280, 70, 33, 33, 0, 0, 0}, {281, 48, 13, 13, 0, 0, 0}, {282, 123, 35, 35, 3, 32, 33}, {283, 74, 144, 145, 0, 0, 0}, {284, 99, 32, 32, 3, 30, 31}, {285, 137, 40, 49, 3, 38, 39}, {286, 210, 53, 57, 3, 50, 51}, {287, 1, 23, 23, 3, 20, 21}, {288, 20, 23, 23, 3, 20, 21}, {299, 19, 96, 96, 0, 0, 0}, {301, 243, 58, 58, 0, 0, 0}, {310, 28, 17, 17, 0, 0, 0}, {311, 95, 116, 116, 0, 0, 0}, {320, 243, 20, 20, 3, 2, 3}, {321, 88, 2, 2, 3, 0, 1}, {322, 243, 149, 149, 0, 0, 0}, {323, 78, 147, 147, 3, 0, 1}, {324, 132, 146, 146, 0, 0, 0}, {330, 23, 158, 167, 0, 0, 0}, {331, 91, 230, 233, 0, 0, 0}, {335, 225, 24, 24, 0, 0, 0}, {339, 199, 5, 5, 0, 0, 0}, {340, 99, 70, 70, 0, 0, 0}, {350, 232, 20, 252, 0, 0, 0}, {370, 75, 87, 109, 0, 0, 0}, {373, 117, 42, 42, 0, 0, 0}, {375, 251, 140, 140, 0, 0, 0}, {376, 199, 8, 8, 0, 0, 0}, {385, 147, 133, 133, 3, 2, 3}, {386, 132, 16, 16, 3, 4, 5}, {387, 4, 72, 72, 3, 4, 5}, {388, 8, 37, 37, 3, 32, 33}, {9000, 113, 137, 137, 0, 0, 0}, {9005, 117, 34, 34, 0, 0, 0}, {12900, 114, 44, 44, 3, 0, 1}, {12901, 254, 59, 59, 3, 30, 31}, {12902, 140, 53, 53, 3, 4, 5}, {12903, 249, 46, 46, 3, 0, 1}, {12904, 77, 54, 54, 3, 28, 29}, {12905, 49, 43, 43, 3, 0, 1}, {12915, 94, 249, 249, 3, 0, 1}, {12918, 139, 51, 51, 0, 0, 0}, {12919, 7, 18, 18, 3, 16, 17}, {12920, 20, 5, 5, 0, 0, 0}}
 #endif
 
 #include "../protocol.h"
@@ -47,7 +47,7 @@ typedef enum FIRMWARE_VERSION_TYPE
 } FIRMWARE_VERSION_TYPE;
 #endif
 
-/** @brief Flags to report failure cases over the high latency telemetry. */
+/** @brief Flags to report failure cases over the high latency telemtry. */
 #ifndef HAVE_ENUM_HL_FAILURE_FLAG
 #define HAVE_ENUM_HL_FAILURE_FLAG
 typedef enum HL_FAILURE_FLAG
@@ -60,7 +60,7 @@ typedef enum HL_FAILURE_FLAG
    HL_FAILURE_FLAG_3D_MAG=32, /* Magnetometer sensor failure. | */
    HL_FAILURE_FLAG_TERRAIN=64, /* Terrain subsystem failure. | */
    HL_FAILURE_FLAG_BATTERY=128, /* Battery failure/critical low battery. | */
-   HL_FAILURE_FLAG_RC_RECEIVER=256, /* RC receiver failure/no RC connection. | */
+   HL_FAILURE_FLAG_RC_RECEIVER=256, /* RC receiver failure/no rc connection. | */
    HL_FAILURE_FLAG_OFFBOARD_LINK=512, /* Offboard link failure. | */
    HL_FAILURE_FLAG_ENGINE=1024, /* Engine failure. | */
    HL_FAILURE_FLAG_GEOFENCE=2048, /* Geofence violation. | */
@@ -83,22 +83,23 @@ typedef enum MAV_GOTO
 } MAV_GOTO;
 #endif
 
-/** @brief Predefined OR-combined MAV_MODE_FLAG values. These can simplify using the flags when setting modes. Note that manual input is enabled in all modes as a safety override. */
+/** @brief These defines are predefined OR-combined mode flags. There is no need to use values from this enum, but it
+               simplifies the use of the mode flags. Note that manual input is enabled in all modes as a safety override. */
 #ifndef HAVE_ENUM_MAV_MODE
 #define HAVE_ENUM_MAV_MODE
 typedef enum MAV_MODE
 {
    MAV_MODE_PREFLIGHT=0, /* System is not ready to fly, booting, calibrating, etc. No flag is set. | */
-   MAV_MODE_MANUAL_DISARMED=64, /* System is allowed to be active, under manual (RC) control, no stabilization (MAV_MODE_FLAG_MANUAL_INPUT_ENABLED) | */
-   MAV_MODE_TEST_DISARMED=66, /* UNDEFINED mode. This solely depends on the autopilot - use with caution, intended for developers only. (MAV_MODE_FLAG_MANUAL_INPUT_ENABLED, MAV_MODE_FLAG_TEST_ENABLED). | */
-   MAV_MODE_STABILIZE_DISARMED=80, /* System is allowed to be active, under assisted RC control (MAV_MODE_FLAG_SAFETY_ARMED, MAV_MODE_FLAG_STABILIZE_ENABLED) | */
-   MAV_MODE_GUIDED_DISARMED=88, /* System is allowed to be active, under autonomous control, manual setpoint (MAV_MODE_FLAG_SAFETY_ARMED, MAV_MODE_FLAG_STABILIZE_ENABLED, MAV_MODE_FLAG_GUIDED_ENABLED) | */
-   MAV_MODE_AUTO_DISARMED=92, /* System is allowed to be active, under autonomous control and navigation (the trajectory is decided onboard and not pre-programmed by waypoints). (MAV_MODE_FLAG_SAFETY_ARMED, MAV_MODE_FLAG_STABILIZE_ENABLED, MAV_MODE_FLAG_GUIDED_ENABLED, MAV_MODE_FLAG_AUTO_ENABLED). | */
-   MAV_MODE_MANUAL_ARMED=192, /* System is allowed to be active, under manual (RC) control, no stabilization (MAV_MODE_FLAG_SAFETY_ARMED, MAV_MODE_FLAG_MANUAL_INPUT_ENABLED) | */
-   MAV_MODE_TEST_ARMED=194, /* UNDEFINED mode. This solely depends on the autopilot - use with caution, intended for developers only (MAV_MODE_FLAG_SAFETY_ARMED, MAV_MODE_FLAG_MANUAL_INPUT_ENABLED, MAV_MODE_FLAG_TEST_ENABLED) | */
-   MAV_MODE_STABILIZE_ARMED=208, /* System is allowed to be active, under assisted RC control (MAV_MODE_FLAG_SAFETY_ARMED, MAV_MODE_FLAG_MANUAL_INPUT_ENABLED, MAV_MODE_FLAG_STABILIZE_ENABLED) | */
-   MAV_MODE_GUIDED_ARMED=216, /* System is allowed to be active, under autonomous control, manual setpoint (MAV_MODE_FLAG_SAFETY_ARMED, MAV_MODE_FLAG_MANUAL_INPUT_ENABLED, MAV_MODE_FLAG_STABILIZE_ENABLED, MAV_MODE_FLAG_GUIDED_ENABLED) | */
-   MAV_MODE_AUTO_ARMED=220, /* System is allowed to be active, under autonomous control and navigation (the trajectory is decided onboard and not pre-programmed by waypoints). (MAV_MODE_FLAG_SAFETY_ARMED, MAV_MODE_FLAG_MANUAL_INPUT_ENABLED, MAV_MODE_FLAG_STABILIZE_ENABLED, MAV_MODE_FLAG_GUIDED_ENABLED,MAV_MODE_FLAG_AUTO_ENABLED). | */
+   MAV_MODE_MANUAL_DISARMED=64, /* System is allowed to be active, under manual (RC) control, no stabilization | */
+   MAV_MODE_TEST_DISARMED=66, /* UNDEFINED mode. This solely depends on the autopilot - use with caution, intended for developers only. | */
+   MAV_MODE_STABILIZE_DISARMED=80, /* System is allowed to be active, under assisted RC control. | */
+   MAV_MODE_GUIDED_DISARMED=88, /* System is allowed to be active, under autonomous control, manual setpoint | */
+   MAV_MODE_AUTO_DISARMED=92, /* System is allowed to be active, under autonomous control and navigation (the trajectory is decided onboard and not pre-programmed by waypoints) | */
+   MAV_MODE_MANUAL_ARMED=192, /* System is allowed to be active, under manual (RC) control, no stabilization | */
+   MAV_MODE_TEST_ARMED=194, /* UNDEFINED mode. This solely depends on the autopilot - use with caution, intended for developers only. | */
+   MAV_MODE_STABILIZE_ARMED=208, /* System is allowed to be active, under assisted RC control. | */
+   MAV_MODE_GUIDED_ARMED=216, /* System is allowed to be active, under autonomous control, manual setpoint | */
+   MAV_MODE_AUTO_ARMED=220, /* System is allowed to be active, under autonomous control and navigation (the trajectory is decided onboard and not pre-programmed by waypoints) | */
    MAV_MODE_ENUM_END=221, /*  | */
 } MAV_MODE;
 #endif
@@ -124,7 +125,7 @@ typedef enum MAV_SYS_STATUS_SENSOR
    MAV_SYS_STATUS_SENSOR_Z_ALTITUDE_CONTROL=8192, /* 0x2000 z/altitude control | */
    MAV_SYS_STATUS_SENSOR_XY_POSITION_CONTROL=16384, /* 0x4000 x/y position control | */
    MAV_SYS_STATUS_SENSOR_MOTOR_OUTPUTS=32768, /* 0x8000 motor outputs / control | */
-   MAV_SYS_STATUS_SENSOR_RC_RECEIVER=65536, /* 0x10000 RC receiver | */
+   MAV_SYS_STATUS_SENSOR_RC_RECEIVER=65536, /* 0x10000 rc receiver | */
    MAV_SYS_STATUS_SENSOR_3D_GYRO2=131072, /* 0x20000 2nd 3D gyro | */
    MAV_SYS_STATUS_SENSOR_3D_ACCEL2=262144, /* 0x40000 2nd 3D accelerometer | */
    MAV_SYS_STATUS_SENSOR_3D_MAG2=524288, /* 0x80000 2nd 3D magnetometer | */
@@ -139,25 +140,14 @@ typedef enum MAV_SYS_STATUS_SENSOR
    MAV_SYS_STATUS_PREARM_CHECK=268435456, /* 0x10000000 pre-arm check status. Always healthy when armed | */
    MAV_SYS_STATUS_OBSTACLE_AVOIDANCE=536870912, /* 0x20000000 Avoidance/collision prevention | */
    MAV_SYS_STATUS_SENSOR_PROPULSION=1073741824, /* 0x40000000 propulsion (actuator, esc, motor or propellor) | */
-   MAV_SYS_STATUS_EXTENSION_USED=2147483648, /* 0x80000000 Extended bit-field are used for further sensor status bits (needs to be set in onboard_control_sensors_present only) | */
-   MAV_SYS_STATUS_SENSOR_ENUM_END=2147483649, /*  | */
+   MAV_SYS_STATUS_SENSOR_ENUM_END=1073741825, /*  | */
 } MAV_SYS_STATUS_SENSOR;
 #endif
 
-/** @brief These encode the sensors whose status is sent as part of the SYS_STATUS message in the extended fields. */
-#ifndef HAVE_ENUM_MAV_SYS_STATUS_SENSOR_EXTENDED
-#define HAVE_ENUM_MAV_SYS_STATUS_SENSOR_EXTENDED
-typedef enum MAV_SYS_STATUS_SENSOR_EXTENDED
-{
-   MAV_SYS_STATUS_RECOVERY_SYSTEM=1, /* 0x01 Recovery system (parachute, balloon, retracts etc) | */
-   MAV_SYS_STATUS_SENSOR_EXTENDED_ENUM_END=2, /*  | */
-} MAV_SYS_STATUS_SENSOR_EXTENDED;
-#endif
-
-/** @brief Coordinate frames used by MAVLink. Not all frames are supported by all commands, messages, or vehicles.
-
+/** @brief Co-ordinate frames used by MAVLink. Not all frames are supported by all commands, messages, or vehicles.
+      
       Global frames use the following naming conventions:
-      - "GLOBAL": Global coordinate frame with WGS84 latitude/longitude and altitude positive over mean sea level (MSL) by default.
+      - "GLOBAL": Global co-ordinate frame with WGS84 latitude/longitude and altitude positive over mean sea level (MSL) by default. 
         The following modifiers may be used with "GLOBAL":
         - "RELATIVE_ALT": Altitude is relative to the vehicle home position rather than MSL.
         - "TERRAIN_ALT": Altitude is relative to ground level rather than MSL.
@@ -184,11 +174,11 @@ typedef enum MAV_FRAME
    MAV_FRAME_GLOBAL_INT=5, /* Global (WGS84) coordinate frame (scaled) + altitude relative to mean sea level (MSL). | */
    MAV_FRAME_GLOBAL_RELATIVE_ALT_INT=6, /* Global (WGS84) coordinate frame (scaled) + altitude relative to the home position.  | */
    MAV_FRAME_LOCAL_OFFSET_NED=7, /* NED local tangent frame (x: North, y: East, z: Down) with origin that travels with the vehicle. | */
-   MAV_FRAME_BODY_NED=8, /* Same as MAV_FRAME_LOCAL_NED when used to represent position values. Same as MAV_FRAME_BODY_FRD when used with velocity/acceleration values. | */
+   MAV_FRAME_BODY_NED=8, /* Same as MAV_FRAME_LOCAL_NED when used to represent position values. Same as MAV_FRAME_BODY_FRD when used with velocity/accelaration values. | */
    MAV_FRAME_BODY_OFFSET_NED=9, /* This is the same as MAV_FRAME_BODY_FRD. | */
    MAV_FRAME_GLOBAL_TERRAIN_ALT=10, /* Global (WGS84) coordinate frame with AGL altitude (altitude at ground level). | */
    MAV_FRAME_GLOBAL_TERRAIN_ALT_INT=11, /* Global (WGS84) coordinate frame (scaled) with AGL altitude (altitude at ground level). | */
-   MAV_FRAME_BODY_FRD=12, /* FRD local frame aligned to the vehicle's attitude (x: Forward, y: Right, z: Down) with an origin that travels with vehicle. | */
+   MAV_FRAME_BODY_FRD=12, /* FRD local tangent frame (x: Forward, y: Right, z: Down) with origin that travels with vehicle. The forward axis is aligned to the front of the vehicle in the horizontal plane. | */
    MAV_FRAME_RESERVED_13=13, /* MAV_FRAME_BODY_FLU - Body fixed frame of reference, Z-up (x: Forward, y: Left, z: Up). | */
    MAV_FRAME_RESERVED_14=14, /* MAV_FRAME_MOCAP_NED - Odometry local coordinate frame of data given by a motion capture system, Z-down (x: North, y: East, z: Down). | */
    MAV_FRAME_RESERVED_15=15, /* MAV_FRAME_MOCAP_ENU - Odometry local coordinate frame of data given by a motion capture system, Z-up (x: East, y: North, z: Up). | */
@@ -218,6 +208,20 @@ typedef enum MAVLINK_DATA_STREAM_TYPE
 #endif
 
 /** @brief  */
+#ifndef HAVE_ENUM_FENCE_ACTION
+#define HAVE_ENUM_FENCE_ACTION
+typedef enum FENCE_ACTION
+{
+   FENCE_ACTION_NONE=0, /* Disable fenced mode | */
+   FENCE_ACTION_GUIDED=1, /* Switched to guided mode to return point (fence point 0) | */
+   FENCE_ACTION_REPORT=2, /* Report fence breach, but don't take action | */
+   FENCE_ACTION_GUIDED_THR_PASS=3, /* Switched to guided mode to return point (fence point 0) with manual throttle control | */
+   FENCE_ACTION_RTL=4, /* Switch to RTL (return to launch) mode and head for the return point. | */
+   FENCE_ACTION_ENUM_END=5, /*  | */
+} FENCE_ACTION;
+#endif
+
+/** @brief  */
 #ifndef HAVE_ENUM_FENCE_BREACH
 #define HAVE_ENUM_FENCE_BREACH
 typedef enum FENCE_BREACH
@@ -242,14 +246,12 @@ typedef enum FENCE_MITIGATE
 } FENCE_MITIGATE;
 #endif
 
-/** @brief Fence types to enable or disable when using MAV_CMD_DO_FENCE_ENABLE.
-        Note that at least one of these flags must be set in MAV_CMD_DO_FENCE_ENABLE.param2.
-        If none are set, the flight stack will ignore the field and enable/disable its default set of fences (usually all of them).
-       */
+/** @brief  */
 #ifndef HAVE_ENUM_FENCE_TYPE
 #define HAVE_ENUM_FENCE_TYPE
 typedef enum FENCE_TYPE
 {
+   FENCE_TYPE_ALL=0, /* All fence types | */
    FENCE_TYPE_ALT_MAX=1, /* Maximum altitude fence | */
    FENCE_TYPE_CIRCLE=2, /* Circle fence | */
    FENCE_TYPE_POLYGON=4, /* Polygon fence | */
@@ -258,18 +260,18 @@ typedef enum FENCE_TYPE
 } FENCE_TYPE;
 #endif
 
-/** @brief Enumeration of possible mount operation modes. This message is used by obsolete/deprecated gimbal messages. */
+/** @brief Enumeration of possible mount operation modes */
 #ifndef HAVE_ENUM_MAV_MOUNT_MODE
 #define HAVE_ENUM_MAV_MOUNT_MODE
 typedef enum MAV_MOUNT_MODE
 {
-   MAV_MOUNT_MODE_RETRACT=0, /* Load and keep safe position (Roll,Pitch,Yaw) from permanent memory and stop stabilization | */
+   MAV_MOUNT_MODE_RETRACT=0, /* Load and keep safe position (Roll,Pitch,Yaw) from permant memory and stop stabilization | */
    MAV_MOUNT_MODE_NEUTRAL=1, /* Load and keep neutral position (Roll,Pitch,Yaw) from permanent memory. | */
    MAV_MOUNT_MODE_MAVLINK_TARGETING=2, /* Load neutral position and start MAVLink Roll,Pitch,Yaw control with stabilization | */
    MAV_MOUNT_MODE_RC_TARGETING=3, /* Load neutral position and start RC Roll,Pitch,Yaw control with stabilization | */
    MAV_MOUNT_MODE_GPS_POINT=4, /* Load neutral position and start to point to Lat,Lon,Alt | */
    MAV_MOUNT_MODE_SYSID_TARGET=5, /* Gimbal tracks system with specified system ID | */
-   MAV_MOUNT_MODE_HOME_LOCATION=6, /* Gimbal tracks home position | */
+   MAV_MOUNT_MODE_HOME_LOCATION=6, /* Gimbal tracks home location | */
    MAV_MOUNT_MODE_ENUM_END=7, /*  | */
 } MAV_MOUNT_MODE;
 #endif
@@ -290,7 +292,7 @@ typedef enum GIMBAL_DEVICE_CAP_FLAGS
    GIMBAL_DEVICE_CAP_FLAGS_HAS_YAW_AXIS=256, /* Gimbal device supports rotating around yaw axis. | */
    GIMBAL_DEVICE_CAP_FLAGS_HAS_YAW_FOLLOW=512, /* Gimbal device supports to follow a yaw angle relative to the vehicle (generally that's the default). | */
    GIMBAL_DEVICE_CAP_FLAGS_HAS_YAW_LOCK=1024, /* Gimbal device supports locking to an absolute heading, i.e., yaw angle relative to North (earth frame, often this is an option available). | */
-   GIMBAL_DEVICE_CAP_FLAGS_SUPPORTS_INFINITE_YAW=2048, /* Gimbal device supports yawing/panning infinitely (e.g. using slip disk). | */
+   GIMBAL_DEVICE_CAP_FLAGS_SUPPORTS_INFINITE_YAW=2048, /* Gimbal device supports yawing/panning infinetely (e.g. using slip disk). | */
    GIMBAL_DEVICE_CAP_FLAGS_SUPPORTS_YAW_IN_EARTH_FRAME=4096, /* Gimbal device supports yaw angles and angular velocities relative to North (earth frame). This usually requires support by an autopilot via AUTOPILOT_STATE_FOR_GIMBAL_DEVICE. Support can go on and off during runtime, which is reported by the flag GIMBAL_DEVICE_FLAGS_CAN_ACCEPT_YAW_IN_EARTH_FRAME. | */
    GIMBAL_DEVICE_CAP_FLAGS_HAS_RC_INPUTS=8192, /* Gimbal device supports radio control inputs as an alternative input for controlling the gimbal orientation. | */
    GIMBAL_DEVICE_CAP_FLAGS_ENUM_END=8193, /*  | */
@@ -327,7 +329,7 @@ typedef enum GIMBAL_MANAGER_CAP_FLAGS
 #define HAVE_ENUM_GIMBAL_DEVICE_FLAGS
 typedef enum GIMBAL_DEVICE_FLAGS
 {
-   GIMBAL_DEVICE_FLAGS_RETRACT=1, /* Set to retracted safe position (no stabilization), takes precedence over all other flags. | */
+   GIMBAL_DEVICE_FLAGS_RETRACT=1, /* Set to retracted safe position (no stabilization), takes presedence over all other flags. | */
    GIMBAL_DEVICE_FLAGS_NEUTRAL=2, /* Set to neutral/default position, taking precedence over all other flags except RETRACT. Neutral is commonly forward-facing and horizontal (roll=pitch=yaw=0) but may be any orientation. | */
    GIMBAL_DEVICE_FLAGS_ROLL_LOCK=4, /* Lock roll angle to absolute angle relative to horizon (not relative to vehicle). This is generally the default with a stabilizing gimbal. | */
    GIMBAL_DEVICE_FLAGS_PITCH_LOCK=8, /* Lock pitch angle to absolute angle relative to horizon (not relative to vehicle). This is generally the default with a stabilizing gimbal. | */
@@ -404,8 +406,7 @@ typedef enum WINCH_ACTIONS
    WINCH_RETRACT=6, /* Return the reel to the fully retracted position. Only action and instance command parameters are used, others are ignored. | */
    WINCH_LOAD_LINE=7, /* Load the reel with line. The winch will calculate the total loaded length and stop when the tension exceeds a threshold. Only action and instance command parameters are used, others are ignored. | */
    WINCH_ABANDON_LINE=8, /* Spool out the entire length of the line. Only action and instance command parameters are used, others are ignored. | */
-   WINCH_LOAD_PAYLOAD=9, /* Spools out just enough to present the hook to the user to load the payload. Only action and instance command parameters are used, others are ignored | */
-   WINCH_ACTIONS_ENUM_END=10, /*  | */
+   WINCH_ACTIONS_ENUM_END=9, /*  | */
 } WINCH_ACTIONS;
 #endif
 
@@ -434,37 +435,6 @@ typedef enum UAVCAN_NODE_MODE
    UAVCAN_NODE_MODE_OFFLINE=7, /* The node is no longer available online. | */
    UAVCAN_NODE_MODE_ENUM_END=8, /*  | */
 } UAVCAN_NODE_MODE;
-#endif
-
-/** @brief Indicates the ESC connection type. */
-#ifndef HAVE_ENUM_ESC_CONNECTION_TYPE
-#define HAVE_ENUM_ESC_CONNECTION_TYPE
-typedef enum ESC_CONNECTION_TYPE
-{
-   ESC_CONNECTION_TYPE_PPM=0, /* Traditional PPM ESC. | */
-   ESC_CONNECTION_TYPE_SERIAL=1, /* Serial Bus connected ESC. | */
-   ESC_CONNECTION_TYPE_ONESHOT=2, /* One Shot PPM ESC. | */
-   ESC_CONNECTION_TYPE_I2C=3, /* I2C ESC. | */
-   ESC_CONNECTION_TYPE_CAN=4, /* CAN-Bus ESC. | */
-   ESC_CONNECTION_TYPE_DSHOT=5, /* DShot ESC. | */
-   ESC_CONNECTION_TYPE_ENUM_END=6, /*  | */
-} ESC_CONNECTION_TYPE;
-#endif
-
-/** @brief Flags to report ESC failures. */
-#ifndef HAVE_ENUM_ESC_FAILURE_FLAGS
-#define HAVE_ENUM_ESC_FAILURE_FLAGS
-typedef enum ESC_FAILURE_FLAGS
-{
-   ESC_FAILURE_OVER_CURRENT=1, /* Over current failure. | */
-   ESC_FAILURE_OVER_VOLTAGE=2, /* Over voltage failure. | */
-   ESC_FAILURE_OVER_TEMPERATURE=4, /* Over temperature failure. | */
-   ESC_FAILURE_OVER_RPM=8, /* Over RPM failure. | */
-   ESC_FAILURE_INCONSISTENT_CMD=16, /* Inconsistent command failure i.e. out of bounds. | */
-   ESC_FAILURE_MOTOR_STUCK=32, /* Motor stuck failure. | */
-   ESC_FAILURE_GENERIC=64, /* Generic ESC failure. | */
-   ESC_FAILURE_FLAGS_ENUM_END=65, /*  | */
-} ESC_FAILURE_FLAGS;
 #endif
 
 /** @brief Flags to indicate the status of camera storage. */
@@ -511,189 +481,17 @@ typedef enum STORAGE_USAGE_FLAG
 } STORAGE_USAGE_FLAG;
 #endif
 
-/** @brief Yaw behaviour during orbit flight. */
-#ifndef HAVE_ENUM_ORBIT_YAW_BEHAVIOUR
-#define HAVE_ENUM_ORBIT_YAW_BEHAVIOUR
-typedef enum ORBIT_YAW_BEHAVIOUR
-{
-   ORBIT_YAW_BEHAVIOUR_HOLD_FRONT_TO_CIRCLE_CENTER=0, /* Vehicle front points to the center (default). | */
-   ORBIT_YAW_BEHAVIOUR_HOLD_INITIAL_HEADING=1, /* Vehicle front holds heading when message received. | */
-   ORBIT_YAW_BEHAVIOUR_UNCONTROLLED=2, /* Yaw uncontrolled. | */
-   ORBIT_YAW_BEHAVIOUR_HOLD_FRONT_TANGENT_TO_CIRCLE=3, /* Vehicle front follows flight path (tangential to circle). | */
-   ORBIT_YAW_BEHAVIOUR_RC_CONTROLLED=4, /* Yaw controlled by RC input. | */
-   ORBIT_YAW_BEHAVIOUR_UNCHANGED=5, /* Vehicle uses current yaw behaviour (unchanged). The vehicle-default yaw behaviour is used if this value is specified when orbit is first commanded. | */
-   ORBIT_YAW_BEHAVIOUR_ENUM_END=6, /*  | */
-} ORBIT_YAW_BEHAVIOUR;
-#endif
-
-/** @brief Possible responses from a WIFI_CONFIG_AP message. */
-#ifndef HAVE_ENUM_WIFI_CONFIG_AP_RESPONSE
-#define HAVE_ENUM_WIFI_CONFIG_AP_RESPONSE
-typedef enum WIFI_CONFIG_AP_RESPONSE
-{
-   WIFI_CONFIG_AP_RESPONSE_UNDEFINED=0, /* Undefined response. Likely an indicative of a system that doesn't support this request. | */
-   WIFI_CONFIG_AP_RESPONSE_ACCEPTED=1, /* Changes accepted. | */
-   WIFI_CONFIG_AP_RESPONSE_REJECTED=2, /* Changes rejected. | */
-   WIFI_CONFIG_AP_RESPONSE_MODE_ERROR=3, /* Invalid Mode. | */
-   WIFI_CONFIG_AP_RESPONSE_SSID_ERROR=4, /* Invalid SSID. | */
-   WIFI_CONFIG_AP_RESPONSE_PASSWORD_ERROR=5, /* Invalid Password. | */
-   WIFI_CONFIG_AP_RESPONSE_ENUM_END=6, /*  | */
-} WIFI_CONFIG_AP_RESPONSE;
-#endif
-
-/** @brief Possible responses from a CELLULAR_CONFIG message. */
-#ifndef HAVE_ENUM_CELLULAR_CONFIG_RESPONSE
-#define HAVE_ENUM_CELLULAR_CONFIG_RESPONSE
-typedef enum CELLULAR_CONFIG_RESPONSE
-{
-   CELLULAR_CONFIG_RESPONSE_ACCEPTED=0, /* Changes accepted. | */
-   CELLULAR_CONFIG_RESPONSE_APN_ERROR=1, /* Invalid APN. | */
-   CELLULAR_CONFIG_RESPONSE_PIN_ERROR=2, /* Invalid PIN. | */
-   CELLULAR_CONFIG_RESPONSE_REJECTED=3, /* Changes rejected. | */
-   CELLULAR_CONFIG_BLOCKED_PUK_REQUIRED=4, /* PUK is required to unblock SIM card. | */
-   CELLULAR_CONFIG_RESPONSE_ENUM_END=5, /*  | */
-} CELLULAR_CONFIG_RESPONSE;
-#endif
-
-/** @brief WiFi Mode. */
-#ifndef HAVE_ENUM_WIFI_CONFIG_AP_MODE
-#define HAVE_ENUM_WIFI_CONFIG_AP_MODE
-typedef enum WIFI_CONFIG_AP_MODE
-{
-   WIFI_CONFIG_AP_MODE_UNDEFINED=0, /* WiFi mode is undefined. | */
-   WIFI_CONFIG_AP_MODE_AP=1, /* WiFi configured as an access point. | */
-   WIFI_CONFIG_AP_MODE_STATION=2, /* WiFi configured as a station connected to an existing local WiFi network. | */
-   WIFI_CONFIG_AP_MODE_DISABLED=3, /* WiFi disabled. | */
-   WIFI_CONFIG_AP_MODE_ENUM_END=4, /*  | */
-} WIFI_CONFIG_AP_MODE;
-#endif
-
-/** @brief Supported component metadata types. These are used in the "general" metadata file returned by COMPONENT_METADATA to provide information about supported metadata types. The types are not used directly in MAVLink messages. */
-#ifndef HAVE_ENUM_COMP_METADATA_TYPE
-#define HAVE_ENUM_COMP_METADATA_TYPE
-typedef enum COMP_METADATA_TYPE
-{
-   COMP_METADATA_TYPE_GENERAL=0, /* General information about the component. General metadata includes information about other metadata types supported by the component. Files of this type must be supported, and must be downloadable from vehicle using a MAVLink FTP URI. | */
-   COMP_METADATA_TYPE_PARAMETER=1, /* Parameter meta data. | */
-   COMP_METADATA_TYPE_COMMANDS=2, /* Meta data that specifies which commands and command parameters the vehicle supports. (WIP) | */
-   COMP_METADATA_TYPE_PERIPHERALS=3, /* Meta data that specifies external non-MAVLink peripherals. | */
-   COMP_METADATA_TYPE_EVENTS=4, /* Meta data for the events interface. | */
-   COMP_METADATA_TYPE_ACTUATORS=5, /* Meta data for actuator configuration (motors, servos and vehicle geometry) and testing. | */
-   COMP_METADATA_TYPE_ENUM_END=6, /*  | */
-} COMP_METADATA_TYPE;
-#endif
-
-/** @brief Actuator configuration, used to change a setting on an actuator. Component information metadata can be used to know which outputs support which commands. */
-#ifndef HAVE_ENUM_ACTUATOR_CONFIGURATION
-#define HAVE_ENUM_ACTUATOR_CONFIGURATION
-typedef enum ACTUATOR_CONFIGURATION
-{
-   ACTUATOR_CONFIGURATION_NONE=0, /* Do nothing. | */
-   ACTUATOR_CONFIGURATION_BEEP=1, /* Command the actuator to beep now. | */
-   ACTUATOR_CONFIGURATION_3D_MODE_ON=2, /* Permanently set the actuator (ESC) to 3D mode (reversible thrust). | */
-   ACTUATOR_CONFIGURATION_3D_MODE_OFF=3, /* Permanently set the actuator (ESC) to non 3D mode (non-reversible thrust). | */
-   ACTUATOR_CONFIGURATION_SPIN_DIRECTION1=4, /* Permanently set the actuator (ESC) to spin direction 1 (which can be clockwise or counter-clockwise). | */
-   ACTUATOR_CONFIGURATION_SPIN_DIRECTION2=5, /* Permanently set the actuator (ESC) to spin direction 2 (opposite of direction 1). | */
-   ACTUATOR_CONFIGURATION_ENUM_END=6, /*  | */
-} ACTUATOR_CONFIGURATION;
-#endif
-
-/** @brief Actuator output function. Values greater or equal to 1000 are autopilot-specific. */
-#ifndef HAVE_ENUM_ACTUATOR_OUTPUT_FUNCTION
-#define HAVE_ENUM_ACTUATOR_OUTPUT_FUNCTION
-typedef enum ACTUATOR_OUTPUT_FUNCTION
-{
-   ACTUATOR_OUTPUT_FUNCTION_NONE=0, /* No function (disabled). | */
-   ACTUATOR_OUTPUT_FUNCTION_MOTOR1=1, /* Motor 1 | */
-   ACTUATOR_OUTPUT_FUNCTION_MOTOR2=2, /* Motor 2 | */
-   ACTUATOR_OUTPUT_FUNCTION_MOTOR3=3, /* Motor 3 | */
-   ACTUATOR_OUTPUT_FUNCTION_MOTOR4=4, /* Motor 4 | */
-   ACTUATOR_OUTPUT_FUNCTION_MOTOR5=5, /* Motor 5 | */
-   ACTUATOR_OUTPUT_FUNCTION_MOTOR6=6, /* Motor 6 | */
-   ACTUATOR_OUTPUT_FUNCTION_MOTOR7=7, /* Motor 7 | */
-   ACTUATOR_OUTPUT_FUNCTION_MOTOR8=8, /* Motor 8 | */
-   ACTUATOR_OUTPUT_FUNCTION_MOTOR9=9, /* Motor 9 | */
-   ACTUATOR_OUTPUT_FUNCTION_MOTOR10=10, /* Motor 10 | */
-   ACTUATOR_OUTPUT_FUNCTION_MOTOR11=11, /* Motor 11 | */
-   ACTUATOR_OUTPUT_FUNCTION_MOTOR12=12, /* Motor 12 | */
-   ACTUATOR_OUTPUT_FUNCTION_MOTOR13=13, /* Motor 13 | */
-   ACTUATOR_OUTPUT_FUNCTION_MOTOR14=14, /* Motor 14 | */
-   ACTUATOR_OUTPUT_FUNCTION_MOTOR15=15, /* Motor 15 | */
-   ACTUATOR_OUTPUT_FUNCTION_MOTOR16=16, /* Motor 16 | */
-   ACTUATOR_OUTPUT_FUNCTION_SERVO1=33, /* Servo 1 | */
-   ACTUATOR_OUTPUT_FUNCTION_SERVO2=34, /* Servo 2 | */
-   ACTUATOR_OUTPUT_FUNCTION_SERVO3=35, /* Servo 3 | */
-   ACTUATOR_OUTPUT_FUNCTION_SERVO4=36, /* Servo 4 | */
-   ACTUATOR_OUTPUT_FUNCTION_SERVO5=37, /* Servo 5 | */
-   ACTUATOR_OUTPUT_FUNCTION_SERVO6=38, /* Servo 6 | */
-   ACTUATOR_OUTPUT_FUNCTION_SERVO7=39, /* Servo 7 | */
-   ACTUATOR_OUTPUT_FUNCTION_SERVO8=40, /* Servo 8 | */
-   ACTUATOR_OUTPUT_FUNCTION_SERVO9=41, /* Servo 9 | */
-   ACTUATOR_OUTPUT_FUNCTION_SERVO10=42, /* Servo 10 | */
-   ACTUATOR_OUTPUT_FUNCTION_SERVO11=43, /* Servo 11 | */
-   ACTUATOR_OUTPUT_FUNCTION_SERVO12=44, /* Servo 12 | */
-   ACTUATOR_OUTPUT_FUNCTION_SERVO13=45, /* Servo 13 | */
-   ACTUATOR_OUTPUT_FUNCTION_SERVO14=46, /* Servo 14 | */
-   ACTUATOR_OUTPUT_FUNCTION_SERVO15=47, /* Servo 15 | */
-   ACTUATOR_OUTPUT_FUNCTION_SERVO16=48, /* Servo 16 | */
-   ACTUATOR_OUTPUT_FUNCTION_ENUM_END=49, /*  | */
-} ACTUATOR_OUTPUT_FUNCTION;
-#endif
-
-/** @brief Axes that will be autotuned by MAV_CMD_DO_AUTOTUNE_ENABLE.
-        Note that at least one flag must be set in MAV_CMD_DO_AUTOTUNE_ENABLE.param2: if none are set, the flight stack will tune its default set of axes. */
+/** @brief Enable axes that will be tuned via autotuning. Used in MAV_CMD_DO_AUTOTUNE_ENABLE. */
 #ifndef HAVE_ENUM_AUTOTUNE_AXIS
 #define HAVE_ENUM_AUTOTUNE_AXIS
 typedef enum AUTOTUNE_AXIS
 {
+   AUTOTUNE_AXIS_DEFAULT=0, /* Flight stack tunes axis according to its default settings. | */
    AUTOTUNE_AXIS_ROLL=1, /* Autotune roll axis. | */
    AUTOTUNE_AXIS_PITCH=2, /* Autotune pitch axis. | */
    AUTOTUNE_AXIS_YAW=4, /* Autotune yaw axis. | */
    AUTOTUNE_AXIS_ENUM_END=5, /*  | */
 } AUTOTUNE_AXIS;
-#endif
-
-/** @brief 
-        Actions for reading/writing parameters between persistent and volatile storage when using MAV_CMD_PREFLIGHT_STORAGE.
-        (Commonly parameters are loaded from persistent storage (flash/EEPROM) into volatile storage (RAM) on startup and written back when they are changed.)
-       */
-#ifndef HAVE_ENUM_PREFLIGHT_STORAGE_PARAMETER_ACTION
-#define HAVE_ENUM_PREFLIGHT_STORAGE_PARAMETER_ACTION
-typedef enum PREFLIGHT_STORAGE_PARAMETER_ACTION
-{
-   PARAM_READ_PERSISTENT=0, /* Read all parameters from persistent storage. Replaces values in volatile storage. | */
-   PARAM_WRITE_PERSISTENT=1, /* Write all parameter values to persistent storage (flash/EEPROM) | */
-   PARAM_RESET_CONFIG_DEFAULT=2, /* Reset all user configurable parameters to their default value (including airframe selection, sensor calibration data, safety settings, and so on). Does not reset values that contain operation counters and vehicle computed statistics. | */
-   PARAM_RESET_SENSOR_DEFAULT=3, /* Reset only sensor calibration parameters to factory defaults (or firmware default if not available) | */
-   PARAM_RESET_ALL_DEFAULT=4, /* Reset all parameters, including operation counters, to default values | */
-   PREFLIGHT_STORAGE_PARAMETER_ACTION_ENUM_END=5, /*  | */
-} PREFLIGHT_STORAGE_PARAMETER_ACTION;
-#endif
-
-/** @brief 
-        Actions for reading and writing plan information (mission, rally points, geofence) between persistent and volatile storage when using MAV_CMD_PREFLIGHT_STORAGE.
-        (Commonly missions are loaded from persistent storage (flash/EEPROM) into volatile storage (RAM) on startup and written back when they are changed.)
-       */
-#ifndef HAVE_ENUM_PREFLIGHT_STORAGE_MISSION_ACTION
-#define HAVE_ENUM_PREFLIGHT_STORAGE_MISSION_ACTION
-typedef enum PREFLIGHT_STORAGE_MISSION_ACTION
-{
-   MISSION_READ_PERSISTENT=0, /* Read current mission data from persistent storage | */
-   MISSION_WRITE_PERSISTENT=1, /* Write current mission data to persistent storage | */
-   MISSION_RESET_DEFAULT=2, /* Erase all mission data stored on the vehicle (both persistent and volatile storage) | */
-   PREFLIGHT_STORAGE_MISSION_ACTION_ENUM_END=3, /*  | */
-} PREFLIGHT_STORAGE_MISSION_ACTION;
-#endif
-
-/** @brief Specifies the conditions under which the MAV_CMD_PREFLIGHT_REBOOT_SHUTDOWN command should be accepted. */
-#ifndef HAVE_ENUM_REBOOT_SHUTDOWN_CONDITIONS
-#define HAVE_ENUM_REBOOT_SHUTDOWN_CONDITIONS
-typedef enum REBOOT_SHUTDOWN_CONDITIONS
-{
-   REBOOT_SHUTDOWN_CONDITIONS_SAFETY_INTERLOCKED=0, /* Reboot/Shutdown only if allowed by safety checks, such as being landed. | */
-   REBOOT_SHUTDOWN_CONDITIONS_FORCE=20190226, /* Force reboot/shutdown of the autopilot/component regardless of system state. | */
-   REBOOT_SHUTDOWN_CONDITIONS_ENUM_END=20190227, /*  | */
-} REBOOT_SHUTDOWN_CONDITIONS;
 #endif
 
 /** @brief A data stream is not a fixed set of messages, but rather a
@@ -708,7 +506,7 @@ typedef enum MAV_DATA_STREAM
    MAV_DATA_STREAM_EXTENDED_STATUS=2, /* Enable GPS_STATUS, CONTROL_STATUS, AUX_STATUS | */
    MAV_DATA_STREAM_RC_CHANNELS=3, /* Enable RC_CHANNELS_SCALED, RC_CHANNELS_RAW, SERVO_OUTPUT_RAW | */
    MAV_DATA_STREAM_RAW_CONTROLLER=4, /* Enable ATTITUDE_CONTROLLER_OUTPUT, POSITION_CONTROLLER_OUTPUT, NAV_CONTROLLER_OUTPUT. | */
-   MAV_DATA_STREAM_POSITION=6, /* Enable LOCAL_POSITION, GLOBAL_POSITION_INT messages. | */
+   MAV_DATA_STREAM_POSITION=6, /* Enable LOCAL_POSITION, GLOBAL_POSITION/GLOBAL_POSITION_INT messages. | */
    MAV_DATA_STREAM_EXTRA1=10, /* Dependent on the autopilot | */
    MAV_DATA_STREAM_EXTRA2=11, /* Dependent on the autopilot | */
    MAV_DATA_STREAM_EXTRA3=12, /* Dependent on the autopilot | */
@@ -781,12 +579,10 @@ typedef enum MAV_RESULT
    MAV_RESULT_DENIED=2, /* Command is invalid (is supported but has invalid parameters). Retrying same command and parameters will not work. | */
    MAV_RESULT_UNSUPPORTED=3, /* Command is not supported (unknown). | */
    MAV_RESULT_FAILED=4, /* Command is valid, but execution has failed. This is used to indicate any non-temporary or unexpected problem, i.e. any problem that must be fixed before the command can succeed/be retried. For example, attempting to write a file when out of memory, attempting to arm when sensors are not calibrated, etc. | */
-   MAV_RESULT_IN_PROGRESS=5, /* Command is valid and is being executed. This will be followed by further progress updates, i.e. the component may send further COMMAND_ACK messages with result MAV_RESULT_IN_PROGRESS (at a rate decided by the implementation), and must terminate by sending a COMMAND_ACK message with final result of the operation. The COMMAND_ACK.progress field can be used to indicate the progress of the operation. | */
-   MAV_RESULT_CANCELLED=6, /* Command has been cancelled (as a result of receiving a COMMAND_CANCEL message). | */
+   MAV_RESULT_IN_PROGRESS=5, /* Command is valid and is being executed. This will be followed by further progress updates, i.e. the component may send further COMMAND_ACK messages with result MAV_RESULT_IN_PROGRESS (at a rate decided by the implementation), and must terminate by sending a COMMAND_ACK message with final result of the operation. The COMMAND_ACK.progress field can be used to indicate the progress of the operation. There is no need for the sender to retry the command, but if done during execution, the component will return MAV_RESULT_IN_PROGRESS with an updated progress. | */
    MAV_RESULT_COMMAND_LONG_ONLY=7, /* Command is only accepted when sent as a COMMAND_LONG. | */
    MAV_RESULT_COMMAND_INT_ONLY=8, /* Command is only accepted when sent as a COMMAND_INT. | */
-   MAV_RESULT_COMMAND_UNSUPPORTED_MAV_FRAME=9, /* Command is invalid because a frame is required and the specified frame is not supported. | */
-   MAV_RESULT_ENUM_END=10, /*  | */
+   MAV_RESULT_ENUM_END=9, /*  | */
 } MAV_RESULT;
 #endif
 
@@ -955,37 +751,24 @@ typedef enum MAV_SENSOR_ORIENTATION
 #define HAVE_ENUM_MAV_PROTOCOL_CAPABILITY
 typedef enum MAV_PROTOCOL_CAPABILITY
 {
-   MAV_PROTOCOL_CAPABILITY_MISSION_FLOAT=1, /* Autopilot supports the MISSION_ITEM float message type.
-          Note that MISSION_ITEM is deprecated, and autopilots should use MISSION_INT instead.
-         | */
+   MAV_PROTOCOL_CAPABILITY_MISSION_FLOAT=1, /* Autopilot supports MISSION float message type. | */
    MAV_PROTOCOL_CAPABILITY_PARAM_FLOAT=2, /* Autopilot supports the new param float message type. | */
-   MAV_PROTOCOL_CAPABILITY_MISSION_INT=4, /* Autopilot supports MISSION_ITEM_INT scaled integer message type.
-          Note that this flag must always be set if missions are supported, because missions must always use MISSION_ITEM_INT (rather than MISSION_ITEM, which is deprecated).
-         | */
+   MAV_PROTOCOL_CAPABILITY_MISSION_INT=4, /* Autopilot supports MISSION_ITEM_INT scaled integer message type. | */
    MAV_PROTOCOL_CAPABILITY_COMMAND_INT=8, /* Autopilot supports COMMAND_INT scaled integer message type. | */
-   MAV_PROTOCOL_CAPABILITY_PARAM_ENCODE_BYTEWISE=16, /* Parameter protocol uses byte-wise encoding of parameter values into param_value (float) fields: https://mavlink.io/en/services/parameter.html#parameter-encoding.
-          Note that either this flag or MAV_PROTOCOL_CAPABILITY_PARAM_ENCODE_C_CAST should be set if the parameter protocol is supported.
-         | */
+   MAV_PROTOCOL_CAPABILITY_PARAM_UNION=16, /* Autopilot supports the new param union message type. | */
    MAV_PROTOCOL_CAPABILITY_FTP=32, /* Autopilot supports the File Transfer Protocol v1: https://mavlink.io/en/services/ftp.html. | */
    MAV_PROTOCOL_CAPABILITY_SET_ATTITUDE_TARGET=64, /* Autopilot supports commanding attitude offboard. | */
    MAV_PROTOCOL_CAPABILITY_SET_POSITION_TARGET_LOCAL_NED=128, /* Autopilot supports commanding position and velocity targets in local NED frame. | */
    MAV_PROTOCOL_CAPABILITY_SET_POSITION_TARGET_GLOBAL_INT=256, /* Autopilot supports commanding position and velocity targets in global scaled integers. | */
    MAV_PROTOCOL_CAPABILITY_TERRAIN=512, /* Autopilot supports terrain protocol / data handling. | */
-   MAV_PROTOCOL_CAPABILITY_RESERVED3=1024, /* Reserved for future use. | */
+   MAV_PROTOCOL_CAPABILITY_SET_ACTUATOR_TARGET=1024, /* Autopilot supports direct actuator control. | */
    MAV_PROTOCOL_CAPABILITY_FLIGHT_TERMINATION=2048, /* Autopilot supports the MAV_CMD_DO_FLIGHTTERMINATION command (flight termination). | */
    MAV_PROTOCOL_CAPABILITY_COMPASS_CALIBRATION=4096, /* Autopilot supports onboard compass calibration. | */
    MAV_PROTOCOL_CAPABILITY_MAVLINK2=8192, /* Autopilot supports MAVLink version 2. | */
    MAV_PROTOCOL_CAPABILITY_MISSION_FENCE=16384, /* Autopilot supports mission fence protocol. | */
    MAV_PROTOCOL_CAPABILITY_MISSION_RALLY=32768, /* Autopilot supports mission rally point protocol. | */
-   MAV_PROTOCOL_CAPABILITY_RESERVED2=65536, /* Reserved for future use. | */
-   MAV_PROTOCOL_CAPABILITY_PARAM_ENCODE_C_CAST=131072, /* Parameter protocol uses C-cast of parameter values to set the param_value (float) fields: https://mavlink.io/en/services/parameter.html#parameter-encoding.
-          Note that either this flag or MAV_PROTOCOL_CAPABILITY_PARAM_ENCODE_BYTEWISE should be set if the parameter protocol is supported.
-         | */
-   MAV_PROTOCOL_CAPABILITY_COMPONENT_IMPLEMENTS_GIMBAL_MANAGER=262144, /* This component implements/is a gimbal manager. This means the GIMBAL_MANAGER_INFORMATION, and other messages can be requested.
-         | */
-   MAV_PROTOCOL_CAPABILITY_COMPONENT_ACCEPTS_GCS_CONTROL=524288, /* Component supports locking control to a particular GCS independent of its system (via MAV_CMD_REQUEST_OPERATOR_CONTROL). | */
-   MAV_PROTOCOL_CAPABILITY_GRIPPER=1048576, /* Autopilot has a connected gripper. MAVLink Grippers would set MAV_TYPE_GRIPPER instead. | */
-   MAV_PROTOCOL_CAPABILITY_ENUM_END=1048577, /*  | */
+   MAV_PROTOCOL_CAPABILITY_FLIGHT_INFORMATION=65536, /* Autopilot supports the flight information protocol. | */
+   MAV_PROTOCOL_CAPABILITY_ENUM_END=65537, /*  | */
 } MAV_PROTOCOL_CAPABILITY;
 #endif
 
@@ -1043,7 +826,7 @@ typedef enum MAV_BATTERY_FUNCTION
    MAV_BATTERY_FUNCTION_ALL=1, /* Battery supports all flight systems | */
    MAV_BATTERY_FUNCTION_PROPULSION=2, /* Battery for the propulsion system | */
    MAV_BATTERY_FUNCTION_AVIONICS=3, /* Avionics battery | */
-   MAV_BATTERY_FUNCTION_PAYLOAD=4, /* Payload battery | */
+   MAV_BATTERY_TYPE_PAYLOAD=4, /* Payload battery | */
    MAV_BATTERY_FUNCTION_ENUM_END=5, /*  | */
 } MAV_BATTERY_FUNCTION;
 #endif
@@ -1093,18 +876,6 @@ typedef enum MAV_BATTERY_FAULT
    BATTERY_FAULT_INCOMPATIBLE_CELLS_CONFIGURATION=256, /* Battery is not compatible due to cell configuration (e.g. 5s1p when vehicle requires 6s). | */
    MAV_BATTERY_FAULT_ENUM_END=257, /*  | */
 } MAV_BATTERY_FAULT;
-#endif
-
-/** @brief Fuel types for use in FUEL_TYPE. Fuel types specify the units for the maximum, available and consumed fuel, and for the flow rates. */
-#ifndef HAVE_ENUM_MAV_FUEL_TYPE
-#define HAVE_ENUM_MAV_FUEL_TYPE
-typedef enum MAV_FUEL_TYPE
-{
-   MAV_FUEL_TYPE_UNKNOWN=0, /* Not specified. Fuel levels are normalized (i.e. maximum is 1, and other levels are relative to 1). | */
-   MAV_FUEL_TYPE_LIQUID=1, /* A generic liquid fuel. Fuel levels are in millilitres (ml). Fuel rates are in millilitres/second. | */
-   MAV_FUEL_TYPE_GAS=2, /* A gas tank. Fuel levels are in kilo-Pascal (kPa), and flow rates are in milliliters per second (ml/s). | */
-   MAV_FUEL_TYPE_ENUM_END=3, /*  | */
-} MAV_FUEL_TYPE;
 #endif
 
 /** @brief Flags to report status/failure cases for a power generator (used in GENERATOR_STATUS). Note that FAULTS are conditions that cause the generator to fail. Warnings are conditions that require attention before the next use (they indicate the system is not operating properly). */
@@ -1232,8 +1003,7 @@ typedef enum ADSB_FLAGS
 typedef enum MAV_DO_REPOSITION_FLAGS
 {
    MAV_DO_REPOSITION_FLAGS_CHANGE_MODE=1, /* The aircraft should immediately transition into guided. This should not be set for follow me applications | */
-   MAV_DO_REPOSITION_FLAGS_RELATIVE_YAW=2, /* Yaw relative to the vehicle current heading (if not set, relative to North). | */
-   MAV_DO_REPOSITION_FLAGS_ENUM_END=3, /*  | */
+   MAV_DO_REPOSITION_FLAGS_ENUM_END=2, /*  | */
 } MAV_DO_REPOSITION_FLAGS;
 #endif
 
@@ -1425,8 +1195,7 @@ typedef enum CAMERA_CAP_FLAGS
    CAMERA_CAP_FLAGS_HAS_TRACKING_POINT=512, /* Camera supports tracking of a point on the camera view. | */
    CAMERA_CAP_FLAGS_HAS_TRACKING_RECTANGLE=1024, /* Camera supports tracking of a selection rectangle on the camera view. | */
    CAMERA_CAP_FLAGS_HAS_TRACKING_GEO_STATUS=2048, /* Camera supports tracking geo status (CAMERA_TRACKING_GEO_STATUS). | */
-   CAMERA_CAP_FLAGS_HAS_THERMAL_RANGE=4096, /* Camera supports absolute thermal range (request CAMERA_THERMAL_RANGE with MAV_CMD_REQUEST_MESSAGE). | */
-   CAMERA_CAP_FLAGS_ENUM_END=4097, /*  | */
+   CAMERA_CAP_FLAGS_ENUM_END=2049, /*  | */
 } CAMERA_CAP_FLAGS;
 #endif
 
@@ -1437,8 +1206,7 @@ typedef enum VIDEO_STREAM_STATUS_FLAGS
 {
    VIDEO_STREAM_STATUS_FLAGS_RUNNING=1, /* Stream is active (running) | */
    VIDEO_STREAM_STATUS_FLAGS_THERMAL=2, /* Stream is thermal imaging | */
-   VIDEO_STREAM_STATUS_FLAGS_THERMAL_RANGE_ENABLED=4, /* Stream can report absolute thermal range (see CAMERA_THERMAL_RANGE). | */
-   VIDEO_STREAM_STATUS_FLAGS_ENUM_END=5, /*  | */
+   VIDEO_STREAM_STATUS_FLAGS_ENUM_END=3, /*  | */
 } VIDEO_STREAM_STATUS_FLAGS;
 #endif
 
@@ -1450,21 +1218,9 @@ typedef enum VIDEO_STREAM_TYPE
    VIDEO_STREAM_TYPE_RTSP=0, /* Stream is RTSP | */
    VIDEO_STREAM_TYPE_RTPUDP=1, /* Stream is RTP UDP (URI gives the port number) | */
    VIDEO_STREAM_TYPE_TCP_MPEG=2, /* Stream is MPEG on TCP | */
-   VIDEO_STREAM_TYPE_MPEG_TS=3, /* Stream is MPEG TS (URI gives the port number) | */
+   VIDEO_STREAM_TYPE_MPEG_TS_H264=3, /* Stream is h.264 on MPEG TS (URI gives the port number) | */
    VIDEO_STREAM_TYPE_ENUM_END=4, /*  | */
 } VIDEO_STREAM_TYPE;
-#endif
-
-/** @brief Video stream encodings */
-#ifndef HAVE_ENUM_VIDEO_STREAM_ENCODING
-#define HAVE_ENUM_VIDEO_STREAM_ENCODING
-typedef enum VIDEO_STREAM_ENCODING
-{
-   VIDEO_STREAM_ENCODING_UNKNOWN=0, /* Stream encoding is unknown | */
-   VIDEO_STREAM_ENCODING_H264=1, /* Stream encoding is H.264 | */
-   VIDEO_STREAM_ENCODING_H265=2, /* Stream encoding is H.265 | */
-   VIDEO_STREAM_ENCODING_ENUM_END=3, /*  | */
-} VIDEO_STREAM_ENCODING;
 #endif
 
 /** @brief Camera tracking status flags */
@@ -1496,6 +1252,7 @@ typedef enum CAMERA_TRACKING_MODE
 #define HAVE_ENUM_CAMERA_TRACKING_TARGET_DATA
 typedef enum CAMERA_TRACKING_TARGET_DATA
 {
+   CAMERA_TRACKING_TARGET_DATA_NONE=0, /* No target data | */
    CAMERA_TRACKING_TARGET_DATA_EMBEDDED=1, /* Target data embedded in image data (proprietary) | */
    CAMERA_TRACKING_TARGET_DATA_RENDERED=2, /* Target data rendered in image | */
    CAMERA_TRACKING_TARGET_DATA_IN_STATUS=4, /* Target data within status message (Point or Rectangle) | */
@@ -1509,11 +1266,10 @@ typedef enum CAMERA_TRACKING_TARGET_DATA
 typedef enum CAMERA_ZOOM_TYPE
 {
    ZOOM_TYPE_STEP=0, /* Zoom one step increment (-1 for wide, 1 for tele) | */
-   ZOOM_TYPE_CONTINUOUS=1, /* Continuous normalized zoom in/out rate until stopped. Range -1..1, negative: wide, positive: narrow/tele, 0 to stop zooming. Other values should be clipped to the range. | */
+   ZOOM_TYPE_CONTINUOUS=1, /* Continuous zoom up/down until stopped (-1 for wide, 1 for tele, 0 to stop zooming) | */
    ZOOM_TYPE_RANGE=2, /* Zoom value as proportion of full camera range (a percentage value between 0.0 and 100.0) | */
    ZOOM_TYPE_FOCAL_LENGTH=3, /* Zoom value/variable focal length in millimetres. Note that there is no message to get the valid zoom range of the camera, so this can type can only be used for cameras where the zoom range is known (implying that this cannot reliably be used in a GCS for an arbitrary camera) | */
-   ZOOM_TYPE_HORIZONTAL_FOV=4, /* Zoom value as horizontal field of view in degrees. | */
-   CAMERA_ZOOM_TYPE_ENUM_END=5, /*  | */
+   CAMERA_ZOOM_TYPE_ENUM_END=4, /*  | */
 } CAMERA_ZOOM_TYPE;
 #endif
 
@@ -1523,7 +1279,7 @@ typedef enum CAMERA_ZOOM_TYPE
 typedef enum SET_FOCUS_TYPE
 {
    FOCUS_TYPE_STEP=0, /* Focus one step increment (-1 for focusing in, 1 for focusing out towards infinity). | */
-   FOCUS_TYPE_CONTINUOUS=1, /* Continuous normalized focus in/out rate until stopped. Range -1..1, negative: in, positive: out towards infinity, 0 to stop focusing. Other values should be clipped to the range. | */
+   FOCUS_TYPE_CONTINUOUS=1, /* Continuous focus up/down until stopped (-1 for focusing in, 1 for focusing out towards infinity, 0 to stop focusing) | */
    FOCUS_TYPE_RANGE=2, /* Focus value as proportion of full camera focus range (a value between 0.0 and 100.0) | */
    FOCUS_TYPE_METERS=3, /* Focus value in metres. Note that there is no message to get the valid focus range of the camera, so this can type can only be used for cameras where the range is known (implying that this cannot reliably be used in a GCS for an arbitrary camera). | */
    FOCUS_TYPE_AUTO=4, /* Focus automatically. | */
@@ -1546,7 +1302,7 @@ typedef enum CAMERA_SOURCE
 } CAMERA_SOURCE;
 #endif
 
-/** @brief Result from PARAM_EXT_SET message. */
+/** @brief Result from PARAM_EXT_SET message (or a PARAM_SET within a transaction). */
 #ifndef HAVE_ENUM_PARAM_ACK
 #define HAVE_ENUM_PARAM_ACK
 typedef enum PARAM_ACK
@@ -1554,7 +1310,7 @@ typedef enum PARAM_ACK
    PARAM_ACK_ACCEPTED=0, /* Parameter value ACCEPTED and SET | */
    PARAM_ACK_VALUE_UNSUPPORTED=1, /* Parameter value UNKNOWN/UNSUPPORTED | */
    PARAM_ACK_FAILED=2, /* Parameter failed to set | */
-   PARAM_ACK_IN_PROGRESS=3, /* Parameter value received but not yet set/accepted. A subsequent PARAM_EXT_ACK with the final result will follow once operation is completed. This is returned immediately for parameters that take longer to set, indicating that the the parameter was received and does not need to be resent. | */
+   PARAM_ACK_IN_PROGRESS=3, /* Parameter value received but not yet set/accepted. A subsequent PARAM_ACK_TRANSACTION or PARAM_EXT_ACK with the final result will follow once operation is completed. This is returned immediately for parameters that take longer to set, indicating taht the the parameter was recieved and does not need to be resent. | */
    PARAM_ACK_ENUM_END=4, /*  | */
 } PARAM_ACK;
 #endif
@@ -1586,27 +1342,25 @@ typedef enum MAV_ARM_AUTH_DENIED_REASON
 } MAV_ARM_AUTH_DENIED_REASON;
 #endif
 
-/** @brief RC type. Used in MAV_CMD_START_RX_PAIR. */
+/** @brief RC type */
 #ifndef HAVE_ENUM_RC_TYPE
 #define HAVE_ENUM_RC_TYPE
 typedef enum RC_TYPE
 {
-   RC_TYPE_SPEKTRUM=0, /* Spektrum | */
-   RC_TYPE_CRSF=1, /* CRSF | */
+   RC_TYPE_SPEKTRUM_DSM2=0, /* Spektrum DSM2 | */
+   RC_TYPE_SPEKTRUM_DSMX=1, /* Spektrum DSMX | */
    RC_TYPE_ENUM_END=2, /*  | */
 } RC_TYPE;
 #endif
 
-/** @brief RC sub-type of types defined in RC_TYPE. Used in MAV_CMD_START_RX_PAIR. Ignored if value does not correspond to the set RC_TYPE. */
-#ifndef HAVE_ENUM_RC_SUB_TYPE
-#define HAVE_ENUM_RC_SUB_TYPE
-typedef enum RC_SUB_TYPE
+/** @brief Engine control options */
+#ifndef HAVE_ENUM_ENGINE_CONTROL_OPTIONS
+#define HAVE_ENUM_ENGINE_CONTROL_OPTIONS
+typedef enum ENGINE_CONTROL_OPTIONS
 {
-   RC_SUB_TYPE_SPEKTRUM_DSM2=0, /* Spektrum DSM2 | */
-   RC_SUB_TYPE_SPEKTRUM_DSMX=1, /* Spektrum DSMX | */
-   RC_SUB_TYPE_SPEKTRUM_DSMX8=2, /* Spektrum DSMX8 | */
-   RC_SUB_TYPE_ENUM_END=3, /*  | */
-} RC_SUB_TYPE;
+   ENGINE_CONTROL_OPTIONS_ALLOW_START_WHILE_DISARMED=1, /* Allow starting the engine once while disarmed | */
+   ENGINE_CONTROL_OPTIONS_ENUM_END=2, /*  | */
+} ENGINE_CONTROL_OPTIONS;
 #endif
 
 /** @brief Bitmap to indicate which dimensions should be ignored by the vehicle: a value of 0b0000000000000000 or 0b0000001000000000 indicates that none of the setpoint dimensions should be ignored. If bit 9 is set the floats afx afy afz should be interpreted as force instead of acceleration. */
@@ -1638,7 +1392,6 @@ typedef enum ATTITUDE_TARGET_TYPEMASK
    ATTITUDE_TARGET_TYPEMASK_BODY_ROLL_RATE_IGNORE=1, /* Ignore body roll rate | */
    ATTITUDE_TARGET_TYPEMASK_BODY_PITCH_RATE_IGNORE=2, /* Ignore body pitch rate | */
    ATTITUDE_TARGET_TYPEMASK_BODY_YAW_RATE_IGNORE=4, /* Ignore body yaw rate | */
-   ATTITUDE_TARGET_TYPEMASK_THRUST_BODY_SET=32, /* Use 3D body thrust setpoint instead of throttle | */
    ATTITUDE_TARGET_TYPEMASK_THROTTLE_IGNORE=64, /* Ignore throttle | */
    ATTITUDE_TARGET_TYPEMASK_ATTITUDE_IGNORE=128, /* Ignore attitude | */
    ATTITUDE_TARGET_TYPEMASK_ENUM_END=129, /*  | */
@@ -1674,55 +1427,6 @@ typedef enum UTM_DATA_AVAIL_FLAGS
    UTM_DATA_AVAIL_FLAGS_NEXT_WAYPOINT_AVAILABLE=128, /* The fields next_lat, next_lon and next_alt contain valid data. | */
    UTM_DATA_AVAIL_FLAGS_ENUM_END=129, /*  | */
 } UTM_DATA_AVAIL_FLAGS;
-#endif
-
-/** @brief These flags encode the cellular network status */
-#ifndef HAVE_ENUM_CELLULAR_STATUS_FLAG
-#define HAVE_ENUM_CELLULAR_STATUS_FLAG
-typedef enum CELLULAR_STATUS_FLAG
-{
-   CELLULAR_STATUS_FLAG_UNKNOWN=0, /* State unknown or not reportable. | */
-   CELLULAR_STATUS_FLAG_FAILED=1, /* Modem is unusable | */
-   CELLULAR_STATUS_FLAG_INITIALIZING=2, /* Modem is being initialized | */
-   CELLULAR_STATUS_FLAG_LOCKED=3, /* Modem is locked | */
-   CELLULAR_STATUS_FLAG_DISABLED=4, /* Modem is not enabled and is powered down | */
-   CELLULAR_STATUS_FLAG_DISABLING=5, /* Modem is currently transitioning to the CELLULAR_STATUS_FLAG_DISABLED state | */
-   CELLULAR_STATUS_FLAG_ENABLING=6, /* Modem is currently transitioning to the CELLULAR_STATUS_FLAG_ENABLED state | */
-   CELLULAR_STATUS_FLAG_ENABLED=7, /* Modem is enabled and powered on but not registered with a network provider and not available for data connections | */
-   CELLULAR_STATUS_FLAG_SEARCHING=8, /* Modem is searching for a network provider to register | */
-   CELLULAR_STATUS_FLAG_REGISTERED=9, /* Modem is registered with a network provider, and data connections and messaging may be available for use | */
-   CELLULAR_STATUS_FLAG_DISCONNECTING=10, /* Modem is disconnecting and deactivating the last active packet data bearer. This state will not be entered if more than one packet data bearer is active and one of the active bearers is deactivated | */
-   CELLULAR_STATUS_FLAG_CONNECTING=11, /* Modem is activating and connecting the first packet data bearer. Subsequent bearer activations when another bearer is already active do not cause this state to be entered | */
-   CELLULAR_STATUS_FLAG_CONNECTED=12, /* One or more packet data bearers is active and connected | */
-   CELLULAR_STATUS_FLAG_ENUM_END=13, /*  | */
-} CELLULAR_STATUS_FLAG;
-#endif
-
-/** @brief These flags are used to diagnose the failure state of CELLULAR_STATUS */
-#ifndef HAVE_ENUM_CELLULAR_NETWORK_FAILED_REASON
-#define HAVE_ENUM_CELLULAR_NETWORK_FAILED_REASON
-typedef enum CELLULAR_NETWORK_FAILED_REASON
-{
-   CELLULAR_NETWORK_FAILED_REASON_NONE=0, /* No error | */
-   CELLULAR_NETWORK_FAILED_REASON_UNKNOWN=1, /* Error state is unknown | */
-   CELLULAR_NETWORK_FAILED_REASON_SIM_MISSING=2, /* SIM is required for the modem but missing | */
-   CELLULAR_NETWORK_FAILED_REASON_SIM_ERROR=3, /* SIM is available, but not usable for connection | */
-   CELLULAR_NETWORK_FAILED_REASON_ENUM_END=4, /*  | */
-} CELLULAR_NETWORK_FAILED_REASON;
-#endif
-
-/** @brief Cellular network radio type */
-#ifndef HAVE_ENUM_CELLULAR_NETWORK_RADIO_TYPE
-#define HAVE_ENUM_CELLULAR_NETWORK_RADIO_TYPE
-typedef enum CELLULAR_NETWORK_RADIO_TYPE
-{
-   CELLULAR_NETWORK_RADIO_TYPE_NONE=0, /*  | */
-   CELLULAR_NETWORK_RADIO_TYPE_GSM=1, /*  | */
-   CELLULAR_NETWORK_RADIO_TYPE_CDMA=2, /*  | */
-   CELLULAR_NETWORK_RADIO_TYPE_WCDMA=3, /*  | */
-   CELLULAR_NETWORK_RADIO_TYPE_LTE=4, /*  | */
-   CELLULAR_NETWORK_RADIO_TYPE_ENUM_END=5, /*  | */
-} CELLULAR_NETWORK_RADIO_TYPE;
 #endif
 
 /** @brief Precision land modes (used in MAV_CMD_NAV_LAND). */
@@ -1765,10 +1469,7 @@ typedef enum MAV_TUNNEL_PAYLOAD_TYPE
    MAV_TUNNEL_PAYLOAD_TYPE_STORM32_RESERVED7=207, /* Registered for STorM32 gimbal controller. | */
    MAV_TUNNEL_PAYLOAD_TYPE_STORM32_RESERVED8=208, /* Registered for STorM32 gimbal controller. | */
    MAV_TUNNEL_PAYLOAD_TYPE_STORM32_RESERVED9=209, /* Registered for STorM32 gimbal controller. | */
-   MAV_TUNNEL_PAYLOAD_TYPE_MODALAI_REMOTE_OSD=210, /* Registered for ModalAI remote OSD protocol. | */
-   MAV_TUNNEL_PAYLOAD_TYPE_MODALAI_ESC_UART_PASSTHRU=211, /* Registered for ModalAI ESC UART passthru protocol. | */
-   MAV_TUNNEL_PAYLOAD_TYPE_MODALAI_IO_UART_PASSTHRU=212, /* Registered for ModalAI vendor use. | */
-   MAV_TUNNEL_PAYLOAD_TYPE_ENUM_END=213, /*  | */
+   MAV_TUNNEL_PAYLOAD_TYPE_ENUM_END=210, /*  | */
 } MAV_TUNNEL_PAYLOAD_TYPE;
 #endif
 
@@ -1933,7 +1634,7 @@ typedef enum MAV_ODID_AUTH_TYPE
 #define HAVE_ENUM_MAV_ODID_DESC_TYPE
 typedef enum MAV_ODID_DESC_TYPE
 {
-   MAV_ODID_DESC_TYPE_TEXT=0, /* Optional free-form text description of the purpose of the flight. | */
+   MAV_ODID_DESC_TYPE_TEXT=0, /* Free-form text description of the purpose of the flight. | */
    MAV_ODID_DESC_TYPE_EMERGENCY=1, /* Optional additional clarification when status == MAV_ODID_STATUS_EMERGENCY. | */
    MAV_ODID_DESC_TYPE_EXTENDED_STATUS=2, /* Optional additional clarification when status != MAV_ODID_STATUS_EMERGENCY. | */
    MAV_ODID_DESC_TYPE_ENUM_END=3, /*  | */
@@ -1945,9 +1646,9 @@ typedef enum MAV_ODID_DESC_TYPE
 #define HAVE_ENUM_MAV_ODID_OPERATOR_LOCATION_TYPE
 typedef enum MAV_ODID_OPERATOR_LOCATION_TYPE
 {
-   MAV_ODID_OPERATOR_LOCATION_TYPE_TAKEOFF=0, /* The location/altitude of the operator is the same as the take-off location. | */
-   MAV_ODID_OPERATOR_LOCATION_TYPE_LIVE_GNSS=1, /* The location/altitude of the operator is dynamic. E.g. based on live GNSS data. | */
-   MAV_ODID_OPERATOR_LOCATION_TYPE_FIXED=2, /* The location/altitude of the operator are fixed values. | */
+   MAV_ODID_OPERATOR_LOCATION_TYPE_TAKEOFF=0, /* The location of the operator is the same as the take-off location. | */
+   MAV_ODID_OPERATOR_LOCATION_TYPE_LIVE_GNSS=1, /* The location of the operator is based on live GNSS data. | */
+   MAV_ODID_OPERATOR_LOCATION_TYPE_FIXED=2, /* The location of the operator is a fixed location. | */
    MAV_ODID_OPERATOR_LOCATION_TYPE_ENUM_END=3, /*  | */
 } MAV_ODID_OPERATOR_LOCATION_TYPE;
 #endif
@@ -2012,17 +1713,6 @@ typedef enum MAV_ODID_ARM_STATUS
    MAV_ODID_ARM_STATUS_PRE_ARM_FAIL_GENERIC=1, /* Generic arming failure, see error string for details. | */
    MAV_ODID_ARM_STATUS_ENUM_END=2, /*  | */
 } MAV_ODID_ARM_STATUS;
-#endif
-
-/** @brief Tune formats (used for vehicle buzzer/tone generation). */
-#ifndef HAVE_ENUM_TUNE_FORMAT
-#define HAVE_ENUM_TUNE_FORMAT
-typedef enum TUNE_FORMAT
-{
-   TUNE_FORMAT_QBASIC1_1=1, /* Format is QBasic 1.1 Play: https://www.qbasic.net/en/reference/qb11/Statement/PLAY-006.htm. | */
-   TUNE_FORMAT_MML_MODERN=2, /* Format is Modern Music Markup Language (MML): https://en.wikipedia.org/wiki/Music_Macro_Language#Modern_MML. | */
-   TUNE_FORMAT_ENUM_END=3, /*  | */
-} TUNE_FORMAT;
 #endif
 
 /** @brief Type of AIS vessel, enum duplicated from AIS standard, https://gpsd.gitlab.io/gpsd/AIVDM.html */
@@ -2093,12 +1783,12 @@ typedef enum AIS_TYPE
    AIS_TYPE_PASSENGER=60, /*  | */
    AIS_TYPE_PASSENGER_HAZARDOUS_A=61, /*  | */
    AIS_TYPE_PASSENGER_HAZARDOUS_B=62, /*  | */
-   AIS_TYPE_PASSENGER_HAZARDOUS_C=63, /*  | */
+   AIS_TYPE_AIS_TYPE_PASSENGER_HAZARDOUS_C=63, /*  | */
    AIS_TYPE_PASSENGER_HAZARDOUS_D=64, /*  | */
    AIS_TYPE_PASSENGER_RESERVED_1=65, /*  | */
    AIS_TYPE_PASSENGER_RESERVED_2=66, /*  | */
    AIS_TYPE_PASSENGER_RESERVED_3=67, /*  | */
-   AIS_TYPE_PASSENGER_RESERVED_4=68, /*  | */
+   AIS_TYPE_AIS_TYPE_PASSENGER_RESERVED_4=68, /*  | */
    AIS_TYPE_PASSENGER_UNKNOWN=69, /*  | */
    AIS_TYPE_CARGO=70, /*  | */
    AIS_TYPE_CARGO_HAZARDOUS_A=71, /*  | */
@@ -2181,81 +1871,16 @@ typedef enum AIS_FLAGS
 } AIS_FLAGS;
 #endif
 
-/** @brief List of possible units where failures can be injected. */
-#ifndef HAVE_ENUM_FAILURE_UNIT
-#define HAVE_ENUM_FAILURE_UNIT
-typedef enum FAILURE_UNIT
-{
-   FAILURE_UNIT_SENSOR_GYRO=0, /*  | */
-   FAILURE_UNIT_SENSOR_ACCEL=1, /*  | */
-   FAILURE_UNIT_SENSOR_MAG=2, /*  | */
-   FAILURE_UNIT_SENSOR_BARO=3, /*  | */
-   FAILURE_UNIT_SENSOR_GPS=4, /*  | */
-   FAILURE_UNIT_SENSOR_OPTICAL_FLOW=5, /*  | */
-   FAILURE_UNIT_SENSOR_VIO=6, /*  | */
-   FAILURE_UNIT_SENSOR_DISTANCE_SENSOR=7, /*  | */
-   FAILURE_UNIT_SENSOR_AIRSPEED=8, /*  | */
-   FAILURE_UNIT_SYSTEM_BATTERY=100, /*  | */
-   FAILURE_UNIT_SYSTEM_MOTOR=101, /*  | */
-   FAILURE_UNIT_SYSTEM_SERVO=102, /*  | */
-   FAILURE_UNIT_SYSTEM_AVOIDANCE=103, /*  | */
-   FAILURE_UNIT_SYSTEM_RC_SIGNAL=104, /*  | */
-   FAILURE_UNIT_SYSTEM_MAVLINK_SIGNAL=105, /*  | */
-   FAILURE_UNIT_ENUM_END=106, /*  | */
-} FAILURE_UNIT;
-#endif
-
-/** @brief List of possible failure type to inject. */
-#ifndef HAVE_ENUM_FAILURE_TYPE
-#define HAVE_ENUM_FAILURE_TYPE
-typedef enum FAILURE_TYPE
-{
-   FAILURE_TYPE_OK=0, /* No failure injected, used to reset a previous failure. | */
-   FAILURE_TYPE_OFF=1, /* Sets unit off, so completely non-responsive. | */
-   FAILURE_TYPE_STUCK=2, /* Unit is stuck e.g. keeps reporting the same value. | */
-   FAILURE_TYPE_GARBAGE=3, /* Unit is reporting complete garbage. | */
-   FAILURE_TYPE_WRONG=4, /* Unit is consistently wrong. | */
-   FAILURE_TYPE_SLOW=5, /* Unit is slow, so e.g. reporting at slower than expected rate. | */
-   FAILURE_TYPE_DELAYED=6, /* Data of unit is delayed in time. | */
-   FAILURE_TYPE_INTERMITTENT=7, /* Unit is sometimes working, sometimes not. | */
-   FAILURE_TYPE_ENUM_END=8, /*  | */
-} FAILURE_TYPE;
-#endif
-
-/** @brief  */
-#ifndef HAVE_ENUM_NAV_VTOL_LAND_OPTIONS
-#define HAVE_ENUM_NAV_VTOL_LAND_OPTIONS
-typedef enum NAV_VTOL_LAND_OPTIONS
-{
-   NAV_VTOL_LAND_OPTIONS_DEFAULT=0, /* Default autopilot landing behaviour. | */
-   NAV_VTOL_LAND_OPTIONS_FW_DESCENT=1, /* Descend in fixed wing mode, transitioning to multicopter mode for vertical landing when close to the ground.
-          The fixed wing descent pattern is at the discretion of the vehicle (e.g. transition altitude, loiter direction, radius, and speed, etc.).
-         | */
-   NAV_VTOL_LAND_OPTIONS_HOVER_DESCENT=2, /* Land in multicopter mode on reaching the landing coordinates (the whole landing is by "hover descent"). | */
-   NAV_VTOL_LAND_OPTIONS_ENUM_END=3, /*  | */
-} NAV_VTOL_LAND_OPTIONS;
-#endif
-
 /** @brief Winch status flags used in WINCH_STATUS */
 #ifndef HAVE_ENUM_MAV_WINCH_STATUS_FLAG
 #define HAVE_ENUM_MAV_WINCH_STATUS_FLAG
 typedef enum MAV_WINCH_STATUS_FLAG
 {
    MAV_WINCH_STATUS_HEALTHY=1, /* Winch is healthy | */
-   MAV_WINCH_STATUS_FULLY_RETRACTED=2, /* Winch line is fully retracted | */
+   MAV_WINCH_STATUS_FULLY_RETRACTED=2, /* Winch thread is fully retracted | */
    MAV_WINCH_STATUS_MOVING=4, /* Winch motor is moving | */
-   MAV_WINCH_STATUS_CLUTCH_ENGAGED=8, /* Winch clutch is engaged allowing motor to move freely. | */
-   MAV_WINCH_STATUS_LOCKED=16, /* Winch is locked by locking mechanism. | */
-   MAV_WINCH_STATUS_DROPPING=32, /* Winch is gravity dropping payload. | */
-   MAV_WINCH_STATUS_ARRESTING=64, /* Winch is arresting payload descent. | */
-   MAV_WINCH_STATUS_GROUND_SENSE=128, /* Winch is using torque measurements to sense the ground. | */
-   MAV_WINCH_STATUS_RETRACTING=256, /* Winch is returning to the fully retracted position. | */
-   MAV_WINCH_STATUS_REDELIVER=512, /* Winch is redelivering the payload. This is a failover state if the line tension goes above a threshold during RETRACTING. | */
-   MAV_WINCH_STATUS_ABANDON_LINE=1024, /* Winch is abandoning the line and possibly payload. Winch unspools the entire calculated line length. This is a failover state from REDELIVER if the number of attempts exceeds a threshold. | */
-   MAV_WINCH_STATUS_LOCKING=2048, /* Winch is engaging the locking mechanism. | */
-   MAV_WINCH_STATUS_LOAD_LINE=4096, /* Winch is spooling on line. | */
-   MAV_WINCH_STATUS_LOAD_PAYLOAD=8192, /* Winch is loading a payload. | */
-   MAV_WINCH_STATUS_FLAG_ENUM_END=8193, /*  | */
+   MAV_WINCH_STATUS_CLUTCH_ENGAGED=8, /* Winch clutch is engaged allowing motor to move freely | */
+   MAV_WINCH_STATUS_FLAG_ENUM_END=9, /*  | */
 } MAV_WINCH_STATUS_FLAG;
 #endif
 
@@ -2276,71 +1901,6 @@ typedef enum MAG_CAL_STATUS
 } MAG_CAL_STATUS;
 #endif
 
-/** @brief Reason for an event error response. */
-#ifndef HAVE_ENUM_MAV_EVENT_ERROR_REASON
-#define HAVE_ENUM_MAV_EVENT_ERROR_REASON
-typedef enum MAV_EVENT_ERROR_REASON
-{
-   MAV_EVENT_ERROR_REASON_UNAVAILABLE=0, /* The requested event is not available (anymore). | */
-   MAV_EVENT_ERROR_REASON_ENUM_END=1, /*  | */
-} MAV_EVENT_ERROR_REASON;
-#endif
-
-/** @brief Flags for CURRENT_EVENT_SEQUENCE. */
-#ifndef HAVE_ENUM_MAV_EVENT_CURRENT_SEQUENCE_FLAGS
-#define HAVE_ENUM_MAV_EVENT_CURRENT_SEQUENCE_FLAGS
-typedef enum MAV_EVENT_CURRENT_SEQUENCE_FLAGS
-{
-   MAV_EVENT_CURRENT_SEQUENCE_FLAGS_RESET=1, /* A sequence reset has happened (e.g. vehicle reboot). | */
-   MAV_EVENT_CURRENT_SEQUENCE_FLAGS_ENUM_END=2, /*  | */
-} MAV_EVENT_CURRENT_SEQUENCE_FLAGS;
-#endif
-
-/** @brief Flags in the HIL_SENSOR message indicate which fields have updated since the last message */
-#ifndef HAVE_ENUM_HIL_SENSOR_UPDATED_FLAGS
-#define HAVE_ENUM_HIL_SENSOR_UPDATED_FLAGS
-typedef enum HIL_SENSOR_UPDATED_FLAGS
-{
-   HIL_SENSOR_UPDATED_XACC=1, /* The value in the xacc field has been updated | */
-   HIL_SENSOR_UPDATED_YACC=2, /* The value in the yacc field has been updated | */
-   HIL_SENSOR_UPDATED_ZACC=4, /* The value in the zacc field has been updated | */
-   HIL_SENSOR_UPDATED_XGYRO=8, /* The value in the xgyro field has been updated | */
-   HIL_SENSOR_UPDATED_YGYRO=16, /* The value in the ygyro field has been updated | */
-   HIL_SENSOR_UPDATED_ZGYRO=32, /* The value in the zgyro field has been updated | */
-   HIL_SENSOR_UPDATED_XMAG=64, /* The value in the xmag field has been updated | */
-   HIL_SENSOR_UPDATED_YMAG=128, /* The value in the ymag field has been updated | */
-   HIL_SENSOR_UPDATED_ZMAG=256, /* The value in the zmag field has been updated | */
-   HIL_SENSOR_UPDATED_ABS_PRESSURE=512, /* The value in the abs_pressure field has been updated | */
-   HIL_SENSOR_UPDATED_DIFF_PRESSURE=1024, /* The value in the diff_pressure field has been updated | */
-   HIL_SENSOR_UPDATED_PRESSURE_ALT=2048, /* The value in the pressure_alt field has been updated | */
-   HIL_SENSOR_UPDATED_TEMPERATURE=4096, /* The value in the temperature field has been updated | */
-   HIL_SENSOR_UPDATED_RESET=2147483648, /* Full reset of attitude/position/velocities/etc was performed in sim (Bit 31). | */
-   HIL_SENSOR_UPDATED_FLAGS_ENUM_END=2147483649, /*  | */
-} HIL_SENSOR_UPDATED_FLAGS;
-#endif
-
-/** @brief Flags in the HIGHRES_IMU message indicate which fields have updated since the last message */
-#ifndef HAVE_ENUM_HIGHRES_IMU_UPDATED_FLAGS
-#define HAVE_ENUM_HIGHRES_IMU_UPDATED_FLAGS
-typedef enum HIGHRES_IMU_UPDATED_FLAGS
-{
-   HIGHRES_IMU_UPDATED_XACC=1, /* The value in the xacc field has been updated | */
-   HIGHRES_IMU_UPDATED_YACC=2, /* The value in the yacc field has been updated | */
-   HIGHRES_IMU_UPDATED_ZACC=4, /* The value in the zacc field has been updated since | */
-   HIGHRES_IMU_UPDATED_XGYRO=8, /* The value in the xgyro field has been updated | */
-   HIGHRES_IMU_UPDATED_YGYRO=16, /* The value in the ygyro field has been updated | */
-   HIGHRES_IMU_UPDATED_ZGYRO=32, /* The value in the zgyro field has been updated | */
-   HIGHRES_IMU_UPDATED_XMAG=64, /* The value in the xmag field has been updated | */
-   HIGHRES_IMU_UPDATED_YMAG=128, /* The value in the ymag field has been updated | */
-   HIGHRES_IMU_UPDATED_ZMAG=256, /* The value in the zmag field has been updated | */
-   HIGHRES_IMU_UPDATED_ABS_PRESSURE=512, /* The value in the abs_pressure field has been updated | */
-   HIGHRES_IMU_UPDATED_DIFF_PRESSURE=1024, /* The value in the diff_pressure field has been updated | */
-   HIGHRES_IMU_UPDATED_PRESSURE_ALT=2048, /* The value in the pressure_alt field has been updated | */
-   HIGHRES_IMU_UPDATED_TEMPERATURE=4096, /* The value in the temperature field has been updated | */
-   HIGHRES_IMU_UPDATED_FLAGS_ENUM_END=4097, /*  | */
-} HIGHRES_IMU_UPDATED_FLAGS;
-#endif
-
 /** @brief  */
 #ifndef HAVE_ENUM_CAN_FILTER_OP
 #define HAVE_ENUM_CAN_FILTER_OP
@@ -2353,52 +1913,16 @@ typedef enum CAN_FILTER_OP
 } CAN_FILTER_OP;
 #endif
 
-/** @brief MAV FTP error codes (https://mavlink.io/en/services/ftp.html) */
-#ifndef HAVE_ENUM_MAV_FTP_ERR
-#define HAVE_ENUM_MAV_FTP_ERR
-typedef enum MAV_FTP_ERR
+/** @brief  */
+#ifndef HAVE_ENUM_NAV_VTOL_LAND_OPTIONS
+#define HAVE_ENUM_NAV_VTOL_LAND_OPTIONS
+typedef enum NAV_VTOL_LAND_OPTIONS
 {
-   MAV_FTP_ERR_NONE=0, /* None: No error | */
-   MAV_FTP_ERR_FAIL=1, /* Fail: Unknown failure | */
-   MAV_FTP_ERR_FAILERRNO=2, /* FailErrno: Command failed, Err number sent back in PayloadHeader.data[1].
-		This is a file-system error number understood by the server operating system. | */
-   MAV_FTP_ERR_INVALIDDATASIZE=3, /* InvalidDataSize: Payload size is invalid | */
-   MAV_FTP_ERR_INVALIDSESSION=4, /* InvalidSession: Session is not currently open | */
-   MAV_FTP_ERR_NOSESSIONSAVAILABLE=5, /* NoSessionsAvailable: All available sessions are already in use | */
-   MAV_FTP_ERR_EOF=6, /* EOF: Offset past end of file for ListDirectory and ReadFile commands | */
-   MAV_FTP_ERR_UNKNOWNCOMMAND=7, /* UnknownCommand: Unknown command / opcode | */
-   MAV_FTP_ERR_FILEEXISTS=8, /* FileExists: File/directory already exists | */
-   MAV_FTP_ERR_FILEPROTECTED=9, /* FileProtected: File/directory is write protected | */
-   MAV_FTP_ERR_FILENOTFOUND=10, /* FileNotFound: File/directory not found | */
-   MAV_FTP_ERR_ENUM_END=11, /*  | */
-} MAV_FTP_ERR;
-#endif
-
-/** @brief MAV FTP opcodes: https://mavlink.io/en/services/ftp.html */
-#ifndef HAVE_ENUM_MAV_FTP_OPCODE
-#define HAVE_ENUM_MAV_FTP_OPCODE
-typedef enum MAV_FTP_OPCODE
-{
-   MAV_FTP_OPCODE_NONE=0, /* None. Ignored, always ACKed | */
-   MAV_FTP_OPCODE_TERMINATESESSION=1, /* TerminateSession: Terminates open Read session | */
-   MAV_FTP_OPCODE_RESETSESSION=2, /* ResetSessions: Terminates all open read sessions | */
-   MAV_FTP_OPCODE_LISTDIRECTORY=3, /* ListDirectory. List files and directories in path from offset | */
-   MAV_FTP_OPCODE_OPENFILERO=4, /* OpenFileRO: Opens file at path for reading, returns session | */
-   MAV_FTP_OPCODE_READFILE=5, /* ReadFile: Reads size bytes from offset in session | */
-   MAV_FTP_OPCODE_CREATEFILE=6, /* CreateFile: Creates file at path for writing, returns session | */
-   MAV_FTP_OPCODE_WRITEFILE=7, /* WriteFile: Writes size bytes to offset in session | */
-   MAV_FTP_OPCODE_REMOVEFILE=8, /* RemoveFile: Remove file at path | */
-   MAV_FTP_OPCODE_CREATEDIRECTORY=9, /* CreateDirectory: Creates directory at path | */
-   MAV_FTP_OPCODE_REMOVEDIRECTORY=10, /* RemoveDirectory: Removes directory at path. The directory must be empty. | */
-   MAV_FTP_OPCODE_OPENFILEWO=11, /* OpenFileWO: Opens file at path for writing, returns session | */
-   MAV_FTP_OPCODE_TRUNCATEFILE=12, /* TruncateFile: Truncate file at path to offset length | */
-   MAV_FTP_OPCODE_RENAME=13, /* Rename: Rename path1 to path2 | */
-   MAV_FTP_OPCODE_CALCFILECRC=14, /* CalcFileCRC32: Calculate CRC32 for file at path | */
-   MAV_FTP_OPCODE_BURSTREADFILE=15, /* BurstReadFile: Burst download session file | */
-   MAV_FTP_OPCODE_ACK=128, /* ACK: ACK response | */
-   MAV_FTP_OPCODE_NAK=129, /* NAK: NAK response | */
-   MAV_FTP_OPCODE_ENUM_END=130, /*  | */
-} MAV_FTP_OPCODE;
+   NAV_VTOL_LAND_OPTIONS_DEFAULT=0, /* Default autopilot landing behaviour. | */
+   NAV_VTOL_LAND_OPTIONS_FW_SPIRAL_APPROACH=1, /* Use a fixed wing spiral desent approach before landing. | */
+   NAV_VTOL_LAND_OPTIONS_FW_APPROACH=2, /* Use a fixed wing approach before detransitioning and landing vertically. | */
+   NAV_VTOL_LAND_OPTIONS_ENUM_END=3, /*  | */
+} NAV_VTOL_LAND_OPTIONS;
 #endif
 
 /** @brief 
@@ -2433,129 +1957,6 @@ typedef enum SAFETY_SWITCH_STATE
 } SAFETY_SWITCH_STATE;
 #endif
 
-/** @brief Modes of illuminator */
-#ifndef HAVE_ENUM_ILLUMINATOR_MODE
-#define HAVE_ENUM_ILLUMINATOR_MODE
-typedef enum ILLUMINATOR_MODE
-{
-   ILLUMINATOR_MODE_UNKNOWN=0, /* Illuminator mode is not specified/unknown | */
-   ILLUMINATOR_MODE_INTERNAL_CONTROL=1, /* Illuminator behavior is controlled by MAV_CMD_DO_ILLUMINATOR_CONFIGURE settings | */
-   ILLUMINATOR_MODE_EXTERNAL_SYNC=2, /* Illuminator behavior is controlled by external factors: e.g. an external hardware signal | */
-   ILLUMINATOR_MODE_ENUM_END=3, /*  | */
-} ILLUMINATOR_MODE;
-#endif
-
-/** @brief Illuminator module error flags (bitmap, 0 means no error) */
-#ifndef HAVE_ENUM_ILLUMINATOR_ERROR_FLAGS
-#define HAVE_ENUM_ILLUMINATOR_ERROR_FLAGS
-typedef enum ILLUMINATOR_ERROR_FLAGS
-{
-   ILLUMINATOR_ERROR_FLAGS_THERMAL_THROTTLING=1, /* Illuminator thermal throttling error. | */
-   ILLUMINATOR_ERROR_FLAGS_OVER_TEMPERATURE_SHUTDOWN=2, /* Illuminator over temperature shutdown error. | */
-   ILLUMINATOR_ERROR_FLAGS_THERMISTOR_FAILURE=4, /* Illuminator thermistor failure. | */
-   ILLUMINATOR_ERROR_FLAGS_ENUM_END=5, /*  | */
-} ILLUMINATOR_ERROR_FLAGS;
-#endif
-
-/** @brief Standard modes with a well understood meaning across flight stacks and vehicle types.
-        For example, most flight stack have the concept of a "return" or "RTL" mode that takes a vehicle to safety, even though the precise mechanics of this mode may differ.
-        The modes supported by a flight stack can be queried using AVAILABLE_MODES and set using MAV_CMD_DO_SET_STANDARD_MODE.
-        The current mode is streamed in CURRENT_MODE.
-        See https://mavlink.io/en/services/standard_modes.html
-       */
-#ifndef HAVE_ENUM_MAV_STANDARD_MODE
-#define HAVE_ENUM_MAV_STANDARD_MODE
-typedef enum MAV_STANDARD_MODE
-{
-   MAV_STANDARD_MODE_NON_STANDARD=0, /* Non standard mode.
-          This may be used when reporting the mode if the current flight mode is not a standard mode.
-         | */
-   MAV_STANDARD_MODE_POSITION_HOLD=1, /* Position mode (manual).
-          Position-controlled and stabilized manual mode.
-          When sticks are released vehicles return to their level-flight orientation and hold both position and altitude against wind and external forces.
-          This mode can only be set by vehicles that can hold a fixed position.
-          Multicopter (MC) vehicles actively brake and hold both position and altitude against wind and external forces.
-          Hybrid MC/FW ("VTOL") vehicles first transition to multicopter mode (if needed) but otherwise behave in the same way as MC vehicles.
-          Fixed-wing (FW) vehicles must not support this mode.
-          Other vehicle types must not support this mode (this may be revisited through the PR process).
-         | */
-   MAV_STANDARD_MODE_ORBIT=2, /* Orbit (manual).
-          Position-controlled and stabilized manual mode.
-          The vehicle circles around a fixed setpoint in the horizontal plane at a particular radius, altitude, and direction.
-          Flight stacks may further allow manual control over the setpoint position, radius, direction, speed, and/or altitude of the circle, but this is not mandated.
-          Flight stacks may support the [MAV_CMD_DO_ORBIT](https://mavlink.io/en/messages/common.html#MAV_CMD_DO_ORBIT) for changing the orbit parameters.
-          MC and FW vehicles may support this mode.
-          Hybrid MC/FW ("VTOL") vehicles may support this mode in MC/FW or both modes; if the mode is not supported by the current configuration the vehicle should transition to the supported configuration.
-          Other vehicle types must not support this mode (this may be revisited through the PR process).
-         | */
-   MAV_STANDARD_MODE_CRUISE=3, /* Cruise mode (manual).
-          Position-controlled and stabilized manual mode.
-          When sticks are released vehicles return to their level-flight orientation and hold their original track against wind and external forces.
-          Fixed-wing (FW) vehicles level orientation and maintain current track and altitude against wind and external forces.
-          Hybrid MC/FW ("VTOL") vehicles first transition to FW mode (if needed) but otherwise behave in the same way as MC vehicles.
-          Multicopter (MC) vehicles must not support this mode.
-          Other vehicle types must not support this mode (this may be revisited through the PR process).
-         | */
-   MAV_STANDARD_MODE_ALTITUDE_HOLD=4, /* Altitude hold (manual).
-          Altitude-controlled and stabilized manual mode.
-          When sticks are released vehicles return to their level-flight orientation and hold their altitude.
-          MC vehicles continue with existing momentum and may move with wind (or other external forces).
-          FW vehicles continue with current heading, but may be moved off-track by wind.
-          Hybrid MC/FW ("VTOL") vehicles behave according to their current configuration/mode (FW or MC).
-          Other vehicle types must not support this mode (this may be revisited through the PR process).
-         | */
-   MAV_STANDARD_MODE_SAFE_RECOVERY=5, /* Safe recovery mode (auto).
-          Automatic mode that takes vehicle to a predefined safe location via a safe flight path, and may also automatically land the vehicle.
-          This mode is more commonly referred to as RTL and/or or Smart RTL.
-          The precise return location, flight path, and landing behaviour depend on vehicle configuration and type.
-          For example, the vehicle might return to the home/launch location, a rally point, or the start of a mission landing, it might follow a direct path, mission path, or breadcrumb path, and land using a mission landing pattern or some other kind of descent.
-         | */
-   MAV_STANDARD_MODE_MISSION=6, /* Mission mode (automatic).
-          Automatic mode that executes MAVLink missions.
-          Missions are executed from the current waypoint as soon as the mode is enabled.
-         | */
-   MAV_STANDARD_MODE_LAND=7, /* Land mode (auto).
-          Automatic mode that lands the vehicle at the current location.
-          The precise landing behaviour depends on vehicle configuration and type.
-         | */
-   MAV_STANDARD_MODE_TAKEOFF=8, /* Takeoff mode (auto).
-          Automatic takeoff mode.
-          The precise takeoff behaviour depends on vehicle configuration and type.
-         | */
-   MAV_STANDARD_MODE_ENUM_END=9, /*  | */
-} MAV_STANDARD_MODE;
-#endif
-
-/** @brief Mode properties.
-       */
-#ifndef HAVE_ENUM_MAV_MODE_PROPERTY
-#define HAVE_ENUM_MAV_MODE_PROPERTY
-typedef enum MAV_MODE_PROPERTY
-{
-   MAV_MODE_PROPERTY_ADVANCED=1, /* If set, this mode is an advanced mode.
-          For example a rate-controlled manual mode might be advanced, whereas a position-controlled manual mode is not.
-          A GCS can optionally use this flag to configure the UI for its intended users.
-         | */
-   MAV_MODE_PROPERTY_NOT_USER_SELECTABLE=2, /* If set, this mode should not be added to the list of selectable modes.
-          The mode might still be selected by the FC directly (for example as part of a failsafe).
-         | */
-   MAV_MODE_PROPERTY_AUTO_MODE=4, /* If set, this mode is automatically controlled (it may use but does not require a manual controller).
-          If unset the mode is a assumed to require user input (be a manual mode).
-         | */
-   MAV_MODE_PROPERTY_ENUM_END=5, /*  | */
-} MAV_MODE_PROPERTY;
-#endif
-
-/** @brief Flags used in HIL_ACTUATOR_CONTROLS message. */
-#ifndef HAVE_ENUM_HIL_ACTUATOR_CONTROLS_FLAGS
-#define HAVE_ENUM_HIL_ACTUATOR_CONTROLS_FLAGS
-typedef enum HIL_ACTUATOR_CONTROLS_FLAGS
-{
-   HIL_ACTUATOR_CONTROLS_FLAGS_LOCKSTEP=1, /* Simulation is using lockstep | */
-   HIL_ACTUATOR_CONTROLS_FLAGS_ENUM_END=2, /*  | */
-} HIL_ACTUATOR_CONTROLS_FLAGS;
-#endif
-
 // MAVLINK VERSION
 
 #ifndef MAVLINK_VERSION
@@ -2574,7 +1975,6 @@ typedef enum HIL_ACTUATOR_CONTROLS_FLAGS
 #include "./mavlink_msg_change_operator_control.h"
 #include "./mavlink_msg_change_operator_control_ack.h"
 #include "./mavlink_msg_auth_key.h"
-#include "./mavlink_msg_link_node_status.h"
 #include "./mavlink_msg_set_mode.h"
 #include "./mavlink_msg_param_request_read.h"
 #include "./mavlink_msg_param_request_list.h"
@@ -2624,7 +2024,6 @@ typedef enum HIL_ACTUATOR_CONTROLS_FLAGS
 #include "./mavlink_msg_command_int.h"
 #include "./mavlink_msg_command_long.h"
 #include "./mavlink_msg_command_ack.h"
-#include "./mavlink_msg_command_cancel.h"
 #include "./mavlink_msg_manual_setpoint.h"
 #include "./mavlink_msg_set_attitude_target.h"
 #include "./mavlink_msg_attitude_target.h"
@@ -2727,7 +2126,6 @@ typedef enum HIL_ACTUATOR_CONTROLS_FLAGS
 #include "./mavlink_msg_camera_fov_status.h"
 #include "./mavlink_msg_camera_tracking_image_status.h"
 #include "./mavlink_msg_camera_tracking_geo_status.h"
-#include "./mavlink_msg_camera_thermal_range.h"
 #include "./mavlink_msg_gimbal_manager_information.h"
 #include "./mavlink_msg_gimbal_manager_status.h"
 #include "./mavlink_msg_gimbal_manager_set_attitude.h"
@@ -2737,8 +2135,6 @@ typedef enum HIL_ACTUATOR_CONTROLS_FLAGS
 #include "./mavlink_msg_autopilot_state_for_gimbal_device.h"
 #include "./mavlink_msg_gimbal_manager_set_pitchyaw.h"
 #include "./mavlink_msg_gimbal_manager_set_manual_control.h"
-#include "./mavlink_msg_esc_info.h"
-#include "./mavlink_msg_esc_status.h"
 #include "./mavlink_msg_wifi_config_ap.h"
 #include "./mavlink_msg_ais_vessel.h"
 #include "./mavlink_msg_uavcan_node_status.h"
@@ -2750,37 +2146,16 @@ typedef enum HIL_ACTUATOR_CONTROLS_FLAGS
 #include "./mavlink_msg_param_ext_ack.h"
 #include "./mavlink_msg_obstacle_distance.h"
 #include "./mavlink_msg_odometry.h"
-#include "./mavlink_msg_trajectory_representation_waypoints.h"
-#include "./mavlink_msg_trajectory_representation_bezier.h"
-#include "./mavlink_msg_cellular_status.h"
 #include "./mavlink_msg_isbd_link_status.h"
-#include "./mavlink_msg_cellular_config.h"
 #include "./mavlink_msg_raw_rpm.h"
 #include "./mavlink_msg_utm_global_position.h"
 #include "./mavlink_msg_debug_float_array.h"
-#include "./mavlink_msg_orbit_execution_status.h"
 #include "./mavlink_msg_smart_battery_info.h"
-#include "./mavlink_msg_fuel_status.h"
-#include "./mavlink_msg_battery_info.h"
 #include "./mavlink_msg_generator_status.h"
 #include "./mavlink_msg_actuator_output_status.h"
-#include "./mavlink_msg_time_estimate_to_target.h"
+#include "./mavlink_msg_relay_status.h"
 #include "./mavlink_msg_tunnel.h"
 #include "./mavlink_msg_can_frame.h"
-#include "./mavlink_msg_onboard_computer_status.h"
-#include "./mavlink_msg_component_information.h"
-#include "./mavlink_msg_component_information_basic.h"
-#include "./mavlink_msg_component_metadata.h"
-#include "./mavlink_msg_play_tune_v2.h"
-#include "./mavlink_msg_supported_tunes.h"
-#include "./mavlink_msg_event.h"
-#include "./mavlink_msg_current_event_sequence.h"
-#include "./mavlink_msg_request_event.h"
-#include "./mavlink_msg_response_event_error.h"
-#include "./mavlink_msg_available_modes.h"
-#include "./mavlink_msg_current_mode.h"
-#include "./mavlink_msg_available_modes_monitor.h"
-#include "./mavlink_msg_illuminator_status.h"
 #include "./mavlink_msg_canfd_frame.h"
 #include "./mavlink_msg_can_filter_modify.h"
 #include "./mavlink_msg_wheel_distance.h"
@@ -2791,18 +2166,18 @@ typedef enum HIL_ACTUATOR_CONTROLS_FLAGS
 #include "./mavlink_msg_open_drone_id_self_id.h"
 #include "./mavlink_msg_open_drone_id_system.h"
 #include "./mavlink_msg_open_drone_id_operator_id.h"
-#include "./mavlink_msg_open_drone_id_message_pack.h"
 #include "./mavlink_msg_open_drone_id_arm_status.h"
+#include "./mavlink_msg_open_drone_id_message_pack.h"
 #include "./mavlink_msg_open_drone_id_system_update.h"
 #include "./mavlink_msg_hygrometer_sensor.h"
 
 // base include
-#include "../standard/standard.h"
+#include "../minimal/minimal.h"
 
 
 #if MAVLINK_COMMON_XML_HASH == MAVLINK_PRIMARY_XML_HASH
-# define MAVLINK_MESSAGE_INFO {MAVLINK_MESSAGE_INFO_HEARTBEAT, MAVLINK_MESSAGE_INFO_SYS_STATUS, MAVLINK_MESSAGE_INFO_SYSTEM_TIME, MAVLINK_MESSAGE_INFO_PING, MAVLINK_MESSAGE_INFO_CHANGE_OPERATOR_CONTROL, MAVLINK_MESSAGE_INFO_CHANGE_OPERATOR_CONTROL_ACK, MAVLINK_MESSAGE_INFO_AUTH_KEY, MAVLINK_MESSAGE_INFO_LINK_NODE_STATUS, MAVLINK_MESSAGE_INFO_SET_MODE, MAVLINK_MESSAGE_INFO_PARAM_REQUEST_READ, MAVLINK_MESSAGE_INFO_PARAM_REQUEST_LIST, MAVLINK_MESSAGE_INFO_PARAM_VALUE, MAVLINK_MESSAGE_INFO_PARAM_SET, MAVLINK_MESSAGE_INFO_GPS_RAW_INT, MAVLINK_MESSAGE_INFO_GPS_STATUS, MAVLINK_MESSAGE_INFO_SCALED_IMU, MAVLINK_MESSAGE_INFO_RAW_IMU, MAVLINK_MESSAGE_INFO_RAW_PRESSURE, MAVLINK_MESSAGE_INFO_SCALED_PRESSURE, MAVLINK_MESSAGE_INFO_ATTITUDE, MAVLINK_MESSAGE_INFO_ATTITUDE_QUATERNION, MAVLINK_MESSAGE_INFO_LOCAL_POSITION_NED, MAVLINK_MESSAGE_INFO_GLOBAL_POSITION_INT, MAVLINK_MESSAGE_INFO_RC_CHANNELS_SCALED, MAVLINK_MESSAGE_INFO_RC_CHANNELS_RAW, MAVLINK_MESSAGE_INFO_SERVO_OUTPUT_RAW, MAVLINK_MESSAGE_INFO_MISSION_REQUEST_PARTIAL_LIST, MAVLINK_MESSAGE_INFO_MISSION_WRITE_PARTIAL_LIST, MAVLINK_MESSAGE_INFO_MISSION_ITEM, MAVLINK_MESSAGE_INFO_MISSION_REQUEST, MAVLINK_MESSAGE_INFO_MISSION_SET_CURRENT, MAVLINK_MESSAGE_INFO_MISSION_CURRENT, MAVLINK_MESSAGE_INFO_MISSION_REQUEST_LIST, MAVLINK_MESSAGE_INFO_MISSION_COUNT, MAVLINK_MESSAGE_INFO_MISSION_CLEAR_ALL, MAVLINK_MESSAGE_INFO_MISSION_ITEM_REACHED, MAVLINK_MESSAGE_INFO_MISSION_ACK, MAVLINK_MESSAGE_INFO_SET_GPS_GLOBAL_ORIGIN, MAVLINK_MESSAGE_INFO_GPS_GLOBAL_ORIGIN, MAVLINK_MESSAGE_INFO_PARAM_MAP_RC, MAVLINK_MESSAGE_INFO_MISSION_REQUEST_INT, MAVLINK_MESSAGE_INFO_SAFETY_SET_ALLOWED_AREA, MAVLINK_MESSAGE_INFO_SAFETY_ALLOWED_AREA, MAVLINK_MESSAGE_INFO_ATTITUDE_QUATERNION_COV, MAVLINK_MESSAGE_INFO_NAV_CONTROLLER_OUTPUT, MAVLINK_MESSAGE_INFO_GLOBAL_POSITION_INT_COV, MAVLINK_MESSAGE_INFO_LOCAL_POSITION_NED_COV, MAVLINK_MESSAGE_INFO_RC_CHANNELS, MAVLINK_MESSAGE_INFO_REQUEST_DATA_STREAM, MAVLINK_MESSAGE_INFO_DATA_STREAM, MAVLINK_MESSAGE_INFO_MANUAL_CONTROL, MAVLINK_MESSAGE_INFO_RC_CHANNELS_OVERRIDE, MAVLINK_MESSAGE_INFO_MISSION_ITEM_INT, MAVLINK_MESSAGE_INFO_VFR_HUD, MAVLINK_MESSAGE_INFO_COMMAND_INT, MAVLINK_MESSAGE_INFO_COMMAND_LONG, MAVLINK_MESSAGE_INFO_COMMAND_ACK, MAVLINK_MESSAGE_INFO_COMMAND_CANCEL, MAVLINK_MESSAGE_INFO_MANUAL_SETPOINT, MAVLINK_MESSAGE_INFO_SET_ATTITUDE_TARGET, MAVLINK_MESSAGE_INFO_ATTITUDE_TARGET, MAVLINK_MESSAGE_INFO_SET_POSITION_TARGET_LOCAL_NED, MAVLINK_MESSAGE_INFO_POSITION_TARGET_LOCAL_NED, MAVLINK_MESSAGE_INFO_SET_POSITION_TARGET_GLOBAL_INT, MAVLINK_MESSAGE_INFO_POSITION_TARGET_GLOBAL_INT, MAVLINK_MESSAGE_INFO_LOCAL_POSITION_NED_SYSTEM_GLOBAL_OFFSET, MAVLINK_MESSAGE_INFO_HIL_STATE, MAVLINK_MESSAGE_INFO_HIL_CONTROLS, MAVLINK_MESSAGE_INFO_HIL_RC_INPUTS_RAW, MAVLINK_MESSAGE_INFO_HIL_ACTUATOR_CONTROLS, MAVLINK_MESSAGE_INFO_OPTICAL_FLOW, MAVLINK_MESSAGE_INFO_GLOBAL_VISION_POSITION_ESTIMATE, MAVLINK_MESSAGE_INFO_VISION_POSITION_ESTIMATE, MAVLINK_MESSAGE_INFO_VISION_SPEED_ESTIMATE, MAVLINK_MESSAGE_INFO_VICON_POSITION_ESTIMATE, MAVLINK_MESSAGE_INFO_HIGHRES_IMU, MAVLINK_MESSAGE_INFO_OPTICAL_FLOW_RAD, MAVLINK_MESSAGE_INFO_HIL_SENSOR, MAVLINK_MESSAGE_INFO_SIM_STATE, MAVLINK_MESSAGE_INFO_RADIO_STATUS, MAVLINK_MESSAGE_INFO_FILE_TRANSFER_PROTOCOL, MAVLINK_MESSAGE_INFO_TIMESYNC, MAVLINK_MESSAGE_INFO_CAMERA_TRIGGER, MAVLINK_MESSAGE_INFO_HIL_GPS, MAVLINK_MESSAGE_INFO_HIL_OPTICAL_FLOW, MAVLINK_MESSAGE_INFO_HIL_STATE_QUATERNION, MAVLINK_MESSAGE_INFO_SCALED_IMU2, MAVLINK_MESSAGE_INFO_LOG_REQUEST_LIST, MAVLINK_MESSAGE_INFO_LOG_ENTRY, MAVLINK_MESSAGE_INFO_LOG_REQUEST_DATA, MAVLINK_MESSAGE_INFO_LOG_DATA, MAVLINK_MESSAGE_INFO_LOG_ERASE, MAVLINK_MESSAGE_INFO_LOG_REQUEST_END, MAVLINK_MESSAGE_INFO_GPS_INJECT_DATA, MAVLINK_MESSAGE_INFO_GPS2_RAW, MAVLINK_MESSAGE_INFO_POWER_STATUS, MAVLINK_MESSAGE_INFO_SERIAL_CONTROL, MAVLINK_MESSAGE_INFO_GPS_RTK, MAVLINK_MESSAGE_INFO_GPS2_RTK, MAVLINK_MESSAGE_INFO_SCALED_IMU3, MAVLINK_MESSAGE_INFO_DATA_TRANSMISSION_HANDSHAKE, MAVLINK_MESSAGE_INFO_ENCAPSULATED_DATA, MAVLINK_MESSAGE_INFO_DISTANCE_SENSOR, MAVLINK_MESSAGE_INFO_TERRAIN_REQUEST, MAVLINK_MESSAGE_INFO_TERRAIN_DATA, MAVLINK_MESSAGE_INFO_TERRAIN_CHECK, MAVLINK_MESSAGE_INFO_TERRAIN_REPORT, MAVLINK_MESSAGE_INFO_SCALED_PRESSURE2, MAVLINK_MESSAGE_INFO_ATT_POS_MOCAP, MAVLINK_MESSAGE_INFO_SET_ACTUATOR_CONTROL_TARGET, MAVLINK_MESSAGE_INFO_ACTUATOR_CONTROL_TARGET, MAVLINK_MESSAGE_INFO_ALTITUDE, MAVLINK_MESSAGE_INFO_RESOURCE_REQUEST, MAVLINK_MESSAGE_INFO_SCALED_PRESSURE3, MAVLINK_MESSAGE_INFO_FOLLOW_TARGET, MAVLINK_MESSAGE_INFO_CONTROL_SYSTEM_STATE, MAVLINK_MESSAGE_INFO_BATTERY_STATUS, MAVLINK_MESSAGE_INFO_AUTOPILOT_VERSION, MAVLINK_MESSAGE_INFO_LANDING_TARGET, MAVLINK_MESSAGE_INFO_FENCE_STATUS, MAVLINK_MESSAGE_INFO_MAG_CAL_REPORT, MAVLINK_MESSAGE_INFO_EFI_STATUS, MAVLINK_MESSAGE_INFO_ESTIMATOR_STATUS, MAVLINK_MESSAGE_INFO_WIND_COV, MAVLINK_MESSAGE_INFO_GPS_INPUT, MAVLINK_MESSAGE_INFO_GPS_RTCM_DATA, MAVLINK_MESSAGE_INFO_HIGH_LATENCY, MAVLINK_MESSAGE_INFO_HIGH_LATENCY2, MAVLINK_MESSAGE_INFO_VIBRATION, MAVLINK_MESSAGE_INFO_HOME_POSITION, MAVLINK_MESSAGE_INFO_SET_HOME_POSITION, MAVLINK_MESSAGE_INFO_MESSAGE_INTERVAL, MAVLINK_MESSAGE_INFO_EXTENDED_SYS_STATE, MAVLINK_MESSAGE_INFO_ADSB_VEHICLE, MAVLINK_MESSAGE_INFO_COLLISION, MAVLINK_MESSAGE_INFO_V2_EXTENSION, MAVLINK_MESSAGE_INFO_MEMORY_VECT, MAVLINK_MESSAGE_INFO_DEBUG_VECT, MAVLINK_MESSAGE_INFO_NAMED_VALUE_FLOAT, MAVLINK_MESSAGE_INFO_NAMED_VALUE_INT, MAVLINK_MESSAGE_INFO_STATUSTEXT, MAVLINK_MESSAGE_INFO_DEBUG, MAVLINK_MESSAGE_INFO_SETUP_SIGNING, MAVLINK_MESSAGE_INFO_BUTTON_CHANGE, MAVLINK_MESSAGE_INFO_PLAY_TUNE, MAVLINK_MESSAGE_INFO_CAMERA_INFORMATION, MAVLINK_MESSAGE_INFO_CAMERA_SETTINGS, MAVLINK_MESSAGE_INFO_STORAGE_INFORMATION, MAVLINK_MESSAGE_INFO_CAMERA_CAPTURE_STATUS, MAVLINK_MESSAGE_INFO_CAMERA_IMAGE_CAPTURED, MAVLINK_MESSAGE_INFO_FLIGHT_INFORMATION, MAVLINK_MESSAGE_INFO_MOUNT_ORIENTATION, MAVLINK_MESSAGE_INFO_LOGGING_DATA, MAVLINK_MESSAGE_INFO_LOGGING_DATA_ACKED, MAVLINK_MESSAGE_INFO_LOGGING_ACK, MAVLINK_MESSAGE_INFO_VIDEO_STREAM_INFORMATION, MAVLINK_MESSAGE_INFO_VIDEO_STREAM_STATUS, MAVLINK_MESSAGE_INFO_CAMERA_FOV_STATUS, MAVLINK_MESSAGE_INFO_CAMERA_TRACKING_IMAGE_STATUS, MAVLINK_MESSAGE_INFO_CAMERA_TRACKING_GEO_STATUS, MAVLINK_MESSAGE_INFO_CAMERA_THERMAL_RANGE, MAVLINK_MESSAGE_INFO_GIMBAL_MANAGER_INFORMATION, MAVLINK_MESSAGE_INFO_GIMBAL_MANAGER_STATUS, MAVLINK_MESSAGE_INFO_GIMBAL_MANAGER_SET_ATTITUDE, MAVLINK_MESSAGE_INFO_GIMBAL_DEVICE_INFORMATION, MAVLINK_MESSAGE_INFO_GIMBAL_DEVICE_SET_ATTITUDE, MAVLINK_MESSAGE_INFO_GIMBAL_DEVICE_ATTITUDE_STATUS, MAVLINK_MESSAGE_INFO_AUTOPILOT_STATE_FOR_GIMBAL_DEVICE, MAVLINK_MESSAGE_INFO_GIMBAL_MANAGER_SET_PITCHYAW, MAVLINK_MESSAGE_INFO_GIMBAL_MANAGER_SET_MANUAL_CONTROL, MAVLINK_MESSAGE_INFO_ESC_INFO, MAVLINK_MESSAGE_INFO_ESC_STATUS, MAVLINK_MESSAGE_INFO_WIFI_CONFIG_AP, MAVLINK_MESSAGE_INFO_PROTOCOL_VERSION, MAVLINK_MESSAGE_INFO_AIS_VESSEL, MAVLINK_MESSAGE_INFO_UAVCAN_NODE_STATUS, MAVLINK_MESSAGE_INFO_UAVCAN_NODE_INFO, MAVLINK_MESSAGE_INFO_PARAM_EXT_REQUEST_READ, MAVLINK_MESSAGE_INFO_PARAM_EXT_REQUEST_LIST, MAVLINK_MESSAGE_INFO_PARAM_EXT_VALUE, MAVLINK_MESSAGE_INFO_PARAM_EXT_SET, MAVLINK_MESSAGE_INFO_PARAM_EXT_ACK, MAVLINK_MESSAGE_INFO_OBSTACLE_DISTANCE, MAVLINK_MESSAGE_INFO_ODOMETRY, MAVLINK_MESSAGE_INFO_TRAJECTORY_REPRESENTATION_WAYPOINTS, MAVLINK_MESSAGE_INFO_TRAJECTORY_REPRESENTATION_BEZIER, MAVLINK_MESSAGE_INFO_CELLULAR_STATUS, MAVLINK_MESSAGE_INFO_ISBD_LINK_STATUS, MAVLINK_MESSAGE_INFO_CELLULAR_CONFIG, MAVLINK_MESSAGE_INFO_RAW_RPM, MAVLINK_MESSAGE_INFO_UTM_GLOBAL_POSITION, MAVLINK_MESSAGE_INFO_DEBUG_FLOAT_ARRAY, MAVLINK_MESSAGE_INFO_ORBIT_EXECUTION_STATUS, MAVLINK_MESSAGE_INFO_SMART_BATTERY_INFO, MAVLINK_MESSAGE_INFO_FUEL_STATUS, MAVLINK_MESSAGE_INFO_BATTERY_INFO, MAVLINK_MESSAGE_INFO_GENERATOR_STATUS, MAVLINK_MESSAGE_INFO_ACTUATOR_OUTPUT_STATUS, MAVLINK_MESSAGE_INFO_TIME_ESTIMATE_TO_TARGET, MAVLINK_MESSAGE_INFO_TUNNEL, MAVLINK_MESSAGE_INFO_CAN_FRAME, MAVLINK_MESSAGE_INFO_CANFD_FRAME, MAVLINK_MESSAGE_INFO_CAN_FILTER_MODIFY, MAVLINK_MESSAGE_INFO_ONBOARD_COMPUTER_STATUS, MAVLINK_MESSAGE_INFO_COMPONENT_INFORMATION, MAVLINK_MESSAGE_INFO_COMPONENT_INFORMATION_BASIC, MAVLINK_MESSAGE_INFO_COMPONENT_METADATA, MAVLINK_MESSAGE_INFO_PLAY_TUNE_V2, MAVLINK_MESSAGE_INFO_SUPPORTED_TUNES, MAVLINK_MESSAGE_INFO_EVENT, MAVLINK_MESSAGE_INFO_CURRENT_EVENT_SEQUENCE, MAVLINK_MESSAGE_INFO_REQUEST_EVENT, MAVLINK_MESSAGE_INFO_RESPONSE_EVENT_ERROR, MAVLINK_MESSAGE_INFO_AVAILABLE_MODES, MAVLINK_MESSAGE_INFO_CURRENT_MODE, MAVLINK_MESSAGE_INFO_AVAILABLE_MODES_MONITOR, MAVLINK_MESSAGE_INFO_ILLUMINATOR_STATUS, MAVLINK_MESSAGE_INFO_WHEEL_DISTANCE, MAVLINK_MESSAGE_INFO_WINCH_STATUS, MAVLINK_MESSAGE_INFO_OPEN_DRONE_ID_BASIC_ID, MAVLINK_MESSAGE_INFO_OPEN_DRONE_ID_LOCATION, MAVLINK_MESSAGE_INFO_OPEN_DRONE_ID_AUTHENTICATION, MAVLINK_MESSAGE_INFO_OPEN_DRONE_ID_SELF_ID, MAVLINK_MESSAGE_INFO_OPEN_DRONE_ID_SYSTEM, MAVLINK_MESSAGE_INFO_OPEN_DRONE_ID_OPERATOR_ID, MAVLINK_MESSAGE_INFO_OPEN_DRONE_ID_MESSAGE_PACK, MAVLINK_MESSAGE_INFO_OPEN_DRONE_ID_ARM_STATUS, MAVLINK_MESSAGE_INFO_OPEN_DRONE_ID_SYSTEM_UPDATE, MAVLINK_MESSAGE_INFO_HYGROMETER_SENSOR}
-# define MAVLINK_MESSAGE_NAMES {{ "ACTUATOR_CONTROL_TARGET", 140 }, { "ACTUATOR_OUTPUT_STATUS", 375 }, { "ADSB_VEHICLE", 246 }, { "AIS_VESSEL", 301 }, { "ALTITUDE", 141 }, { "ATTITUDE", 30 }, { "ATTITUDE_QUATERNION", 31 }, { "ATTITUDE_QUATERNION_COV", 61 }, { "ATTITUDE_TARGET", 83 }, { "ATT_POS_MOCAP", 138 }, { "AUTH_KEY", 7 }, { "AUTOPILOT_STATE_FOR_GIMBAL_DEVICE", 286 }, { "AUTOPILOT_VERSION", 148 }, { "AVAILABLE_MODES", 435 }, { "AVAILABLE_MODES_MONITOR", 437 }, { "BATTERY_INFO", 372 }, { "BATTERY_STATUS", 147 }, { "BUTTON_CHANGE", 257 }, { "CAMERA_CAPTURE_STATUS", 262 }, { "CAMERA_FOV_STATUS", 271 }, { "CAMERA_IMAGE_CAPTURED", 263 }, { "CAMERA_INFORMATION", 259 }, { "CAMERA_SETTINGS", 260 }, { "CAMERA_THERMAL_RANGE", 277 }, { "CAMERA_TRACKING_GEO_STATUS", 276 }, { "CAMERA_TRACKING_IMAGE_STATUS", 275 }, { "CAMERA_TRIGGER", 112 }, { "CANFD_FRAME", 387 }, { "CAN_FILTER_MODIFY", 388 }, { "CAN_FRAME", 386 }, { "CELLULAR_CONFIG", 336 }, { "CELLULAR_STATUS", 334 }, { "CHANGE_OPERATOR_CONTROL", 5 }, { "CHANGE_OPERATOR_CONTROL_ACK", 6 }, { "COLLISION", 247 }, { "COMMAND_ACK", 77 }, { "COMMAND_CANCEL", 80 }, { "COMMAND_INT", 75 }, { "COMMAND_LONG", 76 }, { "COMPONENT_INFORMATION", 395 }, { "COMPONENT_INFORMATION_BASIC", 396 }, { "COMPONENT_METADATA", 397 }, { "CONTROL_SYSTEM_STATE", 146 }, { "CURRENT_EVENT_SEQUENCE", 411 }, { "CURRENT_MODE", 436 }, { "DATA_STREAM", 67 }, { "DATA_TRANSMISSION_HANDSHAKE", 130 }, { "DEBUG", 254 }, { "DEBUG_FLOAT_ARRAY", 350 }, { "DEBUG_VECT", 250 }, { "DISTANCE_SENSOR", 132 }, { "EFI_STATUS", 225 }, { "ENCAPSULATED_DATA", 131 }, { "ESC_INFO", 290 }, { "ESC_STATUS", 291 }, { "ESTIMATOR_STATUS", 230 }, { "EVENT", 410 }, { "EXTENDED_SYS_STATE", 245 }, { "FENCE_STATUS", 162 }, { "FILE_TRANSFER_PROTOCOL", 110 }, { "FLIGHT_INFORMATION", 264 }, { "FOLLOW_TARGET", 144 }, { "FUEL_STATUS", 371 }, { "GENERATOR_STATUS", 373 }, { "GIMBAL_DEVICE_ATTITUDE_STATUS", 285 }, { "GIMBAL_DEVICE_INFORMATION", 283 }, { "GIMBAL_DEVICE_SET_ATTITUDE", 284 }, { "GIMBAL_MANAGER_INFORMATION", 280 }, { "GIMBAL_MANAGER_SET_ATTITUDE", 282 }, { "GIMBAL_MANAGER_SET_MANUAL_CONTROL", 288 }, { "GIMBAL_MANAGER_SET_PITCHYAW", 287 }, { "GIMBAL_MANAGER_STATUS", 281 }, { "GLOBAL_POSITION_INT", 33 }, { "GLOBAL_POSITION_INT_COV", 63 }, { "GLOBAL_VISION_POSITION_ESTIMATE", 101 }, { "GPS2_RAW", 124 }, { "GPS2_RTK", 128 }, { "GPS_GLOBAL_ORIGIN", 49 }, { "GPS_INJECT_DATA", 123 }, { "GPS_INPUT", 232 }, { "GPS_RAW_INT", 24 }, { "GPS_RTCM_DATA", 233 }, { "GPS_RTK", 127 }, { "GPS_STATUS", 25 }, { "HEARTBEAT", 0 }, { "HIGHRES_IMU", 105 }, { "HIGH_LATENCY", 234 }, { "HIGH_LATENCY2", 235 }, { "HIL_ACTUATOR_CONTROLS", 93 }, { "HIL_CONTROLS", 91 }, { "HIL_GPS", 113 }, { "HIL_OPTICAL_FLOW", 114 }, { "HIL_RC_INPUTS_RAW", 92 }, { "HIL_SENSOR", 107 }, { "HIL_STATE", 90 }, { "HIL_STATE_QUATERNION", 115 }, { "HOME_POSITION", 242 }, { "HYGROMETER_SENSOR", 12920 }, { "ILLUMINATOR_STATUS", 440 }, { "ISBD_LINK_STATUS", 335 }, { "LANDING_TARGET", 149 }, { "LINK_NODE_STATUS", 8 }, { "LOCAL_POSITION_NED", 32 }, { "LOCAL_POSITION_NED_COV", 64 }, { "LOCAL_POSITION_NED_SYSTEM_GLOBAL_OFFSET", 89 }, { "LOGGING_ACK", 268 }, { "LOGGING_DATA", 266 }, { "LOGGING_DATA_ACKED", 267 }, { "LOG_DATA", 120 }, { "LOG_ENTRY", 118 }, { "LOG_ERASE", 121 }, { "LOG_REQUEST_DATA", 119 }, { "LOG_REQUEST_END", 122 }, { "LOG_REQUEST_LIST", 117 }, { "MAG_CAL_REPORT", 192 }, { "MANUAL_CONTROL", 69 }, { "MANUAL_SETPOINT", 81 }, { "MEMORY_VECT", 249 }, { "MESSAGE_INTERVAL", 244 }, { "MISSION_ACK", 47 }, { "MISSION_CLEAR_ALL", 45 }, { "MISSION_COUNT", 44 }, { "MISSION_CURRENT", 42 }, { "MISSION_ITEM", 39 }, { "MISSION_ITEM_INT", 73 }, { "MISSION_ITEM_REACHED", 46 }, { "MISSION_REQUEST", 40 }, { "MISSION_REQUEST_INT", 51 }, { "MISSION_REQUEST_LIST", 43 }, { "MISSION_REQUEST_PARTIAL_LIST", 37 }, { "MISSION_SET_CURRENT", 41 }, { "MISSION_WRITE_PARTIAL_LIST", 38 }, { "MOUNT_ORIENTATION", 265 }, { "NAMED_VALUE_FLOAT", 251 }, { "NAMED_VALUE_INT", 252 }, { "NAV_CONTROLLER_OUTPUT", 62 }, { "OBSTACLE_DISTANCE", 330 }, { "ODOMETRY", 331 }, { "ONBOARD_COMPUTER_STATUS", 390 }, { "OPEN_DRONE_ID_ARM_STATUS", 12918 }, { "OPEN_DRONE_ID_AUTHENTICATION", 12902 }, { "OPEN_DRONE_ID_BASIC_ID", 12900 }, { "OPEN_DRONE_ID_LOCATION", 12901 }, { "OPEN_DRONE_ID_MESSAGE_PACK", 12915 }, { "OPEN_DRONE_ID_OPERATOR_ID", 12905 }, { "OPEN_DRONE_ID_SELF_ID", 12903 }, { "OPEN_DRONE_ID_SYSTEM", 12904 }, { "OPEN_DRONE_ID_SYSTEM_UPDATE", 12919 }, { "OPTICAL_FLOW", 100 }, { "OPTICAL_FLOW_RAD", 106 }, { "ORBIT_EXECUTION_STATUS", 360 }, { "PARAM_EXT_ACK", 324 }, { "PARAM_EXT_REQUEST_LIST", 321 }, { "PARAM_EXT_REQUEST_READ", 320 }, { "PARAM_EXT_SET", 323 }, { "PARAM_EXT_VALUE", 322 }, { "PARAM_MAP_RC", 50 }, { "PARAM_REQUEST_LIST", 21 }, { "PARAM_REQUEST_READ", 20 }, { "PARAM_SET", 23 }, { "PARAM_VALUE", 22 }, { "PING", 4 }, { "PLAY_TUNE", 258 }, { "PLAY_TUNE_V2", 400 }, { "POSITION_TARGET_GLOBAL_INT", 87 }, { "POSITION_TARGET_LOCAL_NED", 85 }, { "POWER_STATUS", 125 }, { "PROTOCOL_VERSION", 300 }, { "RADIO_STATUS", 109 }, { "RAW_IMU", 27 }, { "RAW_PRESSURE", 28 }, { "RAW_RPM", 339 }, { "RC_CHANNELS", 65 }, { "RC_CHANNELS_OVERRIDE", 70 }, { "RC_CHANNELS_RAW", 35 }, { "RC_CHANNELS_SCALED", 34 }, { "REQUEST_DATA_STREAM", 66 }, { "REQUEST_EVENT", 412 }, { "RESOURCE_REQUEST", 142 }, { "RESPONSE_EVENT_ERROR", 413 }, { "SAFETY_ALLOWED_AREA", 55 }, { "SAFETY_SET_ALLOWED_AREA", 54 }, { "SCALED_IMU", 26 }, { "SCALED_IMU2", 116 }, { "SCALED_IMU3", 129 }, { "SCALED_PRESSURE", 29 }, { "SCALED_PRESSURE2", 137 }, { "SCALED_PRESSURE3", 143 }, { "SERIAL_CONTROL", 126 }, { "SERVO_OUTPUT_RAW", 36 }, { "SETUP_SIGNING", 256 }, { "SET_ACTUATOR_CONTROL_TARGET", 139 }, { "SET_ATTITUDE_TARGET", 82 }, { "SET_GPS_GLOBAL_ORIGIN", 48 }, { "SET_HOME_POSITION", 243 }, { "SET_MODE", 11 }, { "SET_POSITION_TARGET_GLOBAL_INT", 86 }, { "SET_POSITION_TARGET_LOCAL_NED", 84 }, { "SIM_STATE", 108 }, { "SMART_BATTERY_INFO", 370 }, { "STATUSTEXT", 253 }, { "STORAGE_INFORMATION", 261 }, { "SUPPORTED_TUNES", 401 }, { "SYSTEM_TIME", 2 }, { "SYS_STATUS", 1 }, { "TERRAIN_CHECK", 135 }, { "TERRAIN_DATA", 134 }, { "TERRAIN_REPORT", 136 }, { "TERRAIN_REQUEST", 133 }, { "TIMESYNC", 111 }, { "TIME_ESTIMATE_TO_TARGET", 380 }, { "TRAJECTORY_REPRESENTATION_BEZIER", 333 }, { "TRAJECTORY_REPRESENTATION_WAYPOINTS", 332 }, { "TUNNEL", 385 }, { "UAVCAN_NODE_INFO", 311 }, { "UAVCAN_NODE_STATUS", 310 }, { "UTM_GLOBAL_POSITION", 340 }, { "V2_EXTENSION", 248 }, { "VFR_HUD", 74 }, { "VIBRATION", 241 }, { "VICON_POSITION_ESTIMATE", 104 }, { "VIDEO_STREAM_INFORMATION", 269 }, { "VIDEO_STREAM_STATUS", 270 }, { "VISION_POSITION_ESTIMATE", 102 }, { "VISION_SPEED_ESTIMATE", 103 }, { "WHEEL_DISTANCE", 9000 }, { "WIFI_CONFIG_AP", 299 }, { "WINCH_STATUS", 9005 }, { "WIND_COV", 231 }}
+# define MAVLINK_MESSAGE_INFO {MAVLINK_MESSAGE_INFO_HEARTBEAT, MAVLINK_MESSAGE_INFO_SYS_STATUS, MAVLINK_MESSAGE_INFO_SYSTEM_TIME, MAVLINK_MESSAGE_INFO_PING, MAVLINK_MESSAGE_INFO_CHANGE_OPERATOR_CONTROL, MAVLINK_MESSAGE_INFO_CHANGE_OPERATOR_CONTROL_ACK, MAVLINK_MESSAGE_INFO_AUTH_KEY, MAVLINK_MESSAGE_INFO_SET_MODE, MAVLINK_MESSAGE_INFO_PARAM_REQUEST_READ, MAVLINK_MESSAGE_INFO_PARAM_REQUEST_LIST, MAVLINK_MESSAGE_INFO_PARAM_VALUE, MAVLINK_MESSAGE_INFO_PARAM_SET, MAVLINK_MESSAGE_INFO_GPS_RAW_INT, MAVLINK_MESSAGE_INFO_GPS_STATUS, MAVLINK_MESSAGE_INFO_SCALED_IMU, MAVLINK_MESSAGE_INFO_RAW_IMU, MAVLINK_MESSAGE_INFO_RAW_PRESSURE, MAVLINK_MESSAGE_INFO_SCALED_PRESSURE, MAVLINK_MESSAGE_INFO_ATTITUDE, MAVLINK_MESSAGE_INFO_ATTITUDE_QUATERNION, MAVLINK_MESSAGE_INFO_LOCAL_POSITION_NED, MAVLINK_MESSAGE_INFO_GLOBAL_POSITION_INT, MAVLINK_MESSAGE_INFO_RC_CHANNELS_SCALED, MAVLINK_MESSAGE_INFO_RC_CHANNELS_RAW, MAVLINK_MESSAGE_INFO_SERVO_OUTPUT_RAW, MAVLINK_MESSAGE_INFO_MISSION_REQUEST_PARTIAL_LIST, MAVLINK_MESSAGE_INFO_MISSION_WRITE_PARTIAL_LIST, MAVLINK_MESSAGE_INFO_MISSION_ITEM, MAVLINK_MESSAGE_INFO_MISSION_REQUEST, MAVLINK_MESSAGE_INFO_MISSION_SET_CURRENT, MAVLINK_MESSAGE_INFO_MISSION_CURRENT, MAVLINK_MESSAGE_INFO_MISSION_REQUEST_LIST, MAVLINK_MESSAGE_INFO_MISSION_COUNT, MAVLINK_MESSAGE_INFO_MISSION_CLEAR_ALL, MAVLINK_MESSAGE_INFO_MISSION_ITEM_REACHED, MAVLINK_MESSAGE_INFO_MISSION_ACK, MAVLINK_MESSAGE_INFO_SET_GPS_GLOBAL_ORIGIN, MAVLINK_MESSAGE_INFO_GPS_GLOBAL_ORIGIN, MAVLINK_MESSAGE_INFO_PARAM_MAP_RC, MAVLINK_MESSAGE_INFO_MISSION_REQUEST_INT, MAVLINK_MESSAGE_INFO_SAFETY_SET_ALLOWED_AREA, MAVLINK_MESSAGE_INFO_SAFETY_ALLOWED_AREA, MAVLINK_MESSAGE_INFO_ATTITUDE_QUATERNION_COV, MAVLINK_MESSAGE_INFO_NAV_CONTROLLER_OUTPUT, MAVLINK_MESSAGE_INFO_GLOBAL_POSITION_INT_COV, MAVLINK_MESSAGE_INFO_LOCAL_POSITION_NED_COV, MAVLINK_MESSAGE_INFO_RC_CHANNELS, MAVLINK_MESSAGE_INFO_REQUEST_DATA_STREAM, MAVLINK_MESSAGE_INFO_DATA_STREAM, MAVLINK_MESSAGE_INFO_MANUAL_CONTROL, MAVLINK_MESSAGE_INFO_RC_CHANNELS_OVERRIDE, MAVLINK_MESSAGE_INFO_MISSION_ITEM_INT, MAVLINK_MESSAGE_INFO_VFR_HUD, MAVLINK_MESSAGE_INFO_COMMAND_INT, MAVLINK_MESSAGE_INFO_COMMAND_LONG, MAVLINK_MESSAGE_INFO_COMMAND_ACK, MAVLINK_MESSAGE_INFO_MANUAL_SETPOINT, MAVLINK_MESSAGE_INFO_SET_ATTITUDE_TARGET, MAVLINK_MESSAGE_INFO_ATTITUDE_TARGET, MAVLINK_MESSAGE_INFO_SET_POSITION_TARGET_LOCAL_NED, MAVLINK_MESSAGE_INFO_POSITION_TARGET_LOCAL_NED, MAVLINK_MESSAGE_INFO_SET_POSITION_TARGET_GLOBAL_INT, MAVLINK_MESSAGE_INFO_POSITION_TARGET_GLOBAL_INT, MAVLINK_MESSAGE_INFO_LOCAL_POSITION_NED_SYSTEM_GLOBAL_OFFSET, MAVLINK_MESSAGE_INFO_HIL_STATE, MAVLINK_MESSAGE_INFO_HIL_CONTROLS, MAVLINK_MESSAGE_INFO_HIL_RC_INPUTS_RAW, MAVLINK_MESSAGE_INFO_HIL_ACTUATOR_CONTROLS, MAVLINK_MESSAGE_INFO_OPTICAL_FLOW, MAVLINK_MESSAGE_INFO_GLOBAL_VISION_POSITION_ESTIMATE, MAVLINK_MESSAGE_INFO_VISION_POSITION_ESTIMATE, MAVLINK_MESSAGE_INFO_VISION_SPEED_ESTIMATE, MAVLINK_MESSAGE_INFO_VICON_POSITION_ESTIMATE, MAVLINK_MESSAGE_INFO_HIGHRES_IMU, MAVLINK_MESSAGE_INFO_OPTICAL_FLOW_RAD, MAVLINK_MESSAGE_INFO_HIL_SENSOR, MAVLINK_MESSAGE_INFO_SIM_STATE, MAVLINK_MESSAGE_INFO_RADIO_STATUS, MAVLINK_MESSAGE_INFO_FILE_TRANSFER_PROTOCOL, MAVLINK_MESSAGE_INFO_TIMESYNC, MAVLINK_MESSAGE_INFO_CAMERA_TRIGGER, MAVLINK_MESSAGE_INFO_HIL_GPS, MAVLINK_MESSAGE_INFO_HIL_OPTICAL_FLOW, MAVLINK_MESSAGE_INFO_HIL_STATE_QUATERNION, MAVLINK_MESSAGE_INFO_SCALED_IMU2, MAVLINK_MESSAGE_INFO_LOG_REQUEST_LIST, MAVLINK_MESSAGE_INFO_LOG_ENTRY, MAVLINK_MESSAGE_INFO_LOG_REQUEST_DATA, MAVLINK_MESSAGE_INFO_LOG_DATA, MAVLINK_MESSAGE_INFO_LOG_ERASE, MAVLINK_MESSAGE_INFO_LOG_REQUEST_END, MAVLINK_MESSAGE_INFO_GPS_INJECT_DATA, MAVLINK_MESSAGE_INFO_GPS2_RAW, MAVLINK_MESSAGE_INFO_POWER_STATUS, MAVLINK_MESSAGE_INFO_SERIAL_CONTROL, MAVLINK_MESSAGE_INFO_GPS_RTK, MAVLINK_MESSAGE_INFO_GPS2_RTK, MAVLINK_MESSAGE_INFO_SCALED_IMU3, MAVLINK_MESSAGE_INFO_DATA_TRANSMISSION_HANDSHAKE, MAVLINK_MESSAGE_INFO_ENCAPSULATED_DATA, MAVLINK_MESSAGE_INFO_DISTANCE_SENSOR, MAVLINK_MESSAGE_INFO_TERRAIN_REQUEST, MAVLINK_MESSAGE_INFO_TERRAIN_DATA, MAVLINK_MESSAGE_INFO_TERRAIN_CHECK, MAVLINK_MESSAGE_INFO_TERRAIN_REPORT, MAVLINK_MESSAGE_INFO_SCALED_PRESSURE2, MAVLINK_MESSAGE_INFO_ATT_POS_MOCAP, MAVLINK_MESSAGE_INFO_SET_ACTUATOR_CONTROL_TARGET, MAVLINK_MESSAGE_INFO_ACTUATOR_CONTROL_TARGET, MAVLINK_MESSAGE_INFO_ALTITUDE, MAVLINK_MESSAGE_INFO_RESOURCE_REQUEST, MAVLINK_MESSAGE_INFO_SCALED_PRESSURE3, MAVLINK_MESSAGE_INFO_FOLLOW_TARGET, MAVLINK_MESSAGE_INFO_CONTROL_SYSTEM_STATE, MAVLINK_MESSAGE_INFO_BATTERY_STATUS, MAVLINK_MESSAGE_INFO_AUTOPILOT_VERSION, MAVLINK_MESSAGE_INFO_LANDING_TARGET, MAVLINK_MESSAGE_INFO_FENCE_STATUS, MAVLINK_MESSAGE_INFO_MAG_CAL_REPORT, MAVLINK_MESSAGE_INFO_EFI_STATUS, MAVLINK_MESSAGE_INFO_ESTIMATOR_STATUS, MAVLINK_MESSAGE_INFO_WIND_COV, MAVLINK_MESSAGE_INFO_GPS_INPUT, MAVLINK_MESSAGE_INFO_GPS_RTCM_DATA, MAVLINK_MESSAGE_INFO_HIGH_LATENCY, MAVLINK_MESSAGE_INFO_HIGH_LATENCY2, MAVLINK_MESSAGE_INFO_VIBRATION, MAVLINK_MESSAGE_INFO_HOME_POSITION, MAVLINK_MESSAGE_INFO_SET_HOME_POSITION, MAVLINK_MESSAGE_INFO_MESSAGE_INTERVAL, MAVLINK_MESSAGE_INFO_EXTENDED_SYS_STATE, MAVLINK_MESSAGE_INFO_ADSB_VEHICLE, MAVLINK_MESSAGE_INFO_COLLISION, MAVLINK_MESSAGE_INFO_V2_EXTENSION, MAVLINK_MESSAGE_INFO_MEMORY_VECT, MAVLINK_MESSAGE_INFO_DEBUG_VECT, MAVLINK_MESSAGE_INFO_NAMED_VALUE_FLOAT, MAVLINK_MESSAGE_INFO_NAMED_VALUE_INT, MAVLINK_MESSAGE_INFO_STATUSTEXT, MAVLINK_MESSAGE_INFO_DEBUG, MAVLINK_MESSAGE_INFO_SETUP_SIGNING, MAVLINK_MESSAGE_INFO_BUTTON_CHANGE, MAVLINK_MESSAGE_INFO_PLAY_TUNE, MAVLINK_MESSAGE_INFO_CAMERA_INFORMATION, MAVLINK_MESSAGE_INFO_CAMERA_SETTINGS, MAVLINK_MESSAGE_INFO_STORAGE_INFORMATION, MAVLINK_MESSAGE_INFO_CAMERA_CAPTURE_STATUS, MAVLINK_MESSAGE_INFO_CAMERA_IMAGE_CAPTURED, MAVLINK_MESSAGE_INFO_FLIGHT_INFORMATION, MAVLINK_MESSAGE_INFO_MOUNT_ORIENTATION, MAVLINK_MESSAGE_INFO_LOGGING_DATA, MAVLINK_MESSAGE_INFO_LOGGING_DATA_ACKED, MAVLINK_MESSAGE_INFO_LOGGING_ACK, MAVLINK_MESSAGE_INFO_VIDEO_STREAM_INFORMATION, MAVLINK_MESSAGE_INFO_VIDEO_STREAM_STATUS, MAVLINK_MESSAGE_INFO_CAMERA_FOV_STATUS, MAVLINK_MESSAGE_INFO_CAMERA_TRACKING_IMAGE_STATUS, MAVLINK_MESSAGE_INFO_CAMERA_TRACKING_GEO_STATUS, MAVLINK_MESSAGE_INFO_GIMBAL_MANAGER_INFORMATION, MAVLINK_MESSAGE_INFO_GIMBAL_MANAGER_STATUS, MAVLINK_MESSAGE_INFO_GIMBAL_MANAGER_SET_ATTITUDE, MAVLINK_MESSAGE_INFO_GIMBAL_DEVICE_INFORMATION, MAVLINK_MESSAGE_INFO_GIMBAL_DEVICE_SET_ATTITUDE, MAVLINK_MESSAGE_INFO_GIMBAL_DEVICE_ATTITUDE_STATUS, MAVLINK_MESSAGE_INFO_AUTOPILOT_STATE_FOR_GIMBAL_DEVICE, MAVLINK_MESSAGE_INFO_GIMBAL_MANAGER_SET_PITCHYAW, MAVLINK_MESSAGE_INFO_GIMBAL_MANAGER_SET_MANUAL_CONTROL, MAVLINK_MESSAGE_INFO_WIFI_CONFIG_AP, MAVLINK_MESSAGE_INFO_AIS_VESSEL, MAVLINK_MESSAGE_INFO_UAVCAN_NODE_STATUS, MAVLINK_MESSAGE_INFO_UAVCAN_NODE_INFO, MAVLINK_MESSAGE_INFO_PARAM_EXT_REQUEST_READ, MAVLINK_MESSAGE_INFO_PARAM_EXT_REQUEST_LIST, MAVLINK_MESSAGE_INFO_PARAM_EXT_VALUE, MAVLINK_MESSAGE_INFO_PARAM_EXT_SET, MAVLINK_MESSAGE_INFO_PARAM_EXT_ACK, MAVLINK_MESSAGE_INFO_OBSTACLE_DISTANCE, MAVLINK_MESSAGE_INFO_ODOMETRY, MAVLINK_MESSAGE_INFO_ISBD_LINK_STATUS, MAVLINK_MESSAGE_INFO_RAW_RPM, MAVLINK_MESSAGE_INFO_UTM_GLOBAL_POSITION, MAVLINK_MESSAGE_INFO_DEBUG_FLOAT_ARRAY, MAVLINK_MESSAGE_INFO_SMART_BATTERY_INFO, MAVLINK_MESSAGE_INFO_GENERATOR_STATUS, MAVLINK_MESSAGE_INFO_ACTUATOR_OUTPUT_STATUS, MAVLINK_MESSAGE_INFO_RELAY_STATUS, MAVLINK_MESSAGE_INFO_TUNNEL, MAVLINK_MESSAGE_INFO_CAN_FRAME, MAVLINK_MESSAGE_INFO_CANFD_FRAME, MAVLINK_MESSAGE_INFO_CAN_FILTER_MODIFY, MAVLINK_MESSAGE_INFO_WHEEL_DISTANCE, MAVLINK_MESSAGE_INFO_WINCH_STATUS, MAVLINK_MESSAGE_INFO_OPEN_DRONE_ID_BASIC_ID, MAVLINK_MESSAGE_INFO_OPEN_DRONE_ID_LOCATION, MAVLINK_MESSAGE_INFO_OPEN_DRONE_ID_AUTHENTICATION, MAVLINK_MESSAGE_INFO_OPEN_DRONE_ID_SELF_ID, MAVLINK_MESSAGE_INFO_OPEN_DRONE_ID_SYSTEM, MAVLINK_MESSAGE_INFO_OPEN_DRONE_ID_OPERATOR_ID, MAVLINK_MESSAGE_INFO_OPEN_DRONE_ID_MESSAGE_PACK, MAVLINK_MESSAGE_INFO_OPEN_DRONE_ID_ARM_STATUS, MAVLINK_MESSAGE_INFO_OPEN_DRONE_ID_SYSTEM_UPDATE, MAVLINK_MESSAGE_INFO_HYGROMETER_SENSOR}
+# define MAVLINK_MESSAGE_NAMES {{ "ACTUATOR_CONTROL_TARGET", 140 }, { "ACTUATOR_OUTPUT_STATUS", 375 }, { "ADSB_VEHICLE", 246 }, { "AIS_VESSEL", 301 }, { "ALTITUDE", 141 }, { "ATTITUDE", 30 }, { "ATTITUDE_QUATERNION", 31 }, { "ATTITUDE_QUATERNION_COV", 61 }, { "ATTITUDE_TARGET", 83 }, { "ATT_POS_MOCAP", 138 }, { "AUTH_KEY", 7 }, { "AUTOPILOT_STATE_FOR_GIMBAL_DEVICE", 286 }, { "AUTOPILOT_VERSION", 148 }, { "BATTERY_STATUS", 147 }, { "BUTTON_CHANGE", 257 }, { "CAMERA_CAPTURE_STATUS", 262 }, { "CAMERA_FOV_STATUS", 271 }, { "CAMERA_IMAGE_CAPTURED", 263 }, { "CAMERA_INFORMATION", 259 }, { "CAMERA_SETTINGS", 260 }, { "CAMERA_TRACKING_GEO_STATUS", 276 }, { "CAMERA_TRACKING_IMAGE_STATUS", 275 }, { "CAMERA_TRIGGER", 112 }, { "CANFD_FRAME", 387 }, { "CAN_FILTER_MODIFY", 388 }, { "CAN_FRAME", 386 }, { "CHANGE_OPERATOR_CONTROL", 5 }, { "CHANGE_OPERATOR_CONTROL_ACK", 6 }, { "COLLISION", 247 }, { "COMMAND_ACK", 77 }, { "COMMAND_INT", 75 }, { "COMMAND_LONG", 76 }, { "CONTROL_SYSTEM_STATE", 146 }, { "DATA_STREAM", 67 }, { "DATA_TRANSMISSION_HANDSHAKE", 130 }, { "DEBUG", 254 }, { "DEBUG_FLOAT_ARRAY", 350 }, { "DEBUG_VECT", 250 }, { "DISTANCE_SENSOR", 132 }, { "EFI_STATUS", 225 }, { "ENCAPSULATED_DATA", 131 }, { "ESTIMATOR_STATUS", 230 }, { "EXTENDED_SYS_STATE", 245 }, { "FENCE_STATUS", 162 }, { "FILE_TRANSFER_PROTOCOL", 110 }, { "FLIGHT_INFORMATION", 264 }, { "FOLLOW_TARGET", 144 }, { "GENERATOR_STATUS", 373 }, { "GIMBAL_DEVICE_ATTITUDE_STATUS", 285 }, { "GIMBAL_DEVICE_INFORMATION", 283 }, { "GIMBAL_DEVICE_SET_ATTITUDE", 284 }, { "GIMBAL_MANAGER_INFORMATION", 280 }, { "GIMBAL_MANAGER_SET_ATTITUDE", 282 }, { "GIMBAL_MANAGER_SET_MANUAL_CONTROL", 288 }, { "GIMBAL_MANAGER_SET_PITCHYAW", 287 }, { "GIMBAL_MANAGER_STATUS", 281 }, { "GLOBAL_POSITION_INT", 33 }, { "GLOBAL_POSITION_INT_COV", 63 }, { "GLOBAL_VISION_POSITION_ESTIMATE", 101 }, { "GPS2_RAW", 124 }, { "GPS2_RTK", 128 }, { "GPS_GLOBAL_ORIGIN", 49 }, { "GPS_INJECT_DATA", 123 }, { "GPS_INPUT", 232 }, { "GPS_RAW_INT", 24 }, { "GPS_RTCM_DATA", 233 }, { "GPS_RTK", 127 }, { "GPS_STATUS", 25 }, { "HEARTBEAT", 0 }, { "HIGHRES_IMU", 105 }, { "HIGH_LATENCY", 234 }, { "HIGH_LATENCY2", 235 }, { "HIL_ACTUATOR_CONTROLS", 93 }, { "HIL_CONTROLS", 91 }, { "HIL_GPS", 113 }, { "HIL_OPTICAL_FLOW", 114 }, { "HIL_RC_INPUTS_RAW", 92 }, { "HIL_SENSOR", 107 }, { "HIL_STATE", 90 }, { "HIL_STATE_QUATERNION", 115 }, { "HOME_POSITION", 242 }, { "HYGROMETER_SENSOR", 12920 }, { "ISBD_LINK_STATUS", 335 }, { "LANDING_TARGET", 149 }, { "LOCAL_POSITION_NED", 32 }, { "LOCAL_POSITION_NED_COV", 64 }, { "LOCAL_POSITION_NED_SYSTEM_GLOBAL_OFFSET", 89 }, { "LOGGING_ACK", 268 }, { "LOGGING_DATA", 266 }, { "LOGGING_DATA_ACKED", 267 }, { "LOG_DATA", 120 }, { "LOG_ENTRY", 118 }, { "LOG_ERASE", 121 }, { "LOG_REQUEST_DATA", 119 }, { "LOG_REQUEST_END", 122 }, { "LOG_REQUEST_LIST", 117 }, { "MAG_CAL_REPORT", 192 }, { "MANUAL_CONTROL", 69 }, { "MANUAL_SETPOINT", 81 }, { "MEMORY_VECT", 249 }, { "MESSAGE_INTERVAL", 244 }, { "MISSION_ACK", 47 }, { "MISSION_CLEAR_ALL", 45 }, { "MISSION_COUNT", 44 }, { "MISSION_CURRENT", 42 }, { "MISSION_ITEM", 39 }, { "MISSION_ITEM_INT", 73 }, { "MISSION_ITEM_REACHED", 46 }, { "MISSION_REQUEST", 40 }, { "MISSION_REQUEST_INT", 51 }, { "MISSION_REQUEST_LIST", 43 }, { "MISSION_REQUEST_PARTIAL_LIST", 37 }, { "MISSION_SET_CURRENT", 41 }, { "MISSION_WRITE_PARTIAL_LIST", 38 }, { "MOUNT_ORIENTATION", 265 }, { "NAMED_VALUE_FLOAT", 251 }, { "NAMED_VALUE_INT", 252 }, { "NAV_CONTROLLER_OUTPUT", 62 }, { "OBSTACLE_DISTANCE", 330 }, { "ODOMETRY", 331 }, { "OPEN_DRONE_ID_ARM_STATUS", 12918 }, { "OPEN_DRONE_ID_AUTHENTICATION", 12902 }, { "OPEN_DRONE_ID_BASIC_ID", 12900 }, { "OPEN_DRONE_ID_LOCATION", 12901 }, { "OPEN_DRONE_ID_MESSAGE_PACK", 12915 }, { "OPEN_DRONE_ID_OPERATOR_ID", 12905 }, { "OPEN_DRONE_ID_SELF_ID", 12903 }, { "OPEN_DRONE_ID_SYSTEM", 12904 }, { "OPEN_DRONE_ID_SYSTEM_UPDATE", 12919 }, { "OPTICAL_FLOW", 100 }, { "OPTICAL_FLOW_RAD", 106 }, { "PARAM_EXT_ACK", 324 }, { "PARAM_EXT_REQUEST_LIST", 321 }, { "PARAM_EXT_REQUEST_READ", 320 }, { "PARAM_EXT_SET", 323 }, { "PARAM_EXT_VALUE", 322 }, { "PARAM_MAP_RC", 50 }, { "PARAM_REQUEST_LIST", 21 }, { "PARAM_REQUEST_READ", 20 }, { "PARAM_SET", 23 }, { "PARAM_VALUE", 22 }, { "PING", 4 }, { "PLAY_TUNE", 258 }, { "POSITION_TARGET_GLOBAL_INT", 87 }, { "POSITION_TARGET_LOCAL_NED", 85 }, { "POWER_STATUS", 125 }, { "RADIO_STATUS", 109 }, { "RAW_IMU", 27 }, { "RAW_PRESSURE", 28 }, { "RAW_RPM", 339 }, { "RC_CHANNELS", 65 }, { "RC_CHANNELS_OVERRIDE", 70 }, { "RC_CHANNELS_RAW", 35 }, { "RC_CHANNELS_SCALED", 34 }, { "RELAY_STATUS", 376 }, { "REQUEST_DATA_STREAM", 66 }, { "RESOURCE_REQUEST", 142 }, { "SAFETY_ALLOWED_AREA", 55 }, { "SAFETY_SET_ALLOWED_AREA", 54 }, { "SCALED_IMU", 26 }, { "SCALED_IMU2", 116 }, { "SCALED_IMU3", 129 }, { "SCALED_PRESSURE", 29 }, { "SCALED_PRESSURE2", 137 }, { "SCALED_PRESSURE3", 143 }, { "SERIAL_CONTROL", 126 }, { "SERVO_OUTPUT_RAW", 36 }, { "SETUP_SIGNING", 256 }, { "SET_ACTUATOR_CONTROL_TARGET", 139 }, { "SET_ATTITUDE_TARGET", 82 }, { "SET_GPS_GLOBAL_ORIGIN", 48 }, { "SET_HOME_POSITION", 243 }, { "SET_MODE", 11 }, { "SET_POSITION_TARGET_GLOBAL_INT", 86 }, { "SET_POSITION_TARGET_LOCAL_NED", 84 }, { "SIM_STATE", 108 }, { "SMART_BATTERY_INFO", 370 }, { "STATUSTEXT", 253 }, { "STORAGE_INFORMATION", 261 }, { "SYSTEM_TIME", 2 }, { "SYS_STATUS", 1 }, { "TERRAIN_CHECK", 135 }, { "TERRAIN_DATA", 134 }, { "TERRAIN_REPORT", 136 }, { "TERRAIN_REQUEST", 133 }, { "TIMESYNC", 111 }, { "TUNNEL", 385 }, { "UAVCAN_NODE_INFO", 311 }, { "UAVCAN_NODE_STATUS", 310 }, { "UTM_GLOBAL_POSITION", 340 }, { "V2_EXTENSION", 248 }, { "VFR_HUD", 74 }, { "VIBRATION", 241 }, { "VICON_POSITION_ESTIMATE", 104 }, { "VIDEO_STREAM_INFORMATION", 269 }, { "VIDEO_STREAM_STATUS", 270 }, { "VISION_POSITION_ESTIMATE", 102 }, { "VISION_SPEED_ESTIMATE", 103 }, { "WHEEL_DISTANCE", 9000 }, { "WIFI_CONFIG_AP", 299 }, { "WINCH_STATUS", 9005 }, { "WIND_COV", 231 }}
 # if MAVLINK_COMMAND_24BIT
 #  include "../mavlink_get_info.h"
 # endif
