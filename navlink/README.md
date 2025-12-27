@@ -4,30 +4,25 @@ Custom MAVLink messages for swarm coordination.
 
 ## Generating Headers
 
-To regenerate the C headers from the XML definition:
-
-```python
-python -c "
-from pymavlink.generator import mavgen
-import argparse
-
-parser = argparse.ArgumentParser()
-parser.add_argument('--lang', default='C')
-parser.add_argument('--wire-protocol', default='2.0')
-parser.add_argument('-o', '--output', required=True)
-parser.add_argument('definitions', nargs='+')
-
-args = parser.parse_args(['--lang=C', '--wire-protocol=2.0', '-o', 'navlink', 'message_definitions/navlink.xml'])
-
-opts = mavgen.Opts(args.output, wire_protocol=args.wire_protocol, language=args.lang)
-mavgen.mavgen(opts, args.definitions)
-"
-```
-
-Or use mavgen directly if available:
+To regenerate the C headers from the XML definition, run from the repository root:
 
 ```bash
 mavgen.py --lang=C --wire-protocol=2.0 -o navlink message_definitions/navlink.xml
+```
+
+Then move the generated files:
+```bash
+mv navlink/navlink/* navlink/
+rmdir navlink/navlink
+```
+
+**Note:** `mavgen.py` is installed to Python's Scripts directory by pymavlink. If not in PATH, use the full path or run via Python:
+```bash
+python -c "
+from pymavlink.generator import mavgen
+opts = mavgen.Opts('navlink', wire_protocol='2.0', language='C')
+mavgen.mavgen(opts, ['message_definitions/navlink.xml'])
+"
 ```
 
 ## Requirements
