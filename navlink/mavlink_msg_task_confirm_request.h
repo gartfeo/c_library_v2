@@ -5,20 +5,24 @@
 
 
 typedef struct __mavlink_task_confirm_request_t {
- float lat; /*<  */
- float lng; /*<  */
- float alt; /*<  */
- uint16_t task_id; /*<  */
- uint8_t task_type; /*<  */
+ uint64_t time_ms; /*< [ms] Sender timestamp in milliseconds since epoch.*/
+ uint32_t boot_id; /*<  Random ID generated on process start, identifies sender instance.*/
+ uint32_t msg_seq; /*<  Monotonic sequence counter per sender.*/
+ uint32_t ttl_ms; /*< [ms] Time-to-live validity window in milliseconds.*/
+ float lat; /*<  Task latitude in degrees.*/
+ float lng; /*<  Task longitude in degrees.*/
+ float alt; /*<  Task altitude in meters.*/
+ uint16_t task_id; /*<  Task ID to confirm.*/
+ uint8_t task_type; /*<  Task type.*/
 } mavlink_task_confirm_request_t;
 
-#define MAVLINK_MSG_ID_TASK_CONFIRM_REQUEST_LEN 15
-#define MAVLINK_MSG_ID_TASK_CONFIRM_REQUEST_MIN_LEN 15
-#define MAVLINK_MSG_ID_25108_LEN 15
-#define MAVLINK_MSG_ID_25108_MIN_LEN 15
+#define MAVLINK_MSG_ID_TASK_CONFIRM_REQUEST_LEN 35
+#define MAVLINK_MSG_ID_TASK_CONFIRM_REQUEST_MIN_LEN 35
+#define MAVLINK_MSG_ID_25108_LEN 35
+#define MAVLINK_MSG_ID_25108_MIN_LEN 35
 
-#define MAVLINK_MSG_ID_TASK_CONFIRM_REQUEST_CRC 0
-#define MAVLINK_MSG_ID_25108_CRC 0
+#define MAVLINK_MSG_ID_TASK_CONFIRM_REQUEST_CRC 164
+#define MAVLINK_MSG_ID_25108_CRC 164
 
 
 
@@ -26,23 +30,31 @@ typedef struct __mavlink_task_confirm_request_t {
 #define MAVLINK_MESSAGE_INFO_TASK_CONFIRM_REQUEST { \
     25108, \
     "TASK_CONFIRM_REQUEST", \
-    5, \
-    {  { "task_id", NULL, MAVLINK_TYPE_UINT16_T, 0, 12, offsetof(mavlink_task_confirm_request_t, task_id) }, \
-         { "task_type", NULL, MAVLINK_TYPE_UINT8_T, 0, 14, offsetof(mavlink_task_confirm_request_t, task_type) }, \
-         { "lat", NULL, MAVLINK_TYPE_FLOAT, 0, 0, offsetof(mavlink_task_confirm_request_t, lat) }, \
-         { "lng", NULL, MAVLINK_TYPE_FLOAT, 0, 4, offsetof(mavlink_task_confirm_request_t, lng) }, \
-         { "alt", NULL, MAVLINK_TYPE_FLOAT, 0, 8, offsetof(mavlink_task_confirm_request_t, alt) }, \
+    9, \
+    {  { "boot_id", NULL, MAVLINK_TYPE_UINT32_T, 0, 8, offsetof(mavlink_task_confirm_request_t, boot_id) }, \
+         { "msg_seq", NULL, MAVLINK_TYPE_UINT32_T, 0, 12, offsetof(mavlink_task_confirm_request_t, msg_seq) }, \
+         { "time_ms", NULL, MAVLINK_TYPE_UINT64_T, 0, 0, offsetof(mavlink_task_confirm_request_t, time_ms) }, \
+         { "ttl_ms", NULL, MAVLINK_TYPE_UINT32_T, 0, 16, offsetof(mavlink_task_confirm_request_t, ttl_ms) }, \
+         { "task_id", NULL, MAVLINK_TYPE_UINT16_T, 0, 32, offsetof(mavlink_task_confirm_request_t, task_id) }, \
+         { "task_type", NULL, MAVLINK_TYPE_UINT8_T, 0, 34, offsetof(mavlink_task_confirm_request_t, task_type) }, \
+         { "lat", NULL, MAVLINK_TYPE_FLOAT, 0, 20, offsetof(mavlink_task_confirm_request_t, lat) }, \
+         { "lng", NULL, MAVLINK_TYPE_FLOAT, 0, 24, offsetof(mavlink_task_confirm_request_t, lng) }, \
+         { "alt", NULL, MAVLINK_TYPE_FLOAT, 0, 28, offsetof(mavlink_task_confirm_request_t, alt) }, \
          } \
 }
 #else
 #define MAVLINK_MESSAGE_INFO_TASK_CONFIRM_REQUEST { \
     "TASK_CONFIRM_REQUEST", \
-    5, \
-    {  { "task_id", NULL, MAVLINK_TYPE_UINT16_T, 0, 12, offsetof(mavlink_task_confirm_request_t, task_id) }, \
-         { "task_type", NULL, MAVLINK_TYPE_UINT8_T, 0, 14, offsetof(mavlink_task_confirm_request_t, task_type) }, \
-         { "lat", NULL, MAVLINK_TYPE_FLOAT, 0, 0, offsetof(mavlink_task_confirm_request_t, lat) }, \
-         { "lng", NULL, MAVLINK_TYPE_FLOAT, 0, 4, offsetof(mavlink_task_confirm_request_t, lng) }, \
-         { "alt", NULL, MAVLINK_TYPE_FLOAT, 0, 8, offsetof(mavlink_task_confirm_request_t, alt) }, \
+    9, \
+    {  { "boot_id", NULL, MAVLINK_TYPE_UINT32_T, 0, 8, offsetof(mavlink_task_confirm_request_t, boot_id) }, \
+         { "msg_seq", NULL, MAVLINK_TYPE_UINT32_T, 0, 12, offsetof(mavlink_task_confirm_request_t, msg_seq) }, \
+         { "time_ms", NULL, MAVLINK_TYPE_UINT64_T, 0, 0, offsetof(mavlink_task_confirm_request_t, time_ms) }, \
+         { "ttl_ms", NULL, MAVLINK_TYPE_UINT32_T, 0, 16, offsetof(mavlink_task_confirm_request_t, ttl_ms) }, \
+         { "task_id", NULL, MAVLINK_TYPE_UINT16_T, 0, 32, offsetof(mavlink_task_confirm_request_t, task_id) }, \
+         { "task_type", NULL, MAVLINK_TYPE_UINT8_T, 0, 34, offsetof(mavlink_task_confirm_request_t, task_type) }, \
+         { "lat", NULL, MAVLINK_TYPE_FLOAT, 0, 20, offsetof(mavlink_task_confirm_request_t, lat) }, \
+         { "lng", NULL, MAVLINK_TYPE_FLOAT, 0, 24, offsetof(mavlink_task_confirm_request_t, lng) }, \
+         { "alt", NULL, MAVLINK_TYPE_FLOAT, 0, 28, offsetof(mavlink_task_confirm_request_t, alt) }, \
          } \
 }
 #endif
@@ -53,27 +65,39 @@ typedef struct __mavlink_task_confirm_request_t {
  * @param component_id ID of this component (e.g. 200 for IMU)
  * @param msg The MAVLink message to compress the data into
  *
- * @param task_id  
- * @param task_type  
- * @param lat  
- * @param lng  
- * @param alt  
+ * @param boot_id  Random ID generated on process start, identifies sender instance.
+ * @param msg_seq  Monotonic sequence counter per sender.
+ * @param time_ms [ms] Sender timestamp in milliseconds since epoch.
+ * @param ttl_ms [ms] Time-to-live validity window in milliseconds.
+ * @param task_id  Task ID to confirm.
+ * @param task_type  Task type.
+ * @param lat  Task latitude in degrees.
+ * @param lng  Task longitude in degrees.
+ * @param alt  Task altitude in meters.
  * @return length of the message in bytes (excluding serial stream start sign)
  */
 static inline uint16_t mavlink_msg_task_confirm_request_pack(uint8_t system_id, uint8_t component_id, mavlink_message_t* msg,
-                               uint16_t task_id, uint8_t task_type, float lat, float lng, float alt)
+                               uint32_t boot_id, uint32_t msg_seq, uint64_t time_ms, uint32_t ttl_ms, uint16_t task_id, uint8_t task_type, float lat, float lng, float alt)
 {
 #if MAVLINK_NEED_BYTE_SWAP || !MAVLINK_ALIGNED_FIELDS
     char buf[MAVLINK_MSG_ID_TASK_CONFIRM_REQUEST_LEN];
-    _mav_put_float(buf, 0, lat);
-    _mav_put_float(buf, 4, lng);
-    _mav_put_float(buf, 8, alt);
-    _mav_put_uint16_t(buf, 12, task_id);
-    _mav_put_uint8_t(buf, 14, task_type);
+    _mav_put_uint64_t(buf, 0, time_ms);
+    _mav_put_uint32_t(buf, 8, boot_id);
+    _mav_put_uint32_t(buf, 12, msg_seq);
+    _mav_put_uint32_t(buf, 16, ttl_ms);
+    _mav_put_float(buf, 20, lat);
+    _mav_put_float(buf, 24, lng);
+    _mav_put_float(buf, 28, alt);
+    _mav_put_uint16_t(buf, 32, task_id);
+    _mav_put_uint8_t(buf, 34, task_type);
 
         memcpy(_MAV_PAYLOAD_NON_CONST(msg), buf, MAVLINK_MSG_ID_TASK_CONFIRM_REQUEST_LEN);
 #else
     mavlink_task_confirm_request_t packet;
+    packet.time_ms = time_ms;
+    packet.boot_id = boot_id;
+    packet.msg_seq = msg_seq;
+    packet.ttl_ms = ttl_ms;
     packet.lat = lat;
     packet.lng = lng;
     packet.alt = alt;
@@ -94,27 +118,39 @@ static inline uint16_t mavlink_msg_task_confirm_request_pack(uint8_t system_id, 
  * @param status MAVLink status structure
  * @param msg The MAVLink message to compress the data into
  *
- * @param task_id  
- * @param task_type  
- * @param lat  
- * @param lng  
- * @param alt  
+ * @param boot_id  Random ID generated on process start, identifies sender instance.
+ * @param msg_seq  Monotonic sequence counter per sender.
+ * @param time_ms [ms] Sender timestamp in milliseconds since epoch.
+ * @param ttl_ms [ms] Time-to-live validity window in milliseconds.
+ * @param task_id  Task ID to confirm.
+ * @param task_type  Task type.
+ * @param lat  Task latitude in degrees.
+ * @param lng  Task longitude in degrees.
+ * @param alt  Task altitude in meters.
  * @return length of the message in bytes (excluding serial stream start sign)
  */
 static inline uint16_t mavlink_msg_task_confirm_request_pack_status(uint8_t system_id, uint8_t component_id, mavlink_status_t *_status, mavlink_message_t* msg,
-                               uint16_t task_id, uint8_t task_type, float lat, float lng, float alt)
+                               uint32_t boot_id, uint32_t msg_seq, uint64_t time_ms, uint32_t ttl_ms, uint16_t task_id, uint8_t task_type, float lat, float lng, float alt)
 {
 #if MAVLINK_NEED_BYTE_SWAP || !MAVLINK_ALIGNED_FIELDS
     char buf[MAVLINK_MSG_ID_TASK_CONFIRM_REQUEST_LEN];
-    _mav_put_float(buf, 0, lat);
-    _mav_put_float(buf, 4, lng);
-    _mav_put_float(buf, 8, alt);
-    _mav_put_uint16_t(buf, 12, task_id);
-    _mav_put_uint8_t(buf, 14, task_type);
+    _mav_put_uint64_t(buf, 0, time_ms);
+    _mav_put_uint32_t(buf, 8, boot_id);
+    _mav_put_uint32_t(buf, 12, msg_seq);
+    _mav_put_uint32_t(buf, 16, ttl_ms);
+    _mav_put_float(buf, 20, lat);
+    _mav_put_float(buf, 24, lng);
+    _mav_put_float(buf, 28, alt);
+    _mav_put_uint16_t(buf, 32, task_id);
+    _mav_put_uint8_t(buf, 34, task_type);
 
         memcpy(_MAV_PAYLOAD_NON_CONST(msg), buf, MAVLINK_MSG_ID_TASK_CONFIRM_REQUEST_LEN);
 #else
     mavlink_task_confirm_request_t packet;
+    packet.time_ms = time_ms;
+    packet.boot_id = boot_id;
+    packet.msg_seq = msg_seq;
+    packet.ttl_ms = ttl_ms;
     packet.lat = lat;
     packet.lng = lng;
     packet.alt = alt;
@@ -138,28 +174,40 @@ static inline uint16_t mavlink_msg_task_confirm_request_pack_status(uint8_t syst
  * @param component_id ID of this component (e.g. 200 for IMU)
  * @param chan The MAVLink channel this message will be sent over
  * @param msg The MAVLink message to compress the data into
- * @param task_id  
- * @param task_type  
- * @param lat  
- * @param lng  
- * @param alt  
+ * @param boot_id  Random ID generated on process start, identifies sender instance.
+ * @param msg_seq  Monotonic sequence counter per sender.
+ * @param time_ms [ms] Sender timestamp in milliseconds since epoch.
+ * @param ttl_ms [ms] Time-to-live validity window in milliseconds.
+ * @param task_id  Task ID to confirm.
+ * @param task_type  Task type.
+ * @param lat  Task latitude in degrees.
+ * @param lng  Task longitude in degrees.
+ * @param alt  Task altitude in meters.
  * @return length of the message in bytes (excluding serial stream start sign)
  */
 static inline uint16_t mavlink_msg_task_confirm_request_pack_chan(uint8_t system_id, uint8_t component_id, uint8_t chan,
                                mavlink_message_t* msg,
-                                   uint16_t task_id,uint8_t task_type,float lat,float lng,float alt)
+                                   uint32_t boot_id,uint32_t msg_seq,uint64_t time_ms,uint32_t ttl_ms,uint16_t task_id,uint8_t task_type,float lat,float lng,float alt)
 {
 #if MAVLINK_NEED_BYTE_SWAP || !MAVLINK_ALIGNED_FIELDS
     char buf[MAVLINK_MSG_ID_TASK_CONFIRM_REQUEST_LEN];
-    _mav_put_float(buf, 0, lat);
-    _mav_put_float(buf, 4, lng);
-    _mav_put_float(buf, 8, alt);
-    _mav_put_uint16_t(buf, 12, task_id);
-    _mav_put_uint8_t(buf, 14, task_type);
+    _mav_put_uint64_t(buf, 0, time_ms);
+    _mav_put_uint32_t(buf, 8, boot_id);
+    _mav_put_uint32_t(buf, 12, msg_seq);
+    _mav_put_uint32_t(buf, 16, ttl_ms);
+    _mav_put_float(buf, 20, lat);
+    _mav_put_float(buf, 24, lng);
+    _mav_put_float(buf, 28, alt);
+    _mav_put_uint16_t(buf, 32, task_id);
+    _mav_put_uint8_t(buf, 34, task_type);
 
         memcpy(_MAV_PAYLOAD_NON_CONST(msg), buf, MAVLINK_MSG_ID_TASK_CONFIRM_REQUEST_LEN);
 #else
     mavlink_task_confirm_request_t packet;
+    packet.time_ms = time_ms;
+    packet.boot_id = boot_id;
+    packet.msg_seq = msg_seq;
+    packet.ttl_ms = ttl_ms;
     packet.lat = lat;
     packet.lng = lng;
     packet.alt = alt;
@@ -183,7 +231,7 @@ static inline uint16_t mavlink_msg_task_confirm_request_pack_chan(uint8_t system
  */
 static inline uint16_t mavlink_msg_task_confirm_request_encode(uint8_t system_id, uint8_t component_id, mavlink_message_t* msg, const mavlink_task_confirm_request_t* task_confirm_request)
 {
-    return mavlink_msg_task_confirm_request_pack(system_id, component_id, msg, task_confirm_request->task_id, task_confirm_request->task_type, task_confirm_request->lat, task_confirm_request->lng, task_confirm_request->alt);
+    return mavlink_msg_task_confirm_request_pack(system_id, component_id, msg, task_confirm_request->boot_id, task_confirm_request->msg_seq, task_confirm_request->time_ms, task_confirm_request->ttl_ms, task_confirm_request->task_id, task_confirm_request->task_type, task_confirm_request->lat, task_confirm_request->lng, task_confirm_request->alt);
 }
 
 /**
@@ -197,7 +245,7 @@ static inline uint16_t mavlink_msg_task_confirm_request_encode(uint8_t system_id
  */
 static inline uint16_t mavlink_msg_task_confirm_request_encode_chan(uint8_t system_id, uint8_t component_id, uint8_t chan, mavlink_message_t* msg, const mavlink_task_confirm_request_t* task_confirm_request)
 {
-    return mavlink_msg_task_confirm_request_pack_chan(system_id, component_id, chan, msg, task_confirm_request->task_id, task_confirm_request->task_type, task_confirm_request->lat, task_confirm_request->lng, task_confirm_request->alt);
+    return mavlink_msg_task_confirm_request_pack_chan(system_id, component_id, chan, msg, task_confirm_request->boot_id, task_confirm_request->msg_seq, task_confirm_request->time_ms, task_confirm_request->ttl_ms, task_confirm_request->task_id, task_confirm_request->task_type, task_confirm_request->lat, task_confirm_request->lng, task_confirm_request->alt);
 }
 
 /**
@@ -211,34 +259,46 @@ static inline uint16_t mavlink_msg_task_confirm_request_encode_chan(uint8_t syst
  */
 static inline uint16_t mavlink_msg_task_confirm_request_encode_status(uint8_t system_id, uint8_t component_id, mavlink_status_t* _status, mavlink_message_t* msg, const mavlink_task_confirm_request_t* task_confirm_request)
 {
-    return mavlink_msg_task_confirm_request_pack_status(system_id, component_id, _status, msg,  task_confirm_request->task_id, task_confirm_request->task_type, task_confirm_request->lat, task_confirm_request->lng, task_confirm_request->alt);
+    return mavlink_msg_task_confirm_request_pack_status(system_id, component_id, _status, msg,  task_confirm_request->boot_id, task_confirm_request->msg_seq, task_confirm_request->time_ms, task_confirm_request->ttl_ms, task_confirm_request->task_id, task_confirm_request->task_type, task_confirm_request->lat, task_confirm_request->lng, task_confirm_request->alt);
 }
 
 /**
  * @brief Send a task_confirm_request message
  * @param chan MAVLink channel to send the message
  *
- * @param task_id  
- * @param task_type  
- * @param lat  
- * @param lng  
- * @param alt  
+ * @param boot_id  Random ID generated on process start, identifies sender instance.
+ * @param msg_seq  Monotonic sequence counter per sender.
+ * @param time_ms [ms] Sender timestamp in milliseconds since epoch.
+ * @param ttl_ms [ms] Time-to-live validity window in milliseconds.
+ * @param task_id  Task ID to confirm.
+ * @param task_type  Task type.
+ * @param lat  Task latitude in degrees.
+ * @param lng  Task longitude in degrees.
+ * @param alt  Task altitude in meters.
  */
 #ifdef MAVLINK_USE_CONVENIENCE_FUNCTIONS
 
-static inline void mavlink_msg_task_confirm_request_send(mavlink_channel_t chan, uint16_t task_id, uint8_t task_type, float lat, float lng, float alt)
+static inline void mavlink_msg_task_confirm_request_send(mavlink_channel_t chan, uint32_t boot_id, uint32_t msg_seq, uint64_t time_ms, uint32_t ttl_ms, uint16_t task_id, uint8_t task_type, float lat, float lng, float alt)
 {
 #if MAVLINK_NEED_BYTE_SWAP || !MAVLINK_ALIGNED_FIELDS
     char buf[MAVLINK_MSG_ID_TASK_CONFIRM_REQUEST_LEN];
-    _mav_put_float(buf, 0, lat);
-    _mav_put_float(buf, 4, lng);
-    _mav_put_float(buf, 8, alt);
-    _mav_put_uint16_t(buf, 12, task_id);
-    _mav_put_uint8_t(buf, 14, task_type);
+    _mav_put_uint64_t(buf, 0, time_ms);
+    _mav_put_uint32_t(buf, 8, boot_id);
+    _mav_put_uint32_t(buf, 12, msg_seq);
+    _mav_put_uint32_t(buf, 16, ttl_ms);
+    _mav_put_float(buf, 20, lat);
+    _mav_put_float(buf, 24, lng);
+    _mav_put_float(buf, 28, alt);
+    _mav_put_uint16_t(buf, 32, task_id);
+    _mav_put_uint8_t(buf, 34, task_type);
 
     _mav_finalize_message_chan_send(chan, MAVLINK_MSG_ID_TASK_CONFIRM_REQUEST, buf, MAVLINK_MSG_ID_TASK_CONFIRM_REQUEST_MIN_LEN, MAVLINK_MSG_ID_TASK_CONFIRM_REQUEST_LEN, MAVLINK_MSG_ID_TASK_CONFIRM_REQUEST_CRC);
 #else
     mavlink_task_confirm_request_t packet;
+    packet.time_ms = time_ms;
+    packet.boot_id = boot_id;
+    packet.msg_seq = msg_seq;
+    packet.ttl_ms = ttl_ms;
     packet.lat = lat;
     packet.lng = lng;
     packet.alt = alt;
@@ -257,7 +317,7 @@ static inline void mavlink_msg_task_confirm_request_send(mavlink_channel_t chan,
 static inline void mavlink_msg_task_confirm_request_send_struct(mavlink_channel_t chan, const mavlink_task_confirm_request_t* task_confirm_request)
 {
 #if MAVLINK_NEED_BYTE_SWAP || !MAVLINK_ALIGNED_FIELDS
-    mavlink_msg_task_confirm_request_send(chan, task_confirm_request->task_id, task_confirm_request->task_type, task_confirm_request->lat, task_confirm_request->lng, task_confirm_request->alt);
+    mavlink_msg_task_confirm_request_send(chan, task_confirm_request->boot_id, task_confirm_request->msg_seq, task_confirm_request->time_ms, task_confirm_request->ttl_ms, task_confirm_request->task_id, task_confirm_request->task_type, task_confirm_request->lat, task_confirm_request->lng, task_confirm_request->alt);
 #else
     _mav_finalize_message_chan_send(chan, MAVLINK_MSG_ID_TASK_CONFIRM_REQUEST, (const char *)task_confirm_request, MAVLINK_MSG_ID_TASK_CONFIRM_REQUEST_MIN_LEN, MAVLINK_MSG_ID_TASK_CONFIRM_REQUEST_LEN, MAVLINK_MSG_ID_TASK_CONFIRM_REQUEST_CRC);
 #endif
@@ -265,25 +325,33 @@ static inline void mavlink_msg_task_confirm_request_send_struct(mavlink_channel_
 
 #if MAVLINK_MSG_ID_TASK_CONFIRM_REQUEST_LEN <= MAVLINK_MAX_PAYLOAD_LEN
 /*
-  This variant of _send() can be used to save stack space by reusing
+  This variant of _send() can be used to save stack space by re-using
   memory from the receive buffer.  The caller provides a
   mavlink_message_t which is the size of a full mavlink message. This
   is usually the receive buffer for the channel, and allows a reply to an
   incoming message with minimum stack space usage.
  */
-static inline void mavlink_msg_task_confirm_request_send_buf(mavlink_message_t *msgbuf, mavlink_channel_t chan,  uint16_t task_id, uint8_t task_type, float lat, float lng, float alt)
+static inline void mavlink_msg_task_confirm_request_send_buf(mavlink_message_t *msgbuf, mavlink_channel_t chan,  uint32_t boot_id, uint32_t msg_seq, uint64_t time_ms, uint32_t ttl_ms, uint16_t task_id, uint8_t task_type, float lat, float lng, float alt)
 {
 #if MAVLINK_NEED_BYTE_SWAP || !MAVLINK_ALIGNED_FIELDS
     char *buf = (char *)msgbuf;
-    _mav_put_float(buf, 0, lat);
-    _mav_put_float(buf, 4, lng);
-    _mav_put_float(buf, 8, alt);
-    _mav_put_uint16_t(buf, 12, task_id);
-    _mav_put_uint8_t(buf, 14, task_type);
+    _mav_put_uint64_t(buf, 0, time_ms);
+    _mav_put_uint32_t(buf, 8, boot_id);
+    _mav_put_uint32_t(buf, 12, msg_seq);
+    _mav_put_uint32_t(buf, 16, ttl_ms);
+    _mav_put_float(buf, 20, lat);
+    _mav_put_float(buf, 24, lng);
+    _mav_put_float(buf, 28, alt);
+    _mav_put_uint16_t(buf, 32, task_id);
+    _mav_put_uint8_t(buf, 34, task_type);
 
     _mav_finalize_message_chan_send(chan, MAVLINK_MSG_ID_TASK_CONFIRM_REQUEST, buf, MAVLINK_MSG_ID_TASK_CONFIRM_REQUEST_MIN_LEN, MAVLINK_MSG_ID_TASK_CONFIRM_REQUEST_LEN, MAVLINK_MSG_ID_TASK_CONFIRM_REQUEST_CRC);
 #else
     mavlink_task_confirm_request_t *packet = (mavlink_task_confirm_request_t *)msgbuf;
+    packet->time_ms = time_ms;
+    packet->boot_id = boot_id;
+    packet->msg_seq = msg_seq;
+    packet->ttl_ms = ttl_ms;
     packet->lat = lat;
     packet->lng = lng;
     packet->alt = alt;
@@ -301,53 +369,93 @@ static inline void mavlink_msg_task_confirm_request_send_buf(mavlink_message_t *
 
 
 /**
+ * @brief Get field boot_id from task_confirm_request message
+ *
+ * @return  Random ID generated on process start, identifies sender instance.
+ */
+static inline uint32_t mavlink_msg_task_confirm_request_get_boot_id(const mavlink_message_t* msg)
+{
+    return _MAV_RETURN_uint32_t(msg,  8);
+}
+
+/**
+ * @brief Get field msg_seq from task_confirm_request message
+ *
+ * @return  Monotonic sequence counter per sender.
+ */
+static inline uint32_t mavlink_msg_task_confirm_request_get_msg_seq(const mavlink_message_t* msg)
+{
+    return _MAV_RETURN_uint32_t(msg,  12);
+}
+
+/**
+ * @brief Get field time_ms from task_confirm_request message
+ *
+ * @return [ms] Sender timestamp in milliseconds since epoch.
+ */
+static inline uint64_t mavlink_msg_task_confirm_request_get_time_ms(const mavlink_message_t* msg)
+{
+    return _MAV_RETURN_uint64_t(msg,  0);
+}
+
+/**
+ * @brief Get field ttl_ms from task_confirm_request message
+ *
+ * @return [ms] Time-to-live validity window in milliseconds.
+ */
+static inline uint32_t mavlink_msg_task_confirm_request_get_ttl_ms(const mavlink_message_t* msg)
+{
+    return _MAV_RETURN_uint32_t(msg,  16);
+}
+
+/**
  * @brief Get field task_id from task_confirm_request message
  *
- * @return  
+ * @return  Task ID to confirm.
  */
 static inline uint16_t mavlink_msg_task_confirm_request_get_task_id(const mavlink_message_t* msg)
 {
-    return _MAV_RETURN_uint16_t(msg,  12);
+    return _MAV_RETURN_uint16_t(msg,  32);
 }
 
 /**
  * @brief Get field task_type from task_confirm_request message
  *
- * @return  
+ * @return  Task type.
  */
 static inline uint8_t mavlink_msg_task_confirm_request_get_task_type(const mavlink_message_t* msg)
 {
-    return _MAV_RETURN_uint8_t(msg,  14);
+    return _MAV_RETURN_uint8_t(msg,  34);
 }
 
 /**
  * @brief Get field lat from task_confirm_request message
  *
- * @return  
+ * @return  Task latitude in degrees.
  */
 static inline float mavlink_msg_task_confirm_request_get_lat(const mavlink_message_t* msg)
 {
-    return _MAV_RETURN_float(msg,  0);
+    return _MAV_RETURN_float(msg,  20);
 }
 
 /**
  * @brief Get field lng from task_confirm_request message
  *
- * @return  
+ * @return  Task longitude in degrees.
  */
 static inline float mavlink_msg_task_confirm_request_get_lng(const mavlink_message_t* msg)
 {
-    return _MAV_RETURN_float(msg,  4);
+    return _MAV_RETURN_float(msg,  24);
 }
 
 /**
  * @brief Get field alt from task_confirm_request message
  *
- * @return  
+ * @return  Task altitude in meters.
  */
 static inline float mavlink_msg_task_confirm_request_get_alt(const mavlink_message_t* msg)
 {
-    return _MAV_RETURN_float(msg,  8);
+    return _MAV_RETURN_float(msg,  28);
 }
 
 /**
@@ -359,6 +467,10 @@ static inline float mavlink_msg_task_confirm_request_get_alt(const mavlink_messa
 static inline void mavlink_msg_task_confirm_request_decode(const mavlink_message_t* msg, mavlink_task_confirm_request_t* task_confirm_request)
 {
 #if MAVLINK_NEED_BYTE_SWAP || !MAVLINK_ALIGNED_FIELDS
+    task_confirm_request->time_ms = mavlink_msg_task_confirm_request_get_time_ms(msg);
+    task_confirm_request->boot_id = mavlink_msg_task_confirm_request_get_boot_id(msg);
+    task_confirm_request->msg_seq = mavlink_msg_task_confirm_request_get_msg_seq(msg);
+    task_confirm_request->ttl_ms = mavlink_msg_task_confirm_request_get_ttl_ms(msg);
     task_confirm_request->lat = mavlink_msg_task_confirm_request_get_lat(msg);
     task_confirm_request->lng = mavlink_msg_task_confirm_request_get_lng(msg);
     task_confirm_request->alt = mavlink_msg_task_confirm_request_get_alt(msg);

@@ -5,18 +5,22 @@
 
 
 typedef struct __mavlink_task_confirm_response_t {
- uint16_t task_id; /*<  */
- uint8_t target_system; /*<  System ID.*/
- uint8_t confirmed; /*<  */
+ uint64_t time_ms; /*< [ms] Sender timestamp in milliseconds since epoch.*/
+ uint32_t boot_id; /*<  Random ID generated on process start, identifies sender instance.*/
+ uint32_t msg_seq; /*<  Monotonic sequence counter per sender.*/
+ uint32_t ttl_ms; /*< [ms] Time-to-live validity window in milliseconds.*/
+ uint16_t task_id; /*<  Task ID being confirmed.*/
+ uint8_t target_system; /*<  Target system ID (requester).*/
+ uint8_t confirmed; /*<  1 if confirmed, 0 if rejected.*/
 } mavlink_task_confirm_response_t;
 
-#define MAVLINK_MSG_ID_TASK_CONFIRM_RESPONSE_LEN 4
-#define MAVLINK_MSG_ID_TASK_CONFIRM_RESPONSE_MIN_LEN 4
-#define MAVLINK_MSG_ID_25109_LEN 4
-#define MAVLINK_MSG_ID_25109_MIN_LEN 4
+#define MAVLINK_MSG_ID_TASK_CONFIRM_RESPONSE_LEN 24
+#define MAVLINK_MSG_ID_TASK_CONFIRM_RESPONSE_MIN_LEN 24
+#define MAVLINK_MSG_ID_25109_LEN 24
+#define MAVLINK_MSG_ID_25109_MIN_LEN 24
 
-#define MAVLINK_MSG_ID_TASK_CONFIRM_RESPONSE_CRC 214
-#define MAVLINK_MSG_ID_25109_CRC 214
+#define MAVLINK_MSG_ID_TASK_CONFIRM_RESPONSE_CRC 246
+#define MAVLINK_MSG_ID_25109_CRC 246
 
 
 
@@ -24,19 +28,27 @@ typedef struct __mavlink_task_confirm_response_t {
 #define MAVLINK_MESSAGE_INFO_TASK_CONFIRM_RESPONSE { \
     25109, \
     "TASK_CONFIRM_RESPONSE", \
-    3, \
-    {  { "target_system", NULL, MAVLINK_TYPE_UINT8_T, 0, 2, offsetof(mavlink_task_confirm_response_t, target_system) }, \
-         { "task_id", NULL, MAVLINK_TYPE_UINT16_T, 0, 0, offsetof(mavlink_task_confirm_response_t, task_id) }, \
-         { "confirmed", NULL, MAVLINK_TYPE_UINT8_T, 0, 3, offsetof(mavlink_task_confirm_response_t, confirmed) }, \
+    7, \
+    {  { "boot_id", NULL, MAVLINK_TYPE_UINT32_T, 0, 8, offsetof(mavlink_task_confirm_response_t, boot_id) }, \
+         { "msg_seq", NULL, MAVLINK_TYPE_UINT32_T, 0, 12, offsetof(mavlink_task_confirm_response_t, msg_seq) }, \
+         { "time_ms", NULL, MAVLINK_TYPE_UINT64_T, 0, 0, offsetof(mavlink_task_confirm_response_t, time_ms) }, \
+         { "ttl_ms", NULL, MAVLINK_TYPE_UINT32_T, 0, 16, offsetof(mavlink_task_confirm_response_t, ttl_ms) }, \
+         { "target_system", NULL, MAVLINK_TYPE_UINT8_T, 0, 22, offsetof(mavlink_task_confirm_response_t, target_system) }, \
+         { "task_id", NULL, MAVLINK_TYPE_UINT16_T, 0, 20, offsetof(mavlink_task_confirm_response_t, task_id) }, \
+         { "confirmed", NULL, MAVLINK_TYPE_UINT8_T, 0, 23, offsetof(mavlink_task_confirm_response_t, confirmed) }, \
          } \
 }
 #else
 #define MAVLINK_MESSAGE_INFO_TASK_CONFIRM_RESPONSE { \
     "TASK_CONFIRM_RESPONSE", \
-    3, \
-    {  { "target_system", NULL, MAVLINK_TYPE_UINT8_T, 0, 2, offsetof(mavlink_task_confirm_response_t, target_system) }, \
-         { "task_id", NULL, MAVLINK_TYPE_UINT16_T, 0, 0, offsetof(mavlink_task_confirm_response_t, task_id) }, \
-         { "confirmed", NULL, MAVLINK_TYPE_UINT8_T, 0, 3, offsetof(mavlink_task_confirm_response_t, confirmed) }, \
+    7, \
+    {  { "boot_id", NULL, MAVLINK_TYPE_UINT32_T, 0, 8, offsetof(mavlink_task_confirm_response_t, boot_id) }, \
+         { "msg_seq", NULL, MAVLINK_TYPE_UINT32_T, 0, 12, offsetof(mavlink_task_confirm_response_t, msg_seq) }, \
+         { "time_ms", NULL, MAVLINK_TYPE_UINT64_T, 0, 0, offsetof(mavlink_task_confirm_response_t, time_ms) }, \
+         { "ttl_ms", NULL, MAVLINK_TYPE_UINT32_T, 0, 16, offsetof(mavlink_task_confirm_response_t, ttl_ms) }, \
+         { "target_system", NULL, MAVLINK_TYPE_UINT8_T, 0, 22, offsetof(mavlink_task_confirm_response_t, target_system) }, \
+         { "task_id", NULL, MAVLINK_TYPE_UINT16_T, 0, 20, offsetof(mavlink_task_confirm_response_t, task_id) }, \
+         { "confirmed", NULL, MAVLINK_TYPE_UINT8_T, 0, 23, offsetof(mavlink_task_confirm_response_t, confirmed) }, \
          } \
 }
 #endif
@@ -47,23 +59,35 @@ typedef struct __mavlink_task_confirm_response_t {
  * @param component_id ID of this component (e.g. 200 for IMU)
  * @param msg The MAVLink message to compress the data into
  *
- * @param target_system  System ID.
- * @param task_id  
- * @param confirmed  
+ * @param boot_id  Random ID generated on process start, identifies sender instance.
+ * @param msg_seq  Monotonic sequence counter per sender.
+ * @param time_ms [ms] Sender timestamp in milliseconds since epoch.
+ * @param ttl_ms [ms] Time-to-live validity window in milliseconds.
+ * @param target_system  Target system ID (requester).
+ * @param task_id  Task ID being confirmed.
+ * @param confirmed  1 if confirmed, 0 if rejected.
  * @return length of the message in bytes (excluding serial stream start sign)
  */
 static inline uint16_t mavlink_msg_task_confirm_response_pack(uint8_t system_id, uint8_t component_id, mavlink_message_t* msg,
-                               uint8_t target_system, uint16_t task_id, uint8_t confirmed)
+                               uint32_t boot_id, uint32_t msg_seq, uint64_t time_ms, uint32_t ttl_ms, uint8_t target_system, uint16_t task_id, uint8_t confirmed)
 {
 #if MAVLINK_NEED_BYTE_SWAP || !MAVLINK_ALIGNED_FIELDS
     char buf[MAVLINK_MSG_ID_TASK_CONFIRM_RESPONSE_LEN];
-    _mav_put_uint16_t(buf, 0, task_id);
-    _mav_put_uint8_t(buf, 2, target_system);
-    _mav_put_uint8_t(buf, 3, confirmed);
+    _mav_put_uint64_t(buf, 0, time_ms);
+    _mav_put_uint32_t(buf, 8, boot_id);
+    _mav_put_uint32_t(buf, 12, msg_seq);
+    _mav_put_uint32_t(buf, 16, ttl_ms);
+    _mav_put_uint16_t(buf, 20, task_id);
+    _mav_put_uint8_t(buf, 22, target_system);
+    _mav_put_uint8_t(buf, 23, confirmed);
 
         memcpy(_MAV_PAYLOAD_NON_CONST(msg), buf, MAVLINK_MSG_ID_TASK_CONFIRM_RESPONSE_LEN);
 #else
     mavlink_task_confirm_response_t packet;
+    packet.time_ms = time_ms;
+    packet.boot_id = boot_id;
+    packet.msg_seq = msg_seq;
+    packet.ttl_ms = ttl_ms;
     packet.task_id = task_id;
     packet.target_system = target_system;
     packet.confirmed = confirmed;
@@ -82,23 +106,35 @@ static inline uint16_t mavlink_msg_task_confirm_response_pack(uint8_t system_id,
  * @param status MAVLink status structure
  * @param msg The MAVLink message to compress the data into
  *
- * @param target_system  System ID.
- * @param task_id  
- * @param confirmed  
+ * @param boot_id  Random ID generated on process start, identifies sender instance.
+ * @param msg_seq  Monotonic sequence counter per sender.
+ * @param time_ms [ms] Sender timestamp in milliseconds since epoch.
+ * @param ttl_ms [ms] Time-to-live validity window in milliseconds.
+ * @param target_system  Target system ID (requester).
+ * @param task_id  Task ID being confirmed.
+ * @param confirmed  1 if confirmed, 0 if rejected.
  * @return length of the message in bytes (excluding serial stream start sign)
  */
 static inline uint16_t mavlink_msg_task_confirm_response_pack_status(uint8_t system_id, uint8_t component_id, mavlink_status_t *_status, mavlink_message_t* msg,
-                               uint8_t target_system, uint16_t task_id, uint8_t confirmed)
+                               uint32_t boot_id, uint32_t msg_seq, uint64_t time_ms, uint32_t ttl_ms, uint8_t target_system, uint16_t task_id, uint8_t confirmed)
 {
 #if MAVLINK_NEED_BYTE_SWAP || !MAVLINK_ALIGNED_FIELDS
     char buf[MAVLINK_MSG_ID_TASK_CONFIRM_RESPONSE_LEN];
-    _mav_put_uint16_t(buf, 0, task_id);
-    _mav_put_uint8_t(buf, 2, target_system);
-    _mav_put_uint8_t(buf, 3, confirmed);
+    _mav_put_uint64_t(buf, 0, time_ms);
+    _mav_put_uint32_t(buf, 8, boot_id);
+    _mav_put_uint32_t(buf, 12, msg_seq);
+    _mav_put_uint32_t(buf, 16, ttl_ms);
+    _mav_put_uint16_t(buf, 20, task_id);
+    _mav_put_uint8_t(buf, 22, target_system);
+    _mav_put_uint8_t(buf, 23, confirmed);
 
         memcpy(_MAV_PAYLOAD_NON_CONST(msg), buf, MAVLINK_MSG_ID_TASK_CONFIRM_RESPONSE_LEN);
 #else
     mavlink_task_confirm_response_t packet;
+    packet.time_ms = time_ms;
+    packet.boot_id = boot_id;
+    packet.msg_seq = msg_seq;
+    packet.ttl_ms = ttl_ms;
     packet.task_id = task_id;
     packet.target_system = target_system;
     packet.confirmed = confirmed;
@@ -120,24 +156,36 @@ static inline uint16_t mavlink_msg_task_confirm_response_pack_status(uint8_t sys
  * @param component_id ID of this component (e.g. 200 for IMU)
  * @param chan The MAVLink channel this message will be sent over
  * @param msg The MAVLink message to compress the data into
- * @param target_system  System ID.
- * @param task_id  
- * @param confirmed  
+ * @param boot_id  Random ID generated on process start, identifies sender instance.
+ * @param msg_seq  Monotonic sequence counter per sender.
+ * @param time_ms [ms] Sender timestamp in milliseconds since epoch.
+ * @param ttl_ms [ms] Time-to-live validity window in milliseconds.
+ * @param target_system  Target system ID (requester).
+ * @param task_id  Task ID being confirmed.
+ * @param confirmed  1 if confirmed, 0 if rejected.
  * @return length of the message in bytes (excluding serial stream start sign)
  */
 static inline uint16_t mavlink_msg_task_confirm_response_pack_chan(uint8_t system_id, uint8_t component_id, uint8_t chan,
                                mavlink_message_t* msg,
-                                   uint8_t target_system,uint16_t task_id,uint8_t confirmed)
+                                   uint32_t boot_id,uint32_t msg_seq,uint64_t time_ms,uint32_t ttl_ms,uint8_t target_system,uint16_t task_id,uint8_t confirmed)
 {
 #if MAVLINK_NEED_BYTE_SWAP || !MAVLINK_ALIGNED_FIELDS
     char buf[MAVLINK_MSG_ID_TASK_CONFIRM_RESPONSE_LEN];
-    _mav_put_uint16_t(buf, 0, task_id);
-    _mav_put_uint8_t(buf, 2, target_system);
-    _mav_put_uint8_t(buf, 3, confirmed);
+    _mav_put_uint64_t(buf, 0, time_ms);
+    _mav_put_uint32_t(buf, 8, boot_id);
+    _mav_put_uint32_t(buf, 12, msg_seq);
+    _mav_put_uint32_t(buf, 16, ttl_ms);
+    _mav_put_uint16_t(buf, 20, task_id);
+    _mav_put_uint8_t(buf, 22, target_system);
+    _mav_put_uint8_t(buf, 23, confirmed);
 
         memcpy(_MAV_PAYLOAD_NON_CONST(msg), buf, MAVLINK_MSG_ID_TASK_CONFIRM_RESPONSE_LEN);
 #else
     mavlink_task_confirm_response_t packet;
+    packet.time_ms = time_ms;
+    packet.boot_id = boot_id;
+    packet.msg_seq = msg_seq;
+    packet.ttl_ms = ttl_ms;
     packet.task_id = task_id;
     packet.target_system = target_system;
     packet.confirmed = confirmed;
@@ -159,7 +207,7 @@ static inline uint16_t mavlink_msg_task_confirm_response_pack_chan(uint8_t syste
  */
 static inline uint16_t mavlink_msg_task_confirm_response_encode(uint8_t system_id, uint8_t component_id, mavlink_message_t* msg, const mavlink_task_confirm_response_t* task_confirm_response)
 {
-    return mavlink_msg_task_confirm_response_pack(system_id, component_id, msg, task_confirm_response->target_system, task_confirm_response->task_id, task_confirm_response->confirmed);
+    return mavlink_msg_task_confirm_response_pack(system_id, component_id, msg, task_confirm_response->boot_id, task_confirm_response->msg_seq, task_confirm_response->time_ms, task_confirm_response->ttl_ms, task_confirm_response->target_system, task_confirm_response->task_id, task_confirm_response->confirmed);
 }
 
 /**
@@ -173,7 +221,7 @@ static inline uint16_t mavlink_msg_task_confirm_response_encode(uint8_t system_i
  */
 static inline uint16_t mavlink_msg_task_confirm_response_encode_chan(uint8_t system_id, uint8_t component_id, uint8_t chan, mavlink_message_t* msg, const mavlink_task_confirm_response_t* task_confirm_response)
 {
-    return mavlink_msg_task_confirm_response_pack_chan(system_id, component_id, chan, msg, task_confirm_response->target_system, task_confirm_response->task_id, task_confirm_response->confirmed);
+    return mavlink_msg_task_confirm_response_pack_chan(system_id, component_id, chan, msg, task_confirm_response->boot_id, task_confirm_response->msg_seq, task_confirm_response->time_ms, task_confirm_response->ttl_ms, task_confirm_response->target_system, task_confirm_response->task_id, task_confirm_response->confirmed);
 }
 
 /**
@@ -187,30 +235,42 @@ static inline uint16_t mavlink_msg_task_confirm_response_encode_chan(uint8_t sys
  */
 static inline uint16_t mavlink_msg_task_confirm_response_encode_status(uint8_t system_id, uint8_t component_id, mavlink_status_t* _status, mavlink_message_t* msg, const mavlink_task_confirm_response_t* task_confirm_response)
 {
-    return mavlink_msg_task_confirm_response_pack_status(system_id, component_id, _status, msg,  task_confirm_response->target_system, task_confirm_response->task_id, task_confirm_response->confirmed);
+    return mavlink_msg_task_confirm_response_pack_status(system_id, component_id, _status, msg,  task_confirm_response->boot_id, task_confirm_response->msg_seq, task_confirm_response->time_ms, task_confirm_response->ttl_ms, task_confirm_response->target_system, task_confirm_response->task_id, task_confirm_response->confirmed);
 }
 
 /**
  * @brief Send a task_confirm_response message
  * @param chan MAVLink channel to send the message
  *
- * @param target_system  System ID.
- * @param task_id  
- * @param confirmed  
+ * @param boot_id  Random ID generated on process start, identifies sender instance.
+ * @param msg_seq  Monotonic sequence counter per sender.
+ * @param time_ms [ms] Sender timestamp in milliseconds since epoch.
+ * @param ttl_ms [ms] Time-to-live validity window in milliseconds.
+ * @param target_system  Target system ID (requester).
+ * @param task_id  Task ID being confirmed.
+ * @param confirmed  1 if confirmed, 0 if rejected.
  */
 #ifdef MAVLINK_USE_CONVENIENCE_FUNCTIONS
 
-static inline void mavlink_msg_task_confirm_response_send(mavlink_channel_t chan, uint8_t target_system, uint16_t task_id, uint8_t confirmed)
+static inline void mavlink_msg_task_confirm_response_send(mavlink_channel_t chan, uint32_t boot_id, uint32_t msg_seq, uint64_t time_ms, uint32_t ttl_ms, uint8_t target_system, uint16_t task_id, uint8_t confirmed)
 {
 #if MAVLINK_NEED_BYTE_SWAP || !MAVLINK_ALIGNED_FIELDS
     char buf[MAVLINK_MSG_ID_TASK_CONFIRM_RESPONSE_LEN];
-    _mav_put_uint16_t(buf, 0, task_id);
-    _mav_put_uint8_t(buf, 2, target_system);
-    _mav_put_uint8_t(buf, 3, confirmed);
+    _mav_put_uint64_t(buf, 0, time_ms);
+    _mav_put_uint32_t(buf, 8, boot_id);
+    _mav_put_uint32_t(buf, 12, msg_seq);
+    _mav_put_uint32_t(buf, 16, ttl_ms);
+    _mav_put_uint16_t(buf, 20, task_id);
+    _mav_put_uint8_t(buf, 22, target_system);
+    _mav_put_uint8_t(buf, 23, confirmed);
 
     _mav_finalize_message_chan_send(chan, MAVLINK_MSG_ID_TASK_CONFIRM_RESPONSE, buf, MAVLINK_MSG_ID_TASK_CONFIRM_RESPONSE_MIN_LEN, MAVLINK_MSG_ID_TASK_CONFIRM_RESPONSE_LEN, MAVLINK_MSG_ID_TASK_CONFIRM_RESPONSE_CRC);
 #else
     mavlink_task_confirm_response_t packet;
+    packet.time_ms = time_ms;
+    packet.boot_id = boot_id;
+    packet.msg_seq = msg_seq;
+    packet.ttl_ms = ttl_ms;
     packet.task_id = task_id;
     packet.target_system = target_system;
     packet.confirmed = confirmed;
@@ -227,7 +287,7 @@ static inline void mavlink_msg_task_confirm_response_send(mavlink_channel_t chan
 static inline void mavlink_msg_task_confirm_response_send_struct(mavlink_channel_t chan, const mavlink_task_confirm_response_t* task_confirm_response)
 {
 #if MAVLINK_NEED_BYTE_SWAP || !MAVLINK_ALIGNED_FIELDS
-    mavlink_msg_task_confirm_response_send(chan, task_confirm_response->target_system, task_confirm_response->task_id, task_confirm_response->confirmed);
+    mavlink_msg_task_confirm_response_send(chan, task_confirm_response->boot_id, task_confirm_response->msg_seq, task_confirm_response->time_ms, task_confirm_response->ttl_ms, task_confirm_response->target_system, task_confirm_response->task_id, task_confirm_response->confirmed);
 #else
     _mav_finalize_message_chan_send(chan, MAVLINK_MSG_ID_TASK_CONFIRM_RESPONSE, (const char *)task_confirm_response, MAVLINK_MSG_ID_TASK_CONFIRM_RESPONSE_MIN_LEN, MAVLINK_MSG_ID_TASK_CONFIRM_RESPONSE_LEN, MAVLINK_MSG_ID_TASK_CONFIRM_RESPONSE_CRC);
 #endif
@@ -235,23 +295,31 @@ static inline void mavlink_msg_task_confirm_response_send_struct(mavlink_channel
 
 #if MAVLINK_MSG_ID_TASK_CONFIRM_RESPONSE_LEN <= MAVLINK_MAX_PAYLOAD_LEN
 /*
-  This variant of _send() can be used to save stack space by reusing
+  This variant of _send() can be used to save stack space by re-using
   memory from the receive buffer.  The caller provides a
   mavlink_message_t which is the size of a full mavlink message. This
   is usually the receive buffer for the channel, and allows a reply to an
   incoming message with minimum stack space usage.
  */
-static inline void mavlink_msg_task_confirm_response_send_buf(mavlink_message_t *msgbuf, mavlink_channel_t chan,  uint8_t target_system, uint16_t task_id, uint8_t confirmed)
+static inline void mavlink_msg_task_confirm_response_send_buf(mavlink_message_t *msgbuf, mavlink_channel_t chan,  uint32_t boot_id, uint32_t msg_seq, uint64_t time_ms, uint32_t ttl_ms, uint8_t target_system, uint16_t task_id, uint8_t confirmed)
 {
 #if MAVLINK_NEED_BYTE_SWAP || !MAVLINK_ALIGNED_FIELDS
     char *buf = (char *)msgbuf;
-    _mav_put_uint16_t(buf, 0, task_id);
-    _mav_put_uint8_t(buf, 2, target_system);
-    _mav_put_uint8_t(buf, 3, confirmed);
+    _mav_put_uint64_t(buf, 0, time_ms);
+    _mav_put_uint32_t(buf, 8, boot_id);
+    _mav_put_uint32_t(buf, 12, msg_seq);
+    _mav_put_uint32_t(buf, 16, ttl_ms);
+    _mav_put_uint16_t(buf, 20, task_id);
+    _mav_put_uint8_t(buf, 22, target_system);
+    _mav_put_uint8_t(buf, 23, confirmed);
 
     _mav_finalize_message_chan_send(chan, MAVLINK_MSG_ID_TASK_CONFIRM_RESPONSE, buf, MAVLINK_MSG_ID_TASK_CONFIRM_RESPONSE_MIN_LEN, MAVLINK_MSG_ID_TASK_CONFIRM_RESPONSE_LEN, MAVLINK_MSG_ID_TASK_CONFIRM_RESPONSE_CRC);
 #else
     mavlink_task_confirm_response_t *packet = (mavlink_task_confirm_response_t *)msgbuf;
+    packet->time_ms = time_ms;
+    packet->boot_id = boot_id;
+    packet->msg_seq = msg_seq;
+    packet->ttl_ms = ttl_ms;
     packet->task_id = task_id;
     packet->target_system = target_system;
     packet->confirmed = confirmed;
@@ -267,33 +335,73 @@ static inline void mavlink_msg_task_confirm_response_send_buf(mavlink_message_t 
 
 
 /**
+ * @brief Get field boot_id from task_confirm_response message
+ *
+ * @return  Random ID generated on process start, identifies sender instance.
+ */
+static inline uint32_t mavlink_msg_task_confirm_response_get_boot_id(const mavlink_message_t* msg)
+{
+    return _MAV_RETURN_uint32_t(msg,  8);
+}
+
+/**
+ * @brief Get field msg_seq from task_confirm_response message
+ *
+ * @return  Monotonic sequence counter per sender.
+ */
+static inline uint32_t mavlink_msg_task_confirm_response_get_msg_seq(const mavlink_message_t* msg)
+{
+    return _MAV_RETURN_uint32_t(msg,  12);
+}
+
+/**
+ * @brief Get field time_ms from task_confirm_response message
+ *
+ * @return [ms] Sender timestamp in milliseconds since epoch.
+ */
+static inline uint64_t mavlink_msg_task_confirm_response_get_time_ms(const mavlink_message_t* msg)
+{
+    return _MAV_RETURN_uint64_t(msg,  0);
+}
+
+/**
+ * @brief Get field ttl_ms from task_confirm_response message
+ *
+ * @return [ms] Time-to-live validity window in milliseconds.
+ */
+static inline uint32_t mavlink_msg_task_confirm_response_get_ttl_ms(const mavlink_message_t* msg)
+{
+    return _MAV_RETURN_uint32_t(msg,  16);
+}
+
+/**
  * @brief Get field target_system from task_confirm_response message
  *
- * @return  System ID.
+ * @return  Target system ID (requester).
  */
 static inline uint8_t mavlink_msg_task_confirm_response_get_target_system(const mavlink_message_t* msg)
 {
-    return _MAV_RETURN_uint8_t(msg,  2);
+    return _MAV_RETURN_uint8_t(msg,  22);
 }
 
 /**
  * @brief Get field task_id from task_confirm_response message
  *
- * @return  
+ * @return  Task ID being confirmed.
  */
 static inline uint16_t mavlink_msg_task_confirm_response_get_task_id(const mavlink_message_t* msg)
 {
-    return _MAV_RETURN_uint16_t(msg,  0);
+    return _MAV_RETURN_uint16_t(msg,  20);
 }
 
 /**
  * @brief Get field confirmed from task_confirm_response message
  *
- * @return  
+ * @return  1 if confirmed, 0 if rejected.
  */
 static inline uint8_t mavlink_msg_task_confirm_response_get_confirmed(const mavlink_message_t* msg)
 {
-    return _MAV_RETURN_uint8_t(msg,  3);
+    return _MAV_RETURN_uint8_t(msg,  23);
 }
 
 /**
@@ -305,6 +413,10 @@ static inline uint8_t mavlink_msg_task_confirm_response_get_confirmed(const mavl
 static inline void mavlink_msg_task_confirm_response_decode(const mavlink_message_t* msg, mavlink_task_confirm_response_t* task_confirm_response)
 {
 #if MAVLINK_NEED_BYTE_SWAP || !MAVLINK_ALIGNED_FIELDS
+    task_confirm_response->time_ms = mavlink_msg_task_confirm_response_get_time_ms(msg);
+    task_confirm_response->boot_id = mavlink_msg_task_confirm_response_get_boot_id(msg);
+    task_confirm_response->msg_seq = mavlink_msg_task_confirm_response_get_msg_seq(msg);
+    task_confirm_response->ttl_ms = mavlink_msg_task_confirm_response_get_ttl_ms(msg);
     task_confirm_response->task_id = mavlink_msg_task_confirm_response_get_task_id(msg);
     task_confirm_response->target_system = mavlink_msg_task_confirm_response_get_target_system(msg);
     task_confirm_response->confirmed = mavlink_msg_task_confirm_response_get_confirmed(msg);
