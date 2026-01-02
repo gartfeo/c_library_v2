@@ -119,10 +119,10 @@ static inline uint16_t mavlink_msg_autopilot_version_pack(uint8_t system_id, uin
     packet.board_version = board_version;
     packet.vendor_id = vendor_id;
     packet.product_id = product_id;
-    mav_array_assign_uint8_t(packet.flight_custom_version, flight_custom_version, 8);
-    mav_array_assign_uint8_t(packet.middleware_custom_version, middleware_custom_version, 8);
-    mav_array_assign_uint8_t(packet.os_custom_version, os_custom_version, 8);
-    mav_array_assign_uint8_t(packet.uid2, uid2, 18);
+    mav_array_memcpy(packet.flight_custom_version, flight_custom_version, sizeof(uint8_t)*8);
+    mav_array_memcpy(packet.middleware_custom_version, middleware_custom_version, sizeof(uint8_t)*8);
+    mav_array_memcpy(packet.os_custom_version, os_custom_version, sizeof(uint8_t)*8);
+    mav_array_memcpy(packet.uid2, uid2, sizeof(uint8_t)*18);
         memcpy(_MAV_PAYLOAD_NON_CONST(msg), &packet, MAVLINK_MSG_ID_AUTOPILOT_VERSION_LEN);
 #endif
 
@@ -243,10 +243,10 @@ static inline uint16_t mavlink_msg_autopilot_version_pack_chan(uint8_t system_id
     packet.board_version = board_version;
     packet.vendor_id = vendor_id;
     packet.product_id = product_id;
-    mav_array_assign_uint8_t(packet.flight_custom_version, flight_custom_version, 8);
-    mav_array_assign_uint8_t(packet.middleware_custom_version, middleware_custom_version, 8);
-    mav_array_assign_uint8_t(packet.os_custom_version, os_custom_version, 8);
-    mav_array_assign_uint8_t(packet.uid2, uid2, 18);
+    mav_array_memcpy(packet.flight_custom_version, flight_custom_version, sizeof(uint8_t)*8);
+    mav_array_memcpy(packet.middleware_custom_version, middleware_custom_version, sizeof(uint8_t)*8);
+    mav_array_memcpy(packet.os_custom_version, os_custom_version, sizeof(uint8_t)*8);
+    mav_array_memcpy(packet.uid2, uid2, sizeof(uint8_t)*18);
         memcpy(_MAV_PAYLOAD_NON_CONST(msg), &packet, MAVLINK_MSG_ID_AUTOPILOT_VERSION_LEN);
 #endif
 
@@ -341,10 +341,10 @@ static inline void mavlink_msg_autopilot_version_send(mavlink_channel_t chan, ui
     packet.board_version = board_version;
     packet.vendor_id = vendor_id;
     packet.product_id = product_id;
-    mav_array_assign_uint8_t(packet.flight_custom_version, flight_custom_version, 8);
-    mav_array_assign_uint8_t(packet.middleware_custom_version, middleware_custom_version, 8);
-    mav_array_assign_uint8_t(packet.os_custom_version, os_custom_version, 8);
-    mav_array_assign_uint8_t(packet.uid2, uid2, 18);
+    mav_array_memcpy(packet.flight_custom_version, flight_custom_version, sizeof(uint8_t)*8);
+    mav_array_memcpy(packet.middleware_custom_version, middleware_custom_version, sizeof(uint8_t)*8);
+    mav_array_memcpy(packet.os_custom_version, os_custom_version, sizeof(uint8_t)*8);
+    mav_array_memcpy(packet.uid2, uid2, sizeof(uint8_t)*18);
     _mav_finalize_message_chan_send(chan, MAVLINK_MSG_ID_AUTOPILOT_VERSION, (const char *)&packet, MAVLINK_MSG_ID_AUTOPILOT_VERSION_MIN_LEN, MAVLINK_MSG_ID_AUTOPILOT_VERSION_LEN, MAVLINK_MSG_ID_AUTOPILOT_VERSION_CRC);
 #endif
 }
@@ -365,7 +365,7 @@ static inline void mavlink_msg_autopilot_version_send_struct(mavlink_channel_t c
 
 #if MAVLINK_MSG_ID_AUTOPILOT_VERSION_LEN <= MAVLINK_MAX_PAYLOAD_LEN
 /*
-  This variant of _send() can be used to save stack space by reusing
+  This variant of _send() can be used to save stack space by re-using
   memory from the receive buffer.  The caller provides a
   mavlink_message_t which is the size of a full mavlink message. This
   is usually the receive buffer for the channel, and allows a reply to an
@@ -398,10 +398,10 @@ static inline void mavlink_msg_autopilot_version_send_buf(mavlink_message_t *msg
     packet->board_version = board_version;
     packet->vendor_id = vendor_id;
     packet->product_id = product_id;
-    mav_array_assign_uint8_t(packet->flight_custom_version, flight_custom_version, 8);
-    mav_array_assign_uint8_t(packet->middleware_custom_version, middleware_custom_version, 8);
-    mav_array_assign_uint8_t(packet->os_custom_version, os_custom_version, 8);
-    mav_array_assign_uint8_t(packet->uid2, uid2, 18);
+    mav_array_memcpy(packet->flight_custom_version, flight_custom_version, sizeof(uint8_t)*8);
+    mav_array_memcpy(packet->middleware_custom_version, middleware_custom_version, sizeof(uint8_t)*8);
+    mav_array_memcpy(packet->os_custom_version, os_custom_version, sizeof(uint8_t)*8);
+    mav_array_memcpy(packet->uid2, uid2, sizeof(uint8_t)*18);
     _mav_finalize_message_chan_send(chan, MAVLINK_MSG_ID_AUTOPILOT_VERSION, (const char *)packet, MAVLINK_MSG_ID_AUTOPILOT_VERSION_MIN_LEN, MAVLINK_MSG_ID_AUTOPILOT_VERSION_LEN, MAVLINK_MSG_ID_AUTOPILOT_VERSION_CRC);
 #endif
 }
