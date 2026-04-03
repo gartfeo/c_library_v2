@@ -15,27 +15,29 @@ typedef struct __mavlink_available_task_request_t {
  uint16_t task_id[5]; /*<  Task IDs.*/
  uint8_t count; /*<  Number of tasks in this request (1-5).*/
  uint8_t task_type[5]; /*<  Task types (1=SMALL, 2=MEDIUM, 3=BIG, 4=HEAVY).*/
+ uint8_t class_id[5]; /*<  Detection class IDs (0=Tank..4=Person).*/
 } mavlink_available_task_request_t;
 
-#define MAVLINK_MSG_ID_AVAILABLE_TASK_REQUEST_LEN 96
-#define MAVLINK_MSG_ID_AVAILABLE_TASK_REQUEST_MIN_LEN 96
-#define MAVLINK_MSG_ID_25104_LEN 96
-#define MAVLINK_MSG_ID_25104_MIN_LEN 96
+#define MAVLINK_MSG_ID_AVAILABLE_TASK_REQUEST_LEN 101
+#define MAVLINK_MSG_ID_AVAILABLE_TASK_REQUEST_MIN_LEN 101
+#define MAVLINK_MSG_ID_25104_LEN 101
+#define MAVLINK_MSG_ID_25104_MIN_LEN 101
 
-#define MAVLINK_MSG_ID_AVAILABLE_TASK_REQUEST_CRC 41
-#define MAVLINK_MSG_ID_25104_CRC 41
+#define MAVLINK_MSG_ID_AVAILABLE_TASK_REQUEST_CRC 36
+#define MAVLINK_MSG_ID_25104_CRC 36
 
 #define MAVLINK_MSG_AVAILABLE_TASK_REQUEST_FIELD_LAT_LEN 5
 #define MAVLINK_MSG_AVAILABLE_TASK_REQUEST_FIELD_LNG_LEN 5
 #define MAVLINK_MSG_AVAILABLE_TASK_REQUEST_FIELD_ALT_LEN 5
 #define MAVLINK_MSG_AVAILABLE_TASK_REQUEST_FIELD_TASK_ID_LEN 5
 #define MAVLINK_MSG_AVAILABLE_TASK_REQUEST_FIELD_TASK_TYPE_LEN 5
+#define MAVLINK_MSG_AVAILABLE_TASK_REQUEST_FIELD_CLASS_ID_LEN 5
 
 #if MAVLINK_COMMAND_24BIT
 #define MAVLINK_MESSAGE_INFO_AVAILABLE_TASK_REQUEST { \
     25104, \
     "AVAILABLE_TASK_REQUEST", \
-    10, \
+    11, \
     {  { "boot_id", NULL, MAVLINK_TYPE_UINT32_T, 0, 8, offsetof(mavlink_available_task_request_t, boot_id) }, \
          { "msg_seq", NULL, MAVLINK_TYPE_UINT32_T, 0, 12, offsetof(mavlink_available_task_request_t, msg_seq) }, \
          { "time_ms", NULL, MAVLINK_TYPE_UINT64_T, 0, 0, offsetof(mavlink_available_task_request_t, time_ms) }, \
@@ -43,6 +45,7 @@ typedef struct __mavlink_available_task_request_t {
          { "count", NULL, MAVLINK_TYPE_UINT8_T, 0, 90, offsetof(mavlink_available_task_request_t, count) }, \
          { "task_id", NULL, MAVLINK_TYPE_UINT16_T, 5, 80, offsetof(mavlink_available_task_request_t, task_id) }, \
          { "task_type", NULL, MAVLINK_TYPE_UINT8_T, 5, 91, offsetof(mavlink_available_task_request_t, task_type) }, \
+         { "class_id", NULL, MAVLINK_TYPE_UINT8_T, 5, 96, offsetof(mavlink_available_task_request_t, class_id) }, \
          { "lat", NULL, MAVLINK_TYPE_FLOAT, 5, 20, offsetof(mavlink_available_task_request_t, lat) }, \
          { "lng", NULL, MAVLINK_TYPE_FLOAT, 5, 40, offsetof(mavlink_available_task_request_t, lng) }, \
          { "alt", NULL, MAVLINK_TYPE_FLOAT, 5, 60, offsetof(mavlink_available_task_request_t, alt) }, \
@@ -51,7 +54,7 @@ typedef struct __mavlink_available_task_request_t {
 #else
 #define MAVLINK_MESSAGE_INFO_AVAILABLE_TASK_REQUEST { \
     "AVAILABLE_TASK_REQUEST", \
-    10, \
+    11, \
     {  { "boot_id", NULL, MAVLINK_TYPE_UINT32_T, 0, 8, offsetof(mavlink_available_task_request_t, boot_id) }, \
          { "msg_seq", NULL, MAVLINK_TYPE_UINT32_T, 0, 12, offsetof(mavlink_available_task_request_t, msg_seq) }, \
          { "time_ms", NULL, MAVLINK_TYPE_UINT64_T, 0, 0, offsetof(mavlink_available_task_request_t, time_ms) }, \
@@ -59,6 +62,7 @@ typedef struct __mavlink_available_task_request_t {
          { "count", NULL, MAVLINK_TYPE_UINT8_T, 0, 90, offsetof(mavlink_available_task_request_t, count) }, \
          { "task_id", NULL, MAVLINK_TYPE_UINT16_T, 5, 80, offsetof(mavlink_available_task_request_t, task_id) }, \
          { "task_type", NULL, MAVLINK_TYPE_UINT8_T, 5, 91, offsetof(mavlink_available_task_request_t, task_type) }, \
+         { "class_id", NULL, MAVLINK_TYPE_UINT8_T, 5, 96, offsetof(mavlink_available_task_request_t, class_id) }, \
          { "lat", NULL, MAVLINK_TYPE_FLOAT, 5, 20, offsetof(mavlink_available_task_request_t, lat) }, \
          { "lng", NULL, MAVLINK_TYPE_FLOAT, 5, 40, offsetof(mavlink_available_task_request_t, lng) }, \
          { "alt", NULL, MAVLINK_TYPE_FLOAT, 5, 60, offsetof(mavlink_available_task_request_t, alt) }, \
@@ -79,13 +83,14 @@ typedef struct __mavlink_available_task_request_t {
  * @param count  Number of tasks in this request (1-5).
  * @param task_id  Task IDs.
  * @param task_type  Task types (1=SMALL, 2=MEDIUM, 3=BIG, 4=HEAVY).
+ * @param class_id  Detection class IDs (0=Tank..4=Person).
  * @param lat  Task latitudes in degrees.
  * @param lng  Task longitudes in degrees.
  * @param alt  Task altitudes in meters.
  * @return length of the message in bytes (excluding serial stream start sign)
  */
 static inline uint16_t mavlink_msg_available_task_request_pack(uint8_t system_id, uint8_t component_id, mavlink_message_t* msg,
-                               uint32_t boot_id, uint32_t msg_seq, uint64_t time_ms, uint32_t ttl_ms, uint8_t count, const uint16_t *task_id, const uint8_t *task_type, const float *lat, const float *lng, const float *alt)
+                               uint32_t boot_id, uint32_t msg_seq, uint64_t time_ms, uint32_t ttl_ms, uint8_t count, const uint16_t *task_id, const uint8_t *task_type, const uint8_t *class_id, const float *lat, const float *lng, const float *alt)
 {
 #if MAVLINK_NEED_BYTE_SWAP || !MAVLINK_ALIGNED_FIELDS
     char buf[MAVLINK_MSG_ID_AVAILABLE_TASK_REQUEST_LEN];
@@ -99,6 +104,7 @@ static inline uint16_t mavlink_msg_available_task_request_pack(uint8_t system_id
     _mav_put_float_array(buf, 60, alt, 5);
     _mav_put_uint16_t_array(buf, 80, task_id, 5);
     _mav_put_uint8_t_array(buf, 91, task_type, 5);
+    _mav_put_uint8_t_array(buf, 96, class_id, 5);
         memcpy(_MAV_PAYLOAD_NON_CONST(msg), buf, MAVLINK_MSG_ID_AVAILABLE_TASK_REQUEST_LEN);
 #else
     mavlink_available_task_request_t packet;
@@ -112,6 +118,7 @@ static inline uint16_t mavlink_msg_available_task_request_pack(uint8_t system_id
     mav_array_memcpy(packet.alt, alt, sizeof(float)*5);
     mav_array_memcpy(packet.task_id, task_id, sizeof(uint16_t)*5);
     mav_array_memcpy(packet.task_type, task_type, sizeof(uint8_t)*5);
+    mav_array_memcpy(packet.class_id, class_id, sizeof(uint8_t)*5);
         memcpy(_MAV_PAYLOAD_NON_CONST(msg), &packet, MAVLINK_MSG_ID_AVAILABLE_TASK_REQUEST_LEN);
 #endif
 
@@ -133,13 +140,14 @@ static inline uint16_t mavlink_msg_available_task_request_pack(uint8_t system_id
  * @param count  Number of tasks in this request (1-5).
  * @param task_id  Task IDs.
  * @param task_type  Task types (1=SMALL, 2=MEDIUM, 3=BIG, 4=HEAVY).
+ * @param class_id  Detection class IDs (0=Tank..4=Person).
  * @param lat  Task latitudes in degrees.
  * @param lng  Task longitudes in degrees.
  * @param alt  Task altitudes in meters.
  * @return length of the message in bytes (excluding serial stream start sign)
  */
 static inline uint16_t mavlink_msg_available_task_request_pack_status(uint8_t system_id, uint8_t component_id, mavlink_status_t *_status, mavlink_message_t* msg,
-                               uint32_t boot_id, uint32_t msg_seq, uint64_t time_ms, uint32_t ttl_ms, uint8_t count, const uint16_t *task_id, const uint8_t *task_type, const float *lat, const float *lng, const float *alt)
+                               uint32_t boot_id, uint32_t msg_seq, uint64_t time_ms, uint32_t ttl_ms, uint8_t count, const uint16_t *task_id, const uint8_t *task_type, const uint8_t *class_id, const float *lat, const float *lng, const float *alt)
 {
 #if MAVLINK_NEED_BYTE_SWAP || !MAVLINK_ALIGNED_FIELDS
     char buf[MAVLINK_MSG_ID_AVAILABLE_TASK_REQUEST_LEN];
@@ -153,6 +161,7 @@ static inline uint16_t mavlink_msg_available_task_request_pack_status(uint8_t sy
     _mav_put_float_array(buf, 60, alt, 5);
     _mav_put_uint16_t_array(buf, 80, task_id, 5);
     _mav_put_uint8_t_array(buf, 91, task_type, 5);
+    _mav_put_uint8_t_array(buf, 96, class_id, 5);
         memcpy(_MAV_PAYLOAD_NON_CONST(msg), buf, MAVLINK_MSG_ID_AVAILABLE_TASK_REQUEST_LEN);
 #else
     mavlink_available_task_request_t packet;
@@ -166,6 +175,7 @@ static inline uint16_t mavlink_msg_available_task_request_pack_status(uint8_t sy
     mav_array_memcpy(packet.alt, alt, sizeof(float)*5);
     mav_array_memcpy(packet.task_id, task_id, sizeof(uint16_t)*5);
     mav_array_memcpy(packet.task_type, task_type, sizeof(uint8_t)*5);
+    mav_array_memcpy(packet.class_id, class_id, sizeof(uint8_t)*5);
         memcpy(_MAV_PAYLOAD_NON_CONST(msg), &packet, MAVLINK_MSG_ID_AVAILABLE_TASK_REQUEST_LEN);
 #endif
 
@@ -190,6 +200,7 @@ static inline uint16_t mavlink_msg_available_task_request_pack_status(uint8_t sy
  * @param count  Number of tasks in this request (1-5).
  * @param task_id  Task IDs.
  * @param task_type  Task types (1=SMALL, 2=MEDIUM, 3=BIG, 4=HEAVY).
+ * @param class_id  Detection class IDs (0=Tank..4=Person).
  * @param lat  Task latitudes in degrees.
  * @param lng  Task longitudes in degrees.
  * @param alt  Task altitudes in meters.
@@ -197,7 +208,7 @@ static inline uint16_t mavlink_msg_available_task_request_pack_status(uint8_t sy
  */
 static inline uint16_t mavlink_msg_available_task_request_pack_chan(uint8_t system_id, uint8_t component_id, uint8_t chan,
                                mavlink_message_t* msg,
-                                   uint32_t boot_id,uint32_t msg_seq,uint64_t time_ms,uint32_t ttl_ms,uint8_t count,const uint16_t *task_id,const uint8_t *task_type,const float *lat,const float *lng,const float *alt)
+                                   uint32_t boot_id,uint32_t msg_seq,uint64_t time_ms,uint32_t ttl_ms,uint8_t count,const uint16_t *task_id,const uint8_t *task_type,const uint8_t *class_id,const float *lat,const float *lng,const float *alt)
 {
 #if MAVLINK_NEED_BYTE_SWAP || !MAVLINK_ALIGNED_FIELDS
     char buf[MAVLINK_MSG_ID_AVAILABLE_TASK_REQUEST_LEN];
@@ -211,6 +222,7 @@ static inline uint16_t mavlink_msg_available_task_request_pack_chan(uint8_t syst
     _mav_put_float_array(buf, 60, alt, 5);
     _mav_put_uint16_t_array(buf, 80, task_id, 5);
     _mav_put_uint8_t_array(buf, 91, task_type, 5);
+    _mav_put_uint8_t_array(buf, 96, class_id, 5);
         memcpy(_MAV_PAYLOAD_NON_CONST(msg), buf, MAVLINK_MSG_ID_AVAILABLE_TASK_REQUEST_LEN);
 #else
     mavlink_available_task_request_t packet;
@@ -224,6 +236,7 @@ static inline uint16_t mavlink_msg_available_task_request_pack_chan(uint8_t syst
     mav_array_memcpy(packet.alt, alt, sizeof(float)*5);
     mav_array_memcpy(packet.task_id, task_id, sizeof(uint16_t)*5);
     mav_array_memcpy(packet.task_type, task_type, sizeof(uint8_t)*5);
+    mav_array_memcpy(packet.class_id, class_id, sizeof(uint8_t)*5);
         memcpy(_MAV_PAYLOAD_NON_CONST(msg), &packet, MAVLINK_MSG_ID_AVAILABLE_TASK_REQUEST_LEN);
 #endif
 
@@ -241,7 +254,7 @@ static inline uint16_t mavlink_msg_available_task_request_pack_chan(uint8_t syst
  */
 static inline uint16_t mavlink_msg_available_task_request_encode(uint8_t system_id, uint8_t component_id, mavlink_message_t* msg, const mavlink_available_task_request_t* available_task_request)
 {
-    return mavlink_msg_available_task_request_pack(system_id, component_id, msg, available_task_request->boot_id, available_task_request->msg_seq, available_task_request->time_ms, available_task_request->ttl_ms, available_task_request->count, available_task_request->task_id, available_task_request->task_type, available_task_request->lat, available_task_request->lng, available_task_request->alt);
+    return mavlink_msg_available_task_request_pack(system_id, component_id, msg, available_task_request->boot_id, available_task_request->msg_seq, available_task_request->time_ms, available_task_request->ttl_ms, available_task_request->count, available_task_request->task_id, available_task_request->task_type, available_task_request->class_id, available_task_request->lat, available_task_request->lng, available_task_request->alt);
 }
 
 /**
@@ -255,7 +268,7 @@ static inline uint16_t mavlink_msg_available_task_request_encode(uint8_t system_
  */
 static inline uint16_t mavlink_msg_available_task_request_encode_chan(uint8_t system_id, uint8_t component_id, uint8_t chan, mavlink_message_t* msg, const mavlink_available_task_request_t* available_task_request)
 {
-    return mavlink_msg_available_task_request_pack_chan(system_id, component_id, chan, msg, available_task_request->boot_id, available_task_request->msg_seq, available_task_request->time_ms, available_task_request->ttl_ms, available_task_request->count, available_task_request->task_id, available_task_request->task_type, available_task_request->lat, available_task_request->lng, available_task_request->alt);
+    return mavlink_msg_available_task_request_pack_chan(system_id, component_id, chan, msg, available_task_request->boot_id, available_task_request->msg_seq, available_task_request->time_ms, available_task_request->ttl_ms, available_task_request->count, available_task_request->task_id, available_task_request->task_type, available_task_request->class_id, available_task_request->lat, available_task_request->lng, available_task_request->alt);
 }
 
 /**
@@ -269,7 +282,7 @@ static inline uint16_t mavlink_msg_available_task_request_encode_chan(uint8_t sy
  */
 static inline uint16_t mavlink_msg_available_task_request_encode_status(uint8_t system_id, uint8_t component_id, mavlink_status_t* _status, mavlink_message_t* msg, const mavlink_available_task_request_t* available_task_request)
 {
-    return mavlink_msg_available_task_request_pack_status(system_id, component_id, _status, msg,  available_task_request->boot_id, available_task_request->msg_seq, available_task_request->time_ms, available_task_request->ttl_ms, available_task_request->count, available_task_request->task_id, available_task_request->task_type, available_task_request->lat, available_task_request->lng, available_task_request->alt);
+    return mavlink_msg_available_task_request_pack_status(system_id, component_id, _status, msg,  available_task_request->boot_id, available_task_request->msg_seq, available_task_request->time_ms, available_task_request->ttl_ms, available_task_request->count, available_task_request->task_id, available_task_request->task_type, available_task_request->class_id, available_task_request->lat, available_task_request->lng, available_task_request->alt);
 }
 
 /**
@@ -283,13 +296,14 @@ static inline uint16_t mavlink_msg_available_task_request_encode_status(uint8_t 
  * @param count  Number of tasks in this request (1-5).
  * @param task_id  Task IDs.
  * @param task_type  Task types (1=SMALL, 2=MEDIUM, 3=BIG, 4=HEAVY).
+ * @param class_id  Detection class IDs (0=Tank..4=Person).
  * @param lat  Task latitudes in degrees.
  * @param lng  Task longitudes in degrees.
  * @param alt  Task altitudes in meters.
  */
 #ifdef MAVLINK_USE_CONVENIENCE_FUNCTIONS
 
-static inline void mavlink_msg_available_task_request_send(mavlink_channel_t chan, uint32_t boot_id, uint32_t msg_seq, uint64_t time_ms, uint32_t ttl_ms, uint8_t count, const uint16_t *task_id, const uint8_t *task_type, const float *lat, const float *lng, const float *alt)
+static inline void mavlink_msg_available_task_request_send(mavlink_channel_t chan, uint32_t boot_id, uint32_t msg_seq, uint64_t time_ms, uint32_t ttl_ms, uint8_t count, const uint16_t *task_id, const uint8_t *task_type, const uint8_t *class_id, const float *lat, const float *lng, const float *alt)
 {
 #if MAVLINK_NEED_BYTE_SWAP || !MAVLINK_ALIGNED_FIELDS
     char buf[MAVLINK_MSG_ID_AVAILABLE_TASK_REQUEST_LEN];
@@ -303,6 +317,7 @@ static inline void mavlink_msg_available_task_request_send(mavlink_channel_t cha
     _mav_put_float_array(buf, 60, alt, 5);
     _mav_put_uint16_t_array(buf, 80, task_id, 5);
     _mav_put_uint8_t_array(buf, 91, task_type, 5);
+    _mav_put_uint8_t_array(buf, 96, class_id, 5);
     _mav_finalize_message_chan_send(chan, MAVLINK_MSG_ID_AVAILABLE_TASK_REQUEST, buf, MAVLINK_MSG_ID_AVAILABLE_TASK_REQUEST_MIN_LEN, MAVLINK_MSG_ID_AVAILABLE_TASK_REQUEST_LEN, MAVLINK_MSG_ID_AVAILABLE_TASK_REQUEST_CRC);
 #else
     mavlink_available_task_request_t packet;
@@ -316,6 +331,7 @@ static inline void mavlink_msg_available_task_request_send(mavlink_channel_t cha
     mav_array_memcpy(packet.alt, alt, sizeof(float)*5);
     mav_array_memcpy(packet.task_id, task_id, sizeof(uint16_t)*5);
     mav_array_memcpy(packet.task_type, task_type, sizeof(uint8_t)*5);
+    mav_array_memcpy(packet.class_id, class_id, sizeof(uint8_t)*5);
     _mav_finalize_message_chan_send(chan, MAVLINK_MSG_ID_AVAILABLE_TASK_REQUEST, (const char *)&packet, MAVLINK_MSG_ID_AVAILABLE_TASK_REQUEST_MIN_LEN, MAVLINK_MSG_ID_AVAILABLE_TASK_REQUEST_LEN, MAVLINK_MSG_ID_AVAILABLE_TASK_REQUEST_CRC);
 #endif
 }
@@ -328,7 +344,7 @@ static inline void mavlink_msg_available_task_request_send(mavlink_channel_t cha
 static inline void mavlink_msg_available_task_request_send_struct(mavlink_channel_t chan, const mavlink_available_task_request_t* available_task_request)
 {
 #if MAVLINK_NEED_BYTE_SWAP || !MAVLINK_ALIGNED_FIELDS
-    mavlink_msg_available_task_request_send(chan, available_task_request->boot_id, available_task_request->msg_seq, available_task_request->time_ms, available_task_request->ttl_ms, available_task_request->count, available_task_request->task_id, available_task_request->task_type, available_task_request->lat, available_task_request->lng, available_task_request->alt);
+    mavlink_msg_available_task_request_send(chan, available_task_request->boot_id, available_task_request->msg_seq, available_task_request->time_ms, available_task_request->ttl_ms, available_task_request->count, available_task_request->task_id, available_task_request->task_type, available_task_request->class_id, available_task_request->lat, available_task_request->lng, available_task_request->alt);
 #else
     _mav_finalize_message_chan_send(chan, MAVLINK_MSG_ID_AVAILABLE_TASK_REQUEST, (const char *)available_task_request, MAVLINK_MSG_ID_AVAILABLE_TASK_REQUEST_MIN_LEN, MAVLINK_MSG_ID_AVAILABLE_TASK_REQUEST_LEN, MAVLINK_MSG_ID_AVAILABLE_TASK_REQUEST_CRC);
 #endif
@@ -342,7 +358,7 @@ static inline void mavlink_msg_available_task_request_send_struct(mavlink_channe
   is usually the receive buffer for the channel, and allows a reply to an
   incoming message with minimum stack space usage.
  */
-static inline void mavlink_msg_available_task_request_send_buf(mavlink_message_t *msgbuf, mavlink_channel_t chan,  uint32_t boot_id, uint32_t msg_seq, uint64_t time_ms, uint32_t ttl_ms, uint8_t count, const uint16_t *task_id, const uint8_t *task_type, const float *lat, const float *lng, const float *alt)
+static inline void mavlink_msg_available_task_request_send_buf(mavlink_message_t *msgbuf, mavlink_channel_t chan,  uint32_t boot_id, uint32_t msg_seq, uint64_t time_ms, uint32_t ttl_ms, uint8_t count, const uint16_t *task_id, const uint8_t *task_type, const uint8_t *class_id, const float *lat, const float *lng, const float *alt)
 {
 #if MAVLINK_NEED_BYTE_SWAP || !MAVLINK_ALIGNED_FIELDS
     char *buf = (char *)msgbuf;
@@ -356,6 +372,7 @@ static inline void mavlink_msg_available_task_request_send_buf(mavlink_message_t
     _mav_put_float_array(buf, 60, alt, 5);
     _mav_put_uint16_t_array(buf, 80, task_id, 5);
     _mav_put_uint8_t_array(buf, 91, task_type, 5);
+    _mav_put_uint8_t_array(buf, 96, class_id, 5);
     _mav_finalize_message_chan_send(chan, MAVLINK_MSG_ID_AVAILABLE_TASK_REQUEST, buf, MAVLINK_MSG_ID_AVAILABLE_TASK_REQUEST_MIN_LEN, MAVLINK_MSG_ID_AVAILABLE_TASK_REQUEST_LEN, MAVLINK_MSG_ID_AVAILABLE_TASK_REQUEST_CRC);
 #else
     mavlink_available_task_request_t *packet = (mavlink_available_task_request_t *)msgbuf;
@@ -369,6 +386,7 @@ static inline void mavlink_msg_available_task_request_send_buf(mavlink_message_t
     mav_array_memcpy(packet->alt, alt, sizeof(float)*5);
     mav_array_memcpy(packet->task_id, task_id, sizeof(uint16_t)*5);
     mav_array_memcpy(packet->task_type, task_type, sizeof(uint8_t)*5);
+    mav_array_memcpy(packet->class_id, class_id, sizeof(uint8_t)*5);
     _mav_finalize_message_chan_send(chan, MAVLINK_MSG_ID_AVAILABLE_TASK_REQUEST, (const char *)packet, MAVLINK_MSG_ID_AVAILABLE_TASK_REQUEST_MIN_LEN, MAVLINK_MSG_ID_AVAILABLE_TASK_REQUEST_LEN, MAVLINK_MSG_ID_AVAILABLE_TASK_REQUEST_CRC);
 #endif
 }
@@ -450,6 +468,16 @@ static inline uint16_t mavlink_msg_available_task_request_get_task_type(const ma
 }
 
 /**
+ * @brief Get field class_id from available_task_request message
+ *
+ * @return  Detection class IDs (0=Tank..4=Person).
+ */
+static inline uint16_t mavlink_msg_available_task_request_get_class_id(const mavlink_message_t* msg, uint8_t *class_id)
+{
+    return _MAV_RETURN_uint8_t_array(msg, class_id, 5,  96);
+}
+
+/**
  * @brief Get field lat from available_task_request message
  *
  * @return  Task latitudes in degrees.
@@ -498,6 +526,7 @@ static inline void mavlink_msg_available_task_request_decode(const mavlink_messa
     mavlink_msg_available_task_request_get_task_id(msg, available_task_request->task_id);
     available_task_request->count = mavlink_msg_available_task_request_get_count(msg);
     mavlink_msg_available_task_request_get_task_type(msg, available_task_request->task_type);
+    mavlink_msg_available_task_request_get_class_id(msg, available_task_request->class_id);
 #else
         uint8_t len = msg->len < MAVLINK_MSG_ID_AVAILABLE_TASK_REQUEST_LEN? msg->len : MAVLINK_MSG_ID_AVAILABLE_TASK_REQUEST_LEN;
         memset(available_task_request, 0, MAVLINK_MSG_ID_AVAILABLE_TASK_REQUEST_LEN);

@@ -10,7 +10,7 @@
     #error Wrong include order: MAVLINK_NAVLINK.H MUST NOT BE DIRECTLY USED. Include mavlink.h from the same directory instead or set ALL AND EVERY defines from MAVLINK.H manually accordingly, including the #define MAVLINK_H call.
 #endif
 
-#define MAVLINK_NAVLINK_XML_HASH -4320597209896604551
+#define MAVLINK_NAVLINK_XML_HASH -5279244839027820078
 
 #ifdef __cplusplus
 extern "C" {
@@ -23,7 +23,7 @@ extern "C" {
 #endif
 
 #ifndef MAVLINK_MESSAGE_CRCS
-#define MAVLINK_MESSAGE_CRCS {{25002, 29, 20, 20, 0, 0, 0}, {25003, 83, 32, 32, 0, 0, 0}, {25004, 129, 21, 21, 0, 0, 0}, {25104, 41, 96, 96, 0, 0, 0}, {25105, 250, 52, 52, 1, 50, 0}, {25106, 210, 36, 36, 1, 34, 0}, {25107, 119, 24, 24, 1, 22, 0}, {25108, 164, 35, 35, 0, 0, 0}, {25109, 246, 24, 24, 1, 22, 0}, {25200, 202, 22, 22, 0, 0, 0}, {25201, 210, 22, 22, 0, 0, 0}, {25202, 195, 26, 26, 0, 0, 0}, {25300, 236, 25, 25, 0, 0, 0}}
+#define MAVLINK_MESSAGE_CRCS {{25002, 29, 20, 20, 0, 0, 0}, {25003, 83, 32, 32, 0, 0, 0}, {25004, 129, 21, 21, 0, 0, 0}, {25104, 36, 101, 101, 0, 0, 0}, {25105, 250, 52, 52, 1, 50, 0}, {25106, 56, 37, 37, 1, 34, 0}, {25107, 119, 24, 24, 1, 22, 0}, {25108, 232, 36, 36, 0, 0, 0}, {25109, 246, 24, 24, 1, 22, 0}, {25200, 202, 22, 22, 0, 0, 0}, {25201, 210, 22, 22, 0, 0, 0}, {25202, 195, 26, 26, 0, 0, 0}, {25300, 236, 25, 25, 0, 0, 0}}
 #endif
 
 #include "../protocol.h"

@@ -227,7 +227,7 @@ static void mavlink_test_available_task_request(uint8_t system_id, uint8_t compo
         uint8_t buffer[MAVLINK_MAX_PACKET_LEN];
         uint16_t i;
     mavlink_available_task_request_t packet_in = {
-        93372036854775807ULL,963497880,963498088,963498296,{ 157.0, 158.0, 159.0, 160.0, 161.0 },{ 297.0, 298.0, 299.0, 300.0, 301.0 },{ 437.0, 438.0, 439.0, 440.0, 441.0 },{ 21395, 21396, 21397, 21398, 21399 },147,{ 214, 215, 216, 217, 218 }
+        93372036854775807ULL,963497880,963498088,963498296,{ 157.0, 158.0, 159.0, 160.0, 161.0 },{ 297.0, 298.0, 299.0, 300.0, 301.0 },{ 437.0, 438.0, 439.0, 440.0, 441.0 },{ 21395, 21396, 21397, 21398, 21399 },147,{ 214, 215, 216, 217, 218 },{ 37, 38, 39, 40, 41 }
     };
     mavlink_available_task_request_t packet1, packet2;
         memset(&packet1, 0, sizeof(packet1));
@@ -242,6 +242,7 @@ static void mavlink_test_available_task_request(uint8_t system_id, uint8_t compo
         mav_array_memcpy(packet1.alt, packet_in.alt, sizeof(float)*5);
         mav_array_memcpy(packet1.task_id, packet_in.task_id, sizeof(uint16_t)*5);
         mav_array_memcpy(packet1.task_type, packet_in.task_type, sizeof(uint8_t)*5);
+        mav_array_memcpy(packet1.class_id, packet_in.class_id, sizeof(uint8_t)*5);
         
 #ifdef MAVLINK_STATUS_FLAG_OUT_MAVLINK1
         if (status->flags & MAVLINK_STATUS_FLAG_OUT_MAVLINK1) {
@@ -255,12 +256,12 @@ static void mavlink_test_available_task_request(uint8_t system_id, uint8_t compo
         MAVLINK_ASSERT(memcmp(&packet1, &packet2, sizeof(packet1)) == 0);
 
         memset(&packet2, 0, sizeof(packet2));
-    mavlink_msg_available_task_request_pack(system_id, component_id, &msg , packet1.boot_id , packet1.msg_seq , packet1.time_ms , packet1.ttl_ms , packet1.count , packet1.task_id , packet1.task_type , packet1.lat , packet1.lng , packet1.alt );
+    mavlink_msg_available_task_request_pack(system_id, component_id, &msg , packet1.boot_id , packet1.msg_seq , packet1.time_ms , packet1.ttl_ms , packet1.count , packet1.task_id , packet1.task_type , packet1.class_id , packet1.lat , packet1.lng , packet1.alt );
     mavlink_msg_available_task_request_decode(&msg, &packet2);
         MAVLINK_ASSERT(memcmp(&packet1, &packet2, sizeof(packet1)) == 0);
 
         memset(&packet2, 0, sizeof(packet2));
-    mavlink_msg_available_task_request_pack_chan(system_id, component_id, MAVLINK_COMM_0, &msg , packet1.boot_id , packet1.msg_seq , packet1.time_ms , packet1.ttl_ms , packet1.count , packet1.task_id , packet1.task_type , packet1.lat , packet1.lng , packet1.alt );
+    mavlink_msg_available_task_request_pack_chan(system_id, component_id, MAVLINK_COMM_0, &msg , packet1.boot_id , packet1.msg_seq , packet1.time_ms , packet1.ttl_ms , packet1.count , packet1.task_id , packet1.task_type , packet1.class_id , packet1.lat , packet1.lng , packet1.alt );
     mavlink_msg_available_task_request_decode(&msg, &packet2);
         MAVLINK_ASSERT(memcmp(&packet1, &packet2, sizeof(packet1)) == 0);
 
@@ -273,7 +274,7 @@ static void mavlink_test_available_task_request(uint8_t system_id, uint8_t compo
         MAVLINK_ASSERT(memcmp(&packet1, &packet2, sizeof(packet1)) == 0);
         
         memset(&packet2, 0, sizeof(packet2));
-    mavlink_msg_available_task_request_send(MAVLINK_COMM_1 , packet1.boot_id , packet1.msg_seq , packet1.time_ms , packet1.ttl_ms , packet1.count , packet1.task_id , packet1.task_type , packet1.lat , packet1.lng , packet1.alt );
+    mavlink_msg_available_task_request_send(MAVLINK_COMM_1 , packet1.boot_id , packet1.msg_seq , packet1.time_ms , packet1.ttl_ms , packet1.count , packet1.task_id , packet1.task_type , packet1.class_id , packet1.lat , packet1.lng , packet1.alt );
     mavlink_msg_available_task_request_decode(last_msg, &packet2);
         MAVLINK_ASSERT(memcmp(&packet1, &packet2, sizeof(packet1)) == 0);
 
@@ -361,7 +362,7 @@ static void mavlink_test_task_assign_request(uint8_t system_id, uint8_t componen
         uint8_t buffer[MAVLINK_MAX_PACKET_LEN];
         uint16_t i;
     mavlink_task_assign_request_t packet_in = {
-        93372036854775807ULL,963497880,963498088,963498296,157.0,185.0,213.0,18899,235,46
+        93372036854775807ULL,963497880,963498088,963498296,157.0,185.0,213.0,18899,235,46,113
     };
     mavlink_task_assign_request_t packet1, packet2;
         memset(&packet1, 0, sizeof(packet1));
@@ -375,6 +376,7 @@ static void mavlink_test_task_assign_request(uint8_t system_id, uint8_t componen
         packet1.task_id = packet_in.task_id;
         packet1.target_system = packet_in.target_system;
         packet1.task_type = packet_in.task_type;
+        packet1.class_id = packet_in.class_id;
         
         
 #ifdef MAVLINK_STATUS_FLAG_OUT_MAVLINK1
@@ -389,12 +391,12 @@ static void mavlink_test_task_assign_request(uint8_t system_id, uint8_t componen
         MAVLINK_ASSERT(memcmp(&packet1, &packet2, sizeof(packet1)) == 0);
 
         memset(&packet2, 0, sizeof(packet2));
-    mavlink_msg_task_assign_request_pack(system_id, component_id, &msg , packet1.boot_id , packet1.msg_seq , packet1.time_ms , packet1.ttl_ms , packet1.target_system , packet1.task_id , packet1.task_type , packet1.lat , packet1.lng , packet1.alt );
+    mavlink_msg_task_assign_request_pack(system_id, component_id, &msg , packet1.boot_id , packet1.msg_seq , packet1.time_ms , packet1.ttl_ms , packet1.target_system , packet1.task_id , packet1.task_type , packet1.class_id , packet1.lat , packet1.lng , packet1.alt );
     mavlink_msg_task_assign_request_decode(&msg, &packet2);
         MAVLINK_ASSERT(memcmp(&packet1, &packet2, sizeof(packet1)) == 0);
 
         memset(&packet2, 0, sizeof(packet2));
-    mavlink_msg_task_assign_request_pack_chan(system_id, component_id, MAVLINK_COMM_0, &msg , packet1.boot_id , packet1.msg_seq , packet1.time_ms , packet1.ttl_ms , packet1.target_system , packet1.task_id , packet1.task_type , packet1.lat , packet1.lng , packet1.alt );
+    mavlink_msg_task_assign_request_pack_chan(system_id, component_id, MAVLINK_COMM_0, &msg , packet1.boot_id , packet1.msg_seq , packet1.time_ms , packet1.ttl_ms , packet1.target_system , packet1.task_id , packet1.task_type , packet1.class_id , packet1.lat , packet1.lng , packet1.alt );
     mavlink_msg_task_assign_request_decode(&msg, &packet2);
         MAVLINK_ASSERT(memcmp(&packet1, &packet2, sizeof(packet1)) == 0);
 
@@ -407,7 +409,7 @@ static void mavlink_test_task_assign_request(uint8_t system_id, uint8_t componen
         MAVLINK_ASSERT(memcmp(&packet1, &packet2, sizeof(packet1)) == 0);
         
         memset(&packet2, 0, sizeof(packet2));
-    mavlink_msg_task_assign_request_send(MAVLINK_COMM_1 , packet1.boot_id , packet1.msg_seq , packet1.time_ms , packet1.ttl_ms , packet1.target_system , packet1.task_id , packet1.task_type , packet1.lat , packet1.lng , packet1.alt );
+    mavlink_msg_task_assign_request_send(MAVLINK_COMM_1 , packet1.boot_id , packet1.msg_seq , packet1.time_ms , packet1.ttl_ms , packet1.target_system , packet1.task_id , packet1.task_type , packet1.class_id , packet1.lat , packet1.lng , packet1.alt );
     mavlink_msg_task_assign_request_decode(last_msg, &packet2);
         MAVLINK_ASSERT(memcmp(&packet1, &packet2, sizeof(packet1)) == 0);
 
@@ -494,7 +496,7 @@ static void mavlink_test_task_confirm_request(uint8_t system_id, uint8_t compone
         uint8_t buffer[MAVLINK_MAX_PACKET_LEN];
         uint16_t i;
     mavlink_task_confirm_request_t packet_in = {
-        93372036854775807ULL,963497880,963498088,963498296,157.0,185.0,213.0,18899,235
+        93372036854775807ULL,963497880,963498088,963498296,157.0,185.0,213.0,18899,235,46
     };
     mavlink_task_confirm_request_t packet1, packet2;
         memset(&packet1, 0, sizeof(packet1));
@@ -507,6 +509,7 @@ static void mavlink_test_task_confirm_request(uint8_t system_id, uint8_t compone
         packet1.alt = packet_in.alt;
         packet1.task_id = packet_in.task_id;
         packet1.task_type = packet_in.task_type;
+        packet1.class_id = packet_in.class_id;
         
         
 #ifdef MAVLINK_STATUS_FLAG_OUT_MAVLINK1
@@ -521,12 +524,12 @@ static void mavlink_test_task_confirm_request(uint8_t system_id, uint8_t compone
         MAVLINK_ASSERT(memcmp(&packet1, &packet2, sizeof(packet1)) == 0);
 
         memset(&packet2, 0, sizeof(packet2));
-    mavlink_msg_task_confirm_request_pack(system_id, component_id, &msg , packet1.boot_id , packet1.msg_seq , packet1.time_ms , packet1.ttl_ms , packet1.task_id , packet1.task_type , packet1.lat , packet1.lng , packet1.alt );
+    mavlink_msg_task_confirm_request_pack(system_id, component_id, &msg , packet1.boot_id , packet1.msg_seq , packet1.time_ms , packet1.ttl_ms , packet1.task_id , packet1.task_type , packet1.class_id , packet1.lat , packet1.lng , packet1.alt );
     mavlink_msg_task_confirm_request_decode(&msg, &packet2);
         MAVLINK_ASSERT(memcmp(&packet1, &packet2, sizeof(packet1)) == 0);
 
         memset(&packet2, 0, sizeof(packet2));
-    mavlink_msg_task_confirm_request_pack_chan(system_id, component_id, MAVLINK_COMM_0, &msg , packet1.boot_id , packet1.msg_seq , packet1.time_ms , packet1.ttl_ms , packet1.task_id , packet1.task_type , packet1.lat , packet1.lng , packet1.alt );
+    mavlink_msg_task_confirm_request_pack_chan(system_id, component_id, MAVLINK_COMM_0, &msg , packet1.boot_id , packet1.msg_seq , packet1.time_ms , packet1.ttl_ms , packet1.task_id , packet1.task_type , packet1.class_id , packet1.lat , packet1.lng , packet1.alt );
     mavlink_msg_task_confirm_request_decode(&msg, &packet2);
         MAVLINK_ASSERT(memcmp(&packet1, &packet2, sizeof(packet1)) == 0);
 
@@ -539,7 +542,7 @@ static void mavlink_test_task_confirm_request(uint8_t system_id, uint8_t compone
         MAVLINK_ASSERT(memcmp(&packet1, &packet2, sizeof(packet1)) == 0);
         
         memset(&packet2, 0, sizeof(packet2));
-    mavlink_msg_task_confirm_request_send(MAVLINK_COMM_1 , packet1.boot_id , packet1.msg_seq , packet1.time_ms , packet1.ttl_ms , packet1.task_id , packet1.task_type , packet1.lat , packet1.lng , packet1.alt );
+    mavlink_msg_task_confirm_request_send(MAVLINK_COMM_1 , packet1.boot_id , packet1.msg_seq , packet1.time_ms , packet1.ttl_ms , packet1.task_id , packet1.task_type , packet1.class_id , packet1.lat , packet1.lng , packet1.alt );
     mavlink_msg_task_confirm_request_decode(last_msg, &packet2);
         MAVLINK_ASSERT(memcmp(&packet1, &packet2, sizeof(packet1)) == 0);
 
