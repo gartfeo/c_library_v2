@@ -15,7 +15,7 @@ typedef struct __mavlink_task_assign_request_t {
  uint16_t task_id; /*<  Task ID being assigned.*/
  uint8_t target_system; /*<  Target system ID (assigned peer).*/
  uint8_t task_type; /*<  Task type.*/
- uint8_t class_id; /*<  Detection class ID (0=Tank..4=Person).*/
+ uint8_t class_id; /*<  Detector class ID from the configured detector catalog.*/
 } mavlink_task_assign_request_t;
 
 #define MAVLINK_MSG_ID_TASK_ASSIGN_REQUEST_LEN 37
@@ -78,7 +78,7 @@ typedef struct __mavlink_task_assign_request_t {
  * @param target_system  Target system ID (assigned peer).
  * @param task_id  Task ID being assigned.
  * @param task_type  Task type.
- * @param class_id  Detection class ID (0=Tank..4=Person).
+ * @param class_id  Detector class ID from the configured detector catalog.
  * @param lat  Task latitude in degrees.
  * @param lng  Task longitude in degrees.
  * @param alt  Task altitude in meters.
@@ -137,7 +137,7 @@ static inline uint16_t mavlink_msg_task_assign_request_pack(uint8_t system_id, u
  * @param target_system  Target system ID (assigned peer).
  * @param task_id  Task ID being assigned.
  * @param task_type  Task type.
- * @param class_id  Detection class ID (0=Tank..4=Person).
+ * @param class_id  Detector class ID from the configured detector catalog.
  * @param lat  Task latitude in degrees.
  * @param lng  Task longitude in degrees.
  * @param alt  Task altitude in meters.
@@ -199,7 +199,7 @@ static inline uint16_t mavlink_msg_task_assign_request_pack_status(uint8_t syste
  * @param target_system  Target system ID (assigned peer).
  * @param task_id  Task ID being assigned.
  * @param task_type  Task type.
- * @param class_id  Detection class ID (0=Tank..4=Person).
+ * @param class_id  Detector class ID from the configured detector catalog.
  * @param lat  Task latitude in degrees.
  * @param lng  Task longitude in degrees.
  * @param alt  Task altitude in meters.
@@ -297,7 +297,7 @@ static inline uint16_t mavlink_msg_task_assign_request_encode_status(uint8_t sys
  * @param target_system  Target system ID (assigned peer).
  * @param task_id  Task ID being assigned.
  * @param task_type  Task type.
- * @param class_id  Detection class ID (0=Tank..4=Person).
+ * @param class_id  Detector class ID from the configured detector catalog.
  * @param lat  Task latitude in degrees.
  * @param lng  Task longitude in degrees.
  * @param alt  Task altitude in meters.
@@ -475,7 +475,7 @@ static inline uint8_t mavlink_msg_task_assign_request_get_task_type(const mavlin
 /**
  * @brief Get field class_id from task_assign_request message
  *
- * @return  Detection class ID (0=Tank..4=Person).
+ * @return  Detector class ID from the configured detector catalog.
  */
 static inline uint8_t mavlink_msg_task_assign_request_get_class_id(const mavlink_message_t* msg)
 {

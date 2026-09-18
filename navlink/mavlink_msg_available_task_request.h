@@ -15,7 +15,7 @@ typedef struct __mavlink_available_task_request_t {
  uint16_t task_id[5]; /*<  Task IDs.*/
  uint8_t count; /*<  Number of tasks in this request (1-5).*/
  uint8_t task_type[5]; /*<  Task types (1=SMALL, 2=MEDIUM, 3=BIG, 4=HEAVY).*/
- uint8_t class_id[5]; /*<  Detection class IDs (0=Tank..4=Person).*/
+ uint8_t class_id[5]; /*<  Detector class IDs from the configured detector catalog.*/
 } mavlink_available_task_request_t;
 
 #define MAVLINK_MSG_ID_AVAILABLE_TASK_REQUEST_LEN 101
@@ -83,7 +83,7 @@ typedef struct __mavlink_available_task_request_t {
  * @param count  Number of tasks in this request (1-5).
  * @param task_id  Task IDs.
  * @param task_type  Task types (1=SMALL, 2=MEDIUM, 3=BIG, 4=HEAVY).
- * @param class_id  Detection class IDs (0=Tank..4=Person).
+ * @param class_id  Detector class IDs from the configured detector catalog.
  * @param lat  Task latitudes in degrees.
  * @param lng  Task longitudes in degrees.
  * @param alt  Task altitudes in meters.
@@ -140,7 +140,7 @@ static inline uint16_t mavlink_msg_available_task_request_pack(uint8_t system_id
  * @param count  Number of tasks in this request (1-5).
  * @param task_id  Task IDs.
  * @param task_type  Task types (1=SMALL, 2=MEDIUM, 3=BIG, 4=HEAVY).
- * @param class_id  Detection class IDs (0=Tank..4=Person).
+ * @param class_id  Detector class IDs from the configured detector catalog.
  * @param lat  Task latitudes in degrees.
  * @param lng  Task longitudes in degrees.
  * @param alt  Task altitudes in meters.
@@ -200,7 +200,7 @@ static inline uint16_t mavlink_msg_available_task_request_pack_status(uint8_t sy
  * @param count  Number of tasks in this request (1-5).
  * @param task_id  Task IDs.
  * @param task_type  Task types (1=SMALL, 2=MEDIUM, 3=BIG, 4=HEAVY).
- * @param class_id  Detection class IDs (0=Tank..4=Person).
+ * @param class_id  Detector class IDs from the configured detector catalog.
  * @param lat  Task latitudes in degrees.
  * @param lng  Task longitudes in degrees.
  * @param alt  Task altitudes in meters.
@@ -296,7 +296,7 @@ static inline uint16_t mavlink_msg_available_task_request_encode_status(uint8_t 
  * @param count  Number of tasks in this request (1-5).
  * @param task_id  Task IDs.
  * @param task_type  Task types (1=SMALL, 2=MEDIUM, 3=BIG, 4=HEAVY).
- * @param class_id  Detection class IDs (0=Tank..4=Person).
+ * @param class_id  Detector class IDs from the configured detector catalog.
  * @param lat  Task latitudes in degrees.
  * @param lng  Task longitudes in degrees.
  * @param alt  Task altitudes in meters.
@@ -470,7 +470,7 @@ static inline uint16_t mavlink_msg_available_task_request_get_task_type(const ma
 /**
  * @brief Get field class_id from available_task_request message
  *
- * @return  Detection class IDs (0=Tank..4=Person).
+ * @return  Detector class IDs from the configured detector catalog.
  */
 static inline uint16_t mavlink_msg_available_task_request_get_class_id(const mavlink_message_t* msg, uint8_t *class_id)
 {

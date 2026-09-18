@@ -14,7 +14,7 @@ typedef struct __mavlink_task_confirm_request_t {
  float alt; /*<  Task altitude in meters.*/
  uint16_t task_id; /*<  Task ID to confirm.*/
  uint8_t task_type; /*<  Task type.*/
- uint8_t class_id; /*<  Detection class ID (0=Tank..4=Person).*/
+ uint8_t class_id; /*<  Detector class ID from the configured detector catalog.*/
 } mavlink_task_confirm_request_t;
 
 #define MAVLINK_MSG_ID_TASK_CONFIRM_REQUEST_LEN 36
@@ -74,7 +74,7 @@ typedef struct __mavlink_task_confirm_request_t {
  * @param ttl_ms [ms] Time-to-live validity window in milliseconds.
  * @param task_id  Task ID to confirm.
  * @param task_type  Task type.
- * @param class_id  Detection class ID (0=Tank..4=Person).
+ * @param class_id  Detector class ID from the configured detector catalog.
  * @param lat  Task latitude in degrees.
  * @param lng  Task longitude in degrees.
  * @param alt  Task altitude in meters.
@@ -130,7 +130,7 @@ static inline uint16_t mavlink_msg_task_confirm_request_pack(uint8_t system_id, 
  * @param ttl_ms [ms] Time-to-live validity window in milliseconds.
  * @param task_id  Task ID to confirm.
  * @param task_type  Task type.
- * @param class_id  Detection class ID (0=Tank..4=Person).
+ * @param class_id  Detector class ID from the configured detector catalog.
  * @param lat  Task latitude in degrees.
  * @param lng  Task longitude in degrees.
  * @param alt  Task altitude in meters.
@@ -189,7 +189,7 @@ static inline uint16_t mavlink_msg_task_confirm_request_pack_status(uint8_t syst
  * @param ttl_ms [ms] Time-to-live validity window in milliseconds.
  * @param task_id  Task ID to confirm.
  * @param task_type  Task type.
- * @param class_id  Detection class ID (0=Tank..4=Person).
+ * @param class_id  Detector class ID from the configured detector catalog.
  * @param lat  Task latitude in degrees.
  * @param lng  Task longitude in degrees.
  * @param alt  Task altitude in meters.
@@ -284,7 +284,7 @@ static inline uint16_t mavlink_msg_task_confirm_request_encode_status(uint8_t sy
  * @param ttl_ms [ms] Time-to-live validity window in milliseconds.
  * @param task_id  Task ID to confirm.
  * @param task_type  Task type.
- * @param class_id  Detection class ID (0=Tank..4=Person).
+ * @param class_id  Detector class ID from the configured detector catalog.
  * @param lat  Task latitude in degrees.
  * @param lng  Task longitude in degrees.
  * @param alt  Task altitude in meters.
@@ -448,7 +448,7 @@ static inline uint8_t mavlink_msg_task_confirm_request_get_task_type(const mavli
 /**
  * @brief Get field class_id from task_confirm_request message
  *
- * @return  Detection class ID (0=Tank..4=Person).
+ * @return  Detector class ID from the configured detector catalog.
  */
 static inline uint8_t mavlink_msg_task_confirm_request_get_class_id(const mavlink_message_t* msg)
 {
